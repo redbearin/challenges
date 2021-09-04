@@ -17,7 +17,7 @@ const properFractions = limit => {
   // up to limit
   const primes = [];
   for (let i = 2; i <= limit; i++) {
-    if (isPrime)
+    if (isPrime(i))
       primes.push(i);
   }
   // keep track of all proper fractions
@@ -48,6 +48,6 @@ const properFractions = limit => {
   return numProperFrac;
 };
 
-const limit = 2;
+const limit = 25;
 
 document.getElementById('ans').textContent = properFractions(limit);
