@@ -1,5 +1,5 @@
 const thirdMostExpensive = stolenItems => {
-  //break the object into an array of subarrays
+  //break object into an array of subarrays
   // and sort by the price, highest to lowest
   const sortedArray = Object.entries(stolenItems).
                       sort((a,b) => b[1] - a[1])
