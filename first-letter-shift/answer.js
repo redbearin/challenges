@@ -20,6 +20,6 @@ const shiftSentence = str => {
   return final.join(' ');
 };
 
-const str = "the output is not very legible";
+const str = "edabit";
 
 document.getElementById('ans').textContent = shiftSentence(str);
