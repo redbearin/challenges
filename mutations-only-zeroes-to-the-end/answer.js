@@ -17,5 +17,5 @@ const zeroesToEnd = arr => {
   }
   return JSON.stringify(arr);
 };
-const arr = [1, 2, 0, 0, 4, 0, 5];
+const arr = [0, 0];
 document.getElementById('ans').textContent = zeroesToEnd(arr);
