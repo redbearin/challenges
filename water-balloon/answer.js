@@ -11,6 +11,6 @@ const pop = arr => {
   }
   return JSON.stringify(arr)
 }
-const arr = [0, 0, 0, 0, 4, 0, 0, 0, 0];
+const arr = [0];
 
 document.getElementById('ans').textContent = pop(arr);

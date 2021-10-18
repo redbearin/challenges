@@ -13,6 +13,7 @@ timeToFinish(
 // 11 + 3 = 14
 // 14 x 0.5 = 7
 // Remember not to include spaces.
+
 Examples
 timeToFinish(
   "And so brings my conclusion to its conclusion.",
