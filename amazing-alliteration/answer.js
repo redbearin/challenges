@@ -15,6 +15,6 @@ const alliterationCorrect = sent => {
   return true;
 };
 
-const sent = "She swam to the shore."; 
+const sent = "Maybel manages money well."; 
 
 document.getElementById('ans').textContent = alliterationCorrect(sent);
