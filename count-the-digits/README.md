@@ -11,8 +11,6 @@ digitsCount(0) ➞ 1
 
 digitsCount(12345) ➞ 5
 
-digitsCount(1289396387328L) ➞ 13
-
 Notes
 All inputs are integers but some are in exponential form, deal with it accordingly.
 A recursive version of this challenge can be found via this link.
