@@ -6,10 +6,11 @@ const howMuchMega = num => {
     return "not a mega milestone";
   // a milestone
   let str = '';
-  // add Mega to string for 100 and each order 
-  // of magnitude
+  // add Mega to string for 100 and 
+  // each order of magnitude
   while (num >=100) {
-    str += "MAGA "
+    str += "MAGA ";
+    // reduce the number by an order of magnitude
     num /= 10;
   }
   return str + "milestone";

@@ -5,6 +5,6 @@ function reverse(str) {
     return reverse(str.substr(1)) + str[0];
 };
 
-const str = "hello"
+const str = "";
 
 document.getElementById('ans').textContent = reverse(str);

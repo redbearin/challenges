@@ -1,6 +1,6 @@
 Given an integer, return a new integer according to the rules below:
 
-Split the number into groups of two digit numbers. If the number has an odd number of digits, return "invalid".
+Split the number into groups of two digit numbers. If the number has an odd number of digits, return c.
 For each group of two digit numbers, concatenate the last digit to a new string the same number of times as the value of the first digit.
 Return the result as an integer.
 lookAndSay(3132) ➞ 111222
