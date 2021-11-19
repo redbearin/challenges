@@ -1,20 +1,27 @@
 const longestAbecedarian = words => {
-  let flag = false;
-  let final = '';
+  // initialize flag for letters of word all increasing
+  let ltrsAllIncreasing = true;
+  let longestAbec = '';
+  // go word by word through array
   for (let i = 0; i < words.length; i++) {
+    // go letter by letter through word
     for (let j = 1; j < words[i].length; j++) {
+      // letters are not increasing
       if (words[i].charCodeAt(j) < words[i].charCodeAt(j - 1)) {
-        flag = true;
+        ltrsAllIncreasing = false;
         break;
       }
     }
-    if (!flag) 
-      if (words[i].length > final.length)
-        final = words[i];
+    // letters of word are increasing
+    if (ltrsAllIncreasing) 
+      if (words[i].length > longestAbec.length)
+        longestAbec = words[i];
+    // letters of word are not increasing
+    // reset flag
     else
-      flag = false;
+      ltrsAllIncreasing = true;
   }
-  return final;
+  return longestAbec;
 };
 
 const words = ["one", "two", "three"];

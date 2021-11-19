@@ -14,6 +14,6 @@ const digitsCount = num => {
   return count;
 }
 
-let num = 314890e3;
+let num = 0;
 
 document.getElementById('ans').textContent = digitsCount(num);

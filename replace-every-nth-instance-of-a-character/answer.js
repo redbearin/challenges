@@ -23,9 +23,9 @@ const replaceNth = (str, num, char1, char2) => {
   return finalStr;
 }
 
-const str = "Vader said: No, I am your father!";
-const num = 2;
-const char1 = "a";
-const char2 = "o";
+const str = "A glittering gem is not enough.";
+const num = 0;
+const char1 = "0";
+const char2 = "-";
 
 document.getElementById('ans').textContent = replaceNth(str, num, char1, char2);

@@ -14,7 +14,6 @@ const encryption = str => {
   else
     noSpaceStr = str;
   
-
   // number of columns (or length of each row)
   const numCols = Math.ceil(Math.sqrt(noSpaceStr.length));
   // initialize array to hold rows
@@ -61,6 +60,6 @@ const encryption = str => {
   return encrypted.join(' ');
 };
 
-const str = "if man was meant to stay on the ground god would have given us roots";
+const str = "A Fool and His Money Are Soon Parted.";
 
 document.getElementById('ans').textContent = encryption(str);
