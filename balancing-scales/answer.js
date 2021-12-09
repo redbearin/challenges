@@ -13,7 +13,7 @@ scaleTip = arr => {
     return 'left';
   if (leftTtl < rightTtl)
     return 'right';
-  return 'balance';
+  return 'balanced';
 };
 
 const arr = [1, 2, 3, "I", 4, 0, 0];
