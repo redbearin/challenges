@@ -7,7 +7,7 @@ scaleTip([0, 0, "I", 1, 1]) ➞ "right"
 scaleTip([1, 2, 3, "I", 4, 0, 0]) ➞ "left"
 // 6 > 4 so it will tip left
 
-scaleTip(c) ➞ "balanced"
+scaleTip([5, 5, 5, 0, "I", 10, 2, 2, 1]) ➞ "balanced"
 // 15 = 15 so it will stay balanced
 
 Notes
