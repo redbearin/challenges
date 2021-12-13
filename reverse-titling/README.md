@@ -5,7 +5,7 @@ The goal of this challenge, however, is to create a reverseTitle() function, whi
 Examples
 reverseTitle("this is a title") ➞ "tHIS iS a tITLE"
 
-reverseTitle(c) ➞ "bOLD aND bRASH!"
+reverseTitle("BOLD AND BRASH!") ➞ "bOLD aND bRASH!"
 
 reverseTitle("Elephants dance about bravely in Thailand") ➞ "eLEPHANTS dANCE aBOUT bRAVELY iN tHAILAND"
 

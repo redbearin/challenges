@@ -10,7 +10,7 @@ const allAboutStrings = str => {
   if (details[0] % 2)
     details[3] = str[Math.ceil(details[0] / 2) - 1];
   else {
-    details[3] = str[(details[0] / 2) - 1] + str[details[0] / 2] ;
+    details[3] = str[(details[0] / 2) - 1] + str[details[0] / 2];
   }
   // index that holds same char as in index 1
   const backPart = str.slice(2);

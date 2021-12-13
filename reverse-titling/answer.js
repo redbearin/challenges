@@ -17,6 +17,6 @@ const reverseTitle = title => {
   return revTitleArr.join(' ');
 };
 
-const title = "BOLD AND BRASH!";
+const title = "Elephants dance about bravely in Thailand";
 
 document.getElementById('ans').textContent = reverseTitle(title);
