@@ -13,7 +13,7 @@ printGrid = (rows, cols) => {
   return JSON.stringify(grid);
 }
 
-let rows = 4;
-let cols = 1;
+const rows = 4;
+const cols = 1;
 
 document.getElementById('ans').textContent = printGrid(rows, cols);
