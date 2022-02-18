@@ -43,6 +43,6 @@ digitalDivision = num => {
       return "Perfect";
   }
 }
-const num = 12;
+const num = 31;
 
 document.getElementById('ans').textContent = digitalDivision(num);
