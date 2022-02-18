@@ -16,12 +16,11 @@ closestToPage = (chapters, page) => {
 }
 
 const chapters = {
-  "New Beginnings" : 1,
-  "Strange Developments" : 62,
-  "The End?" : 194,
-  "The True Ending" : 460
+  "Chapter 1" : 1,
+  "Chapter 2" : 15,
+  "Chapter 3" : 37
 };
 
-const page = 200;
+const page = 10;
 
 document.getElementById('ans').textContent = closestToPage(chapters, page)
