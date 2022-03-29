@@ -8,8 +8,8 @@ isTriplet = (num1, num2, num3) => {
   return false;
 }
 
-const num1 = 1;
-const num2 = 2;
-const num3 = 3;
+const num1 = 3;
+const num2 = 4;
+const num3 = 5;
 
 document.getElementById('ans').textContent = isTriplet(num1, num2, num3);
