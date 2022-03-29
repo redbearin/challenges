@@ -21,7 +21,7 @@ possiblyPerfect = (key, test) => {
     return false;
 }
 
-const key = ["B", "_"];
-const test = ["C", "A"];
+const key = ["A", "B", "C", "_"];
+const test = ["B", "A", "C", "C"];
 
 document.getElementById('ans').textContent = possiblyPerfect(key, test);
