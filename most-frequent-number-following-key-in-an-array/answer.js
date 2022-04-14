@@ -19,7 +19,7 @@ mostFrequent = (nums, key) => {
   return (arrTargetCts.sort(((a,b) => b[1] - a[1])))[0][0];
 }
 
-const nums = [1,100,200,1,100];
-const key = 1;
+const nums = [2,2,2,2,3];
+const key = 2;
 
 document.getElementById('ans').textContent = mostFrequent(nums, key);
