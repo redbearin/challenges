@@ -16,8 +16,8 @@ digitOccurrences = (min, max, digit) => {
   return digitCount;
 }
 
-const min = 71;
-const max = 77;
-const digit = 2;
+const min = 1;
+const max = 8;
+const digit = 9;
 
 document.getElementById('ans').textContent = digitOccurrences (min, max, digit);

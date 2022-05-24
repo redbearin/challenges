@@ -35,6 +35,6 @@ asteroidCollision = nums => {
   return JSON.stringify(nums);
 }
 
-const nums = [8, -8];
+const nums = [10, 2, -5];
 
 document.getElementById('ans').textContent = asteroidCollision(nums);

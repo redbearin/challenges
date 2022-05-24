@@ -24,5 +24,5 @@ fractionHalf = str => {
     }
   }
 }
-const str = "3/5";
+const str = "3/8";
 document.getElementById('ans').textContent = fractionHalf(str);
