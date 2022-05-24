@@ -11,6 +11,6 @@ superheroes = arr => {
   return JSON.stringify(manEndings.sort());
 }
 
-const arr = ["Wonder-Woman", "Catwoman", "Invisible-Woman"];
+const arr = ["Batman", "Superman", "Spider-man", "Hulk", "Wolverine", "Wonder-Woman"];
 
 document.getElementById('ans').textContent = superheroes(arr);

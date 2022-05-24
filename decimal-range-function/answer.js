@@ -34,8 +34,8 @@ drange = (stop, start = 0, step = 1) => {
   return JSON.stringify(arr);
 }
 
-const start = 1;
-const stop = 7;
-const step = 1.2;
+const start = 1.2;
+const stop = 5.9;
+const step = 0.45;
 
-document.getElementById('ans').textContent = drange(stop, start, step);
+document.getElementById('ans').textContent = drange(stop,start, step);
