@@ -10,9 +10,11 @@ generateHashtag = str => {
       newStr += str[i];
     }
   }
+  if (newStr.length === 1)
+    return false;
   return newStr;
 }
 
-const str = "    Hello     World   ";
+const str = "   ";
 
 document.getElementById('ans').textContent = generateHashtag(str);
