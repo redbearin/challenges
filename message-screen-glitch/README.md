@@ -11,4 +11,5 @@ messageGlitch("P12e1s5 4o14'20 13i3r15w1v5 6i19h i14 20h5 20h9r4 6l15o18 11i20c8
 ➞ "Please don't microwave fish in the third floor kitchen!"
 
 Notes
+Slightly modified
 Each group of numbers will always refer to one letter only (e.g. 14 = "n", not "ad").
