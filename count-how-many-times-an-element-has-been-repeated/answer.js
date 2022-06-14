@@ -7,13 +7,13 @@ countRepetitions = arr => {
       counts[arr[i]] = 1;
   }
   const sorted = Object.entries(counts)
-  .sort(([,a],[,b]) => b-a).reduce((_sortedObj, [k,v]) => ({
+  .sort(([,a],[,b]) => b-a).reduce((_sortedObj, [k, v]) => ({
     ..._sortedObj, 
-    ["" + k]: v
+    [k]: v
   }), {})
   return JSON.stringify(sorted);
 }
 
-const arr = [1, 5, 5, 5, 12, 12, 0, 0, 0, 0, 0, 0];
+const arr = ["cat", "dog", "cat", "cow", "cow", "cow"];
 
 document.getElementById('ans').textContent = countRepetitions(arr);
