@@ -16,5 +16,5 @@ canBuild([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], []) ➞ true
 canBuild([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [3]) ➞ false
 
 Notes
-Single digit only
+Single digit only.
 N/A

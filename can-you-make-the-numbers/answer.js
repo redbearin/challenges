@@ -17,7 +17,7 @@ canBuild = (digits, nums) => {
   }
   return true;
 }
-const digits = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const nums = [];
+const digits = [0, 1, 2, 2, 3, 0, 0, 0, 1, 1];
+const nums = [123, 444, 92];
 
 document.getElementById('ans').textContent = canBuild(digits, nums);
