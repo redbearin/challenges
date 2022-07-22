@@ -18,6 +18,6 @@ getPrimieraScore = deck => {
   return counts.d + counts.h + counts.s + counts.c;
 }
 
-const deck = ["3d", "6d", "6h", "Qh", "7s", "As", "6c", "Jc"];
+const deck = ["2d", "Jd", "Qc", "5s", "As"];
 
 document.getElementById('ans').textContent = getPrimieraScore(deck);
