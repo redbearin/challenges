@@ -1,25 +1,27 @@
 hasIdentical = arr => {
+  // not a square matrix
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length !== arr.length) {
       return false;
     }
   }
   let match;
+  // row
   for (let i = 0; i < arr.length; i++) {
-    match = true;
+    // column by column
     for (let j = 0; j < arr[i].length; j++) {
+      // column elements
+      match = true;
+      // row by row within column
       for (let k = 0; k < arr[i].length; k++) {
-        console.log('arr[i][k]: ', arr[i][k])
-        console.log('arr[k][j]: ', arr[k][j])
         if (arr[i][k] !== arr[k][j]) {
           match = false;
           break;
         } 
       }
-      console.log('*')
-    }
-    if (match) {
-      return true;
+      if (match) {
+        return true;
+      }
     }
   }
   return false;
