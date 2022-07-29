@@ -1,6 +1,5 @@
 awardPrizes = (names) => {
   sortedNamesArr = Object.entries(names).sort((a,b) => b[1] - a[1]);
-  console.log(sortedNamesArr);
   names[sortedNamesArr[0][0]] = "Gold";
   names[sortedNamesArr[1][0]] = "Silver";
   names[sortedNamesArr[2][0]] = "Bronze";
