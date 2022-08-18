@@ -21,6 +21,6 @@ retrieve = str => {
 }
 
 
-const sentence = "The poor ostrich was ostracized.";
+const sentence = "";
 
 document.getElementById('ans').textContent = retrieve(sentence);
