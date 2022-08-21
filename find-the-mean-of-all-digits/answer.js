@@ -9,6 +9,6 @@ mean = num => {
   return sum / numStr.length;
 }
 
-const num = 777;
+const num = 12345;
 
 document.getElementById('ans').textContent = mean(num);
