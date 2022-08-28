@@ -16,7 +16,7 @@ BMI = (weight, height) => {
     return bmiDetails + ' Obese';
 }
 
-const weight = "154 pounds";
-const height = "2 meters";
+const weight = "205 pounds";
+const height = "73 inches";
 
 document.getElementById('ans').textContent = BMI(weight, height);
