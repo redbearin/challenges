@@ -23,6 +23,6 @@ digitSort = nums => {
   return JSON.stringify(lenGrped.flat().map(Number));
 }
 
-const nums = [77, 23, 5, 7, 101];
+const nums = [53219, 3772, 564, 32, 1];
 
 document.getElementById('ans').textContent = digitSort(nums);

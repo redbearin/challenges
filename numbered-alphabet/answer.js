@@ -1,7 +1,7 @@
 alphNum = str => {
-  let nums = [];
+  const nums = [];
   for (let i = 0; i < str.length; i++) {
-    nums.push(str.charCodeAt(i) - 65);
+    nums.push(str.charCodeAt(i) - 65)
   }
   return nums.join(' ');
 }

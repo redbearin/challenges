@@ -1,3 +1,4 @@
+
 isTriplet = (n1, n2, n3) => {
   sortNums = [n1, n2, n3].sort((a, b) => a - b);
   if (Math.pow(sortNums[0], 2) + 
@@ -12,3 +13,5 @@ const n2 = 5;
 const n3 = 12;
 
 document.getElementById('ans').textContent = isTriplet(n1, n2, n3);
+
+
