@@ -1,13 +1,16 @@
-const sumFoundIndices = (arr, num) => {
-  let sumIndices = 0;
+
+sumFoundIndexes = (arr, n) => {
+  let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === num)
-      sumIndices += i;
+    if (arr[i] === n) {
+      sum += i;
+    }
   }
-  return sumIndices;
-};
+  return sum;
+}
 
 const arr = [5, 10, 15, 20];
-const num = 2;
+const n = 2;
 
-document.getElementById('ans').textContent = sumFoundIndices(arr, num);
+document.getElementById('ans').textContent = sumFoundIndexes(arr, n);
+
