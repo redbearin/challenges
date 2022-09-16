@@ -1,19 +1,20 @@
 bugger = num => {
-  // convert num to string
-  let strNum = num.toString();
-  let product = 1;
+  let numStr = num.toString();
+  let product;
   let count = 0;
-  // num is more than one digit
-  while (strNum.length > 1) {
-    count++;
-    // find the new product of the digits
-    for (let i = 0; i < strNum.length; i++) {
-      product *= +strNum[i];
-    }
-    // reinitialize
-    strNum = product.toString();
+  while (numStr.length > 1) {
     product = 1;
-  }
+    count++;
+    for (let i = 0; i < numStr.length; i++) {
+      product *= +numStr[i];
+    }
+    if (product < 10) {
+      return count;
+    }
+    else {
+      numStr = product.toString();
+    }
+  } 
   return count;
 }
 
