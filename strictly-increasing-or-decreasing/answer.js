@@ -1,32 +1,30 @@
-check = list => {
-  let decreasing = false;
-  // first two numbers are the same
-  if (list[0] === list[1])
-    return 'neither';
-  if (list[0] > list[1])
-    decreasing = true;
-  // decreasing pattern
-  if (decreasing) {
-    for (let i = 2; i < list.length; i++) {
-      // changes to increasing or the same
-      if (list[i] >= list[i - 1])
-        return neither;
-    }
+check = arr => {
+  let inc = false;
+  let dec = false;
+  if (arr[1] > arr[0]) {
+    inc = true;
   }
-  // increasing pattern
+  else if (arr[1] < arr[0]) {
+    dec = true;
+  }
   else {
-    for (let i = 2; i < list.length; i++) {
-      // changes to decreasing or the same
-      if (list[i] <= list[i - 1])
-        return 'neither';
+    console.log('inside else')
+    return 'neither';
+  }
+  console.log(inc)
+  console.log(dec)
+  for (let i = 2; i < arr.length; i++) {
+    if (arr[i] > arr[i-1] && !inc || 
+        arr[i] < arr[i-1] && !dec) { 
+      return 'neither';
     }
   }
-  // all decreasing
-  if (decreasing)
+  if (inc)
+    return 'increasing';
+  else 
     return 'decreasing';
-  // all increasing
-  return 'increasing';
 }
-const list = [1, 2, 3];
+const arr = [1, 2, 3];
 
 document.getElementById('ans').textContent = check(list);
+
