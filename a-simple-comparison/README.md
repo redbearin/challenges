@@ -17,3 +17,7 @@ simpleComp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921,
 simpleComp([4, 4], [1, 31]) ➞ false
 
 simpleComp([2, 2, 3], [4, 4, 9]) ➞ true
+
+Notes
+Numbers can be in any order.
+
