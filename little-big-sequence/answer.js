@@ -7,3 +7,4 @@ littleBig = num => {
 const num = 28;
 
 document.getElementById('ans').textContent = littleBig(num); 
+
