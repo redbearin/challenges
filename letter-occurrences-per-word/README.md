@@ -23,6 +23,7 @@ findOccurrences("An APPLE a day keeps an Archeologist AWAY...", "A") ➞ {
   "archeologist" : 1,
   "away..." : 2
 }
+
 Notes
 The function shouldn't be case sensitive.
 Words in the dictionary should be in lowercase.
