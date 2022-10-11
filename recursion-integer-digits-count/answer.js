@@ -1,18 +1,10 @@
-count = (num, digits) => {
-  // convert num to string
-  strNum = num.toString();
-  // add one to the digits count
-  digits++;
-  // remove the last digit (the one counted)
-  strNum = strNum.slice(0, -1);
-  // have not counted all digits
-  if (strNum.length && strNum !== '-')
-    return count (+strNum, digits)
-  // counted all digits
-  return digits;
+count = n => {
+  if (n >= 10 || n <= -10) 
+    return count(n / 10) + 1;
+  return 1;
 }
 
-const num = 654321;
-const digits = 0;
+const n  = -314890;
 
-document.getElementById('ans').textContent = count(num, digits);
+document.getElementById('ans').textContent = count(n);
+
