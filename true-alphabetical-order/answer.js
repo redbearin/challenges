@@ -1,35 +1,17 @@
 trueAlphabetic = str => {
-  // create an array of letters/spaces
-  let strArr = str.split('');
-  // sort the array
-  strArr.sort();
-  // remove the spaces
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i] === ' ') 
-      continue;
-    else {
-      strArr = strArr.slice(i);
-      break;
-    }
-  }
-  // create a string from sorted array
-  let sortedStr = strArr.join('');
-  let alphaOrder = '';
-  let ltr;
-  // go element by element through original str
+  let newStr  = '';
+  let count = 0;
+  const noSpcSorted = str.replaceAll(" ", "").split('').sort();
   for (let i = 0; i < str.length; i++) {
-    // if a space add a space to alpha order string
-    if (str[i] === ' ') 
-      alphaOrder += ' ';
-    // not a space add a letter from the 
-    // sorted string
+    if (str[i] === ' ') {
+      newStr += " ";
+    }
     else {
-      ltr = sortedStr.slice(0,1);
-      sortedStr = sortedStr.slice(1);
-      alphaOrder += ltr;
+      newStr += noSpcSorted[count];
+      count++;
     }
   }
-  return alphaOrder;
+  return newStr;
 }
 
 const str = "have a nice day";

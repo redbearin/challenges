@@ -1,4 +1,4 @@
-eate a function which takes every letter in every word, and puts it in alphabetical order. Note how the original word lengths must stay the same.
+Create a function which takes every letter in every word, and puts it in alphabetical order. Note how the original word lengths must stay the same
 
 Examples
 trueAlphabetic("hello world") ➞ "dehll loorw"
