@@ -22,7 +22,6 @@ checkFlush = (table, hand) => {
         counts[2]++;
       if (hand[i][hand[i].length - 1]  === 'H')
         counts[3]++;
-      console.log(counts)
     }
     if (counts.includes(5) || counts.includes(6)) {
       return true;
