@@ -15,4 +15,7 @@ isShuffledWell([1, 3, 5, 7, 9, 2, 4, 6, 8, 10]) ➞ true
 
 Notes
 Only steps of 1 in either direction count as consecutive (i.e. a sequence of odd and even numbers would count as being properly shuffled (see example #4)).
+
 You will get numbers from 1-10.
+
+This is a repeat to upload to edabit.
