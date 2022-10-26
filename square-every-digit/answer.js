@@ -1,13 +1,12 @@
 squareDigits = num => {
-  const numStr = num.toString();
-  const squares = [];
-  // take each number and square it
-  for (let i = 0; i < numStr.length; i++) {
-    squares.push(Math.pow(+numStr[i], 2));
+  const strNum = num.toString();
+  let final = "";
+  for (let i = 0; i < strNum.length; i++) {
+    final += "" + Math.pow(strNum[i], 2);
   }
-  return squares.join('');
+  return +final;
 }
 
-const num = 3212;
+const num = 2483;
 
 document.getElementById('ans').textContent = squareDigits(num);
