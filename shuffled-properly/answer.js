@@ -9,4 +9,5 @@ isShuffledWell = arr => {
 
 const arr = [1, 5, 3, 8, 10, 2, 7, 6, 4, 9];
 
+
 document.getElementById('ans').textContent = isShuffledWell(arr);

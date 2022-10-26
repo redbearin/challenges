@@ -22,6 +22,6 @@ simpleComp = (arr1, arr2) => {
 }
 
 const arr1 = [4, 4];
-const arr2 = [1,31];
+const arr2 = [1, 31];
 
 document.getElementById('ans').textContent = simpleComp(arr1, arr2);
