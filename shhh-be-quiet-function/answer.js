@@ -1,4 +1,7 @@
 shhh = str => {
+	if (str === '') {
+		return '""' +  ", whispered Edabit."
+	}
   const strArr = str.split(' ');
   let final = '"';
   for (let i = 0; i < strArr.length; i++) {
@@ -15,6 +18,6 @@ shhh = str => {
   return final + '"' +  ", whispered Edabit.";
 }
 
-const str = "HI THERE!";
+const str = "";
 
 document.getElementById('ans').textContent = shhh(str);
