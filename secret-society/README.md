@@ -9,5 +9,7 @@ societyName(["Harry", "Newt", "Luna", "Cho"]) ➞ "CHLN"
 
 societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]) ➞ "CJMPRR"
 
+Modified slightly
+
 Notes
 The secret society's name should be entirely uppercased.
