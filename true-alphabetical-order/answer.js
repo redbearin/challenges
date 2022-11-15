@@ -16,6 +16,4 @@ trueAlphabetic = str => {
 
 const str = "have a nice day";
 
-
-
 document.getElementById('ans').textContent = trueAlphabetic(str);

@@ -12,3 +12,4 @@ greaterThanSum = arr => {
 const arr = [1, 2, 4, 6, 13];
 
 document.getElementById('ans').textContent = greaterThanSum(arr);
+
