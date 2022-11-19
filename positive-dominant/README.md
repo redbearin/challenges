@@ -10,5 +10,7 @@ isPositiveDominant([5, 99, 832, -3, -4]) ➞ true
 isPositiveDominant([5, 0]) ➞ true
 
 isPositiveDominant([0, -4, -1]) ➞ false
+
 Notes
 0 counts as neither a positive nor a negative value.
+

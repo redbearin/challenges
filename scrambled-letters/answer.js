@@ -25,3 +25,4 @@ const words = ["cee","dee","eer","erd","ere","red","ree","cede","cere","cree","d
 const mask = "*re**";
 
 document.getElementById('ans').textContent = scrambled(words, mask);
+
