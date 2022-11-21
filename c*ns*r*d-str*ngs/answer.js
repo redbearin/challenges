@@ -1,16 +1,19 @@
-const uncensor = (str, vowels) => {
+uncensor = (str, vowels) => {
+  let compStr = '';
   let count = 0;
-  let strArr = str.split('');
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i] === '*') {
-      strArr[i] = vowels[count];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '*') {
+      compStr += vowels[count];
       count++;
     }
+    else {
+      compStr += str[i];
+    }
   }
-  return strArr.join('');
+  return compStr;
 }
 
-const str = "*PP*RC*S*";
-const vowels = "UEAE";
+const str = "Wh*r* d*d my v*w*ls g*?";
+const vowels = "eeioeo";
 
 document.getElementById('ans').textContent = uncensor(str, vowels);
