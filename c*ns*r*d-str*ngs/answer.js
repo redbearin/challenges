@@ -1,4 +1,4 @@
-uncensor = str => {
+uncensor = (str, vowels) => {
   let compStr = '';
   let count = 0;
   for (let i = 0; i < str.length; i++) {
@@ -16,4 +16,4 @@ uncensor = str => {
 const str = "Wh*r* d*d my v*w*ls g*?";
 const vowels = "eeioeo";
 
-document.getElementById('ans').textContent = uncensor(str);
+document.getElementById('ans').textContent = uncensor(str, vowels);
