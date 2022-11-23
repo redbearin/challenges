@@ -1,3 +1,4 @@
+
 Create a function similar to Processing's "map" function (check the Resources tab), in which a value and its range is taken and remapped to a new range.
 
 The function takes 5 numbers:
