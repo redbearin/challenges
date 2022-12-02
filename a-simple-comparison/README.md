@@ -20,3 +20,4 @@ simpleComp([2, 2, 3], [4, 4, 9]) ➞ true
 
 Notes
 Numbers can be in any order.
+

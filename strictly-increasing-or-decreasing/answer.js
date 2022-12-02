@@ -2,9 +2,7 @@ check = arr => {
   let inc = false;
   let dec = false;
   if (arr[1] > arr[0]) {
-    console.log('inside')
     inc = true;
-    console.log('inc')
   }
   else if (arr[1] < arr[0]) {
     dec = true;
@@ -28,4 +26,5 @@ check = arr => {
 }
 const arr = [1, 2, 3];
 
-document.getElementById('ans').textContent = check(arr);
+document.getElementById('ans').textContent = check(list);
+
