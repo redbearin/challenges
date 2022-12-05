@@ -19,3 +19,4 @@ const str = "Hello World";
 const char = "o";
 
 document.getElementById('ans').textContent = findOccurrences(str, char);
+
