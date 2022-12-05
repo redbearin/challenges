@@ -12,3 +12,5 @@ Don't count single character words (such as "I" and "A" in example #3).
 The function should not be case sensitive, meaning a capital "P" should match with a lowercase one.
 Mind the punctuation!
 Bonus points indeed for using regex!
+
+Using regex!
