@@ -1,7 +1,6 @@
 Given a sentence, return the number of words which have the same first and last letter.
 
 Examples
-
 countSameEnds("Pop! goes the balloon") ➞ 1
 
 countSameEnds("And the crowd goes wild!") ➞ 0

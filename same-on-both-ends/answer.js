@@ -1,14 +1,16 @@
-const countSameEnds = str => {
+countSameEnds = str => {
+  str = str.replace(/[^A-Za-z]/, "");
   const strArr = str.split(' ');
-  let count = 0;
-  let n;
+  count = 0;
   for (let i = 0; i < strArr.length; i++) {
-    n = 1;
-    while (strArr[i].length - n < )
-
+    if (strArr[i][0].toLowerCase() === 
+        strArr[i][strArr[i].length - 1].toLowerCase()) {
+      count++;
+    }
   }
-};
+  return count;
+}
 
-const str = "Pop! goes the balloon";
+const str = "No I am not in a gang.";
 
 document.getElementById('ans').textContent = countSameEnds(str);
