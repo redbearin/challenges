@@ -18,3 +18,4 @@ const seats = [
 ];
 
 document.getElementById('ans').textContent = canSeeStage(seats);
+

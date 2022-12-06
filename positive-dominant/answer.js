@@ -19,3 +19,4 @@ isPositiveDominant = a => {
 const a = [1, 1, 1, 1, -3, -4];
 
 document.getElementById('ans').textContent = isPositiveDominant(a);
+

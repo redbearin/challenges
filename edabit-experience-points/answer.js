@@ -16,6 +16,6 @@ const obj = {
   "Very Hard" : 34
 };
 
-
 document.getElementById('ans').textContent = getXP(obj);
+
 

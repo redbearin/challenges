@@ -28,4 +28,3 @@ const str = "Computer";
 
 document.getElementById('ans').textContent = allAboutStrings(str);
 
-1111
