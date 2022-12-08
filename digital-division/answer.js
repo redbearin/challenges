@@ -39,7 +39,6 @@ digitalDivision = num => {
   }
 }
 
-
 const num = 100;
 
 document.getElementById('ans').textContent = digitalDivision(num);
