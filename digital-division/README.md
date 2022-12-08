@@ -33,3 +33,4 @@ Remember to exclude any 0-digit when testing if the given n is divisible by each
 A number containing at least a 0-digit can't be exactly divided by the product of its digits (division by 0).
 Trivially, every single-digit positive number greater than 0 is Perfect
 Any given number will be a positive integer greater than 0.
+
