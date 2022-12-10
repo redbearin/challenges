@@ -1,6 +1,5 @@
 stringCode = str => {
   const cleanedStr = str.replace(/[^a-zA-Z\s]/g,"");
-  console.log(cleanedStr )
   const strArr = cleanedStr.split(' ');
   const vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
   let vowelCt;
