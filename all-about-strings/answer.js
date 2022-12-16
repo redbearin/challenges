@@ -23,3 +23,4 @@ allAboutStrings = str => {
 const str = "Computer";
 
 document.getElementById('ans').textContent = allAboutStrings(str);
+
