@@ -10,5 +10,6 @@ missingLetter("mnopqs") ➞ "r"
 missingLetter("tuvxyz") ➞ "w"
 
 missingLetter("ghijklmno") ➞ "No Missing Letter"
+
 Notes
 The given string will never have more than one missing letter.
