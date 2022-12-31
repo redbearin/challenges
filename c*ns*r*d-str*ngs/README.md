@@ -3,7 +3,6 @@ Someone has attempted to censor my strings by replacing every vowel with a *, l*
 Given a censored string and a string of the censored vowels, return the original uncensored string.
 
 Example
-
 uncensor("Wh*r* d*d my v*w*ls g*?", "eeioeo") ➞ "Where did my vowels go?"
 
 uncensor("abcd", "") ➞ "abcd"

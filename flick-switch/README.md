@@ -1,4 +1,3 @@
-Flick Switch
 Create a function that always returns true for every item in a given array. However, if an element is the word "flick", switch to always returning the opposite boolean value.
 
 Examples

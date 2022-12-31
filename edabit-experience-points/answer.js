@@ -1,17 +1,21 @@
-const getXP = probs => {
-  return probs['Very Easy'] * 5 +
-         probs.Easy * 10 +
-         probs.Medium * 20 +
-         probs.Hard * 40 +
-         probs['Very Hard'] * 80 + 'XP';
+getXP = obj => {
+  const pts = {'Very Easy':	5, Easy: 10, Medium: 20, Hard: 40, 'Very Hard':	80};
+  let sum = 0;
+  for (key in obj) {
+    sum += pts[key] * obj[key]
+  }
+  return sum + 'XP';
+}
+
+
+const obj = {
+  "Very Easy" : 254,
+  "Easy" : 32,
+  "Medium" : 65,
+  "Hard" : 51,
+  "Very Hard" : 34
 };
 
-const probs = {
-  "Very Easy" : 11,
-  "Easy" : 0,
-  "Medium" : 2,
-  "Hard" : 0,
-  "Very Hard" : 27
-};
+document.getElementById('ans').textContent = getXP(obj);
 
-document.getElementById('ans').textContent = getXP(probs);
+

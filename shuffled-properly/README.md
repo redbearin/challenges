@@ -21,3 +21,5 @@ Only steps of 1 in either direction count as consecutive (i.e. a sequence of odd
 
 You will get numbers from 1-10.
 
+
+

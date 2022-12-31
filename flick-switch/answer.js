@@ -1,27 +1,14 @@
-flickSwitch = words => {
-  let flickFlag = false;
-  let values = [];
-  // word by word thru words array
-  for (let i = 0; i < words.length; i++) {
-    // word is "flick"
-    if (words[i] === 'flick') {
-      // if already flagged turn flag off
-      if (flickFlag)
-        flickFlag = false;
-      // if flag on, turn flag off
-      else
-        flickFlag = true;
+flickSwitch = arr => {
+  let on = true;
+  let final = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'flick') {
+      on ? on = false : on = true;
     }
-    // flag on 
-    if (flickFlag) 
-      values.push(false);
-    // flag off
-    else 
-      values.push(true);
+    on ? final.push(true) : final.push(false);
   }
-  return JSON.stringify(values);
+  return JSON.stringify(final);
 }
+const arr = ["flick", 11037, 3.14, 53];
 
-const words = [false, false, "flick", "sheep", "flick"];
-
-document.getElementById('ans').textContent = flickSwitch(words);
+document.getElementById('ans').textContent = flickSwitch(arr);
