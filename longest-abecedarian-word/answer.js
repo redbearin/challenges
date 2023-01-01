@@ -10,3 +10,4 @@ longestAbecedarian = arr => {
 const arr = ["forty", "choppy", "ghost"];
 
 document.getElementById('ans').textContent = longestAbecedarian(arr);
+
