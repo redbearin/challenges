@@ -1,5 +1,5 @@
 realType = value => {
-  let type = typeof(value);
+  const type = typeof(value);
   if (type === 'object') {
     const objStr = Object.prototype.toString.call(value);
     const arr = objStr.split(' ');
