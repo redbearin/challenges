@@ -1,27 +1,27 @@
-possiblyPerfect = (key, test) => {
-  let incorrect = 0;
-  let correct = 0;
-  let noRqdAns = 0;
-  // compare key answer with test answer
-  for (let i = 0; i < key.length; i++) {
-    if (key[i] === '_')
-      noRqdAns++;
-    else if (key[i] === test[i])
-      correct++;
-    else
-      incorrect++;
+possiblyPerfect = (arr1, arr2) => {
+  let wrongCount = 0;
+  let noCount = 0;
+  let rightCount = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === '_') {
+      noCount++;
+    }
+    else if (arr1[i] !== arr2[i]) {
+      wrongCount++;
+    }
+    else {
+      rightCount++;
+    }
   }
-  // all required answers either correct
-  // or incorrect
-  if (correct + noRqdAns === key.length || 
-      incorrect + noRqdAns === key.length)
+  if (rightCount + noCount === arr1.length || 
+      wrongCount + noCount === arr1.length) {
     return true;
-  // mix of correct and incorrect
-  else 
-    return false;
+  }
+  return false;
 }
 
-const key = ["A", "B", "C", "_"];
-const test = ["B", "A", "C", "C"];
+const arr1 = ['B', '_', 'B'];
+const arr2 = ['B', 'D', 'C'];
 
-document.getElementById('ans').textContent = possiblyPerfect(key, test);
+document.getElementById('ans').textContent = possiblyPerfect(arr1, arr2);
+
