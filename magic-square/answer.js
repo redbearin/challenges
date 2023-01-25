@@ -1,43 +1,40 @@
 isMagicSquare = arr => {
-  let diagSum = 0;
-  let sum;
-
-  // sum of left to right diag
+  let base, sumRow, sumCol;
+  let sumDia = 0
+  let sumDiaRev = 0;
+  // rows and columns
   for (let i = 0; i < arr.length; i++) {
-    diagSum += arr[i][i];
-  }
-
-  // sum left to right diag and compare to right to left diag
-  sum = 0;
-  for (let i = arr.length - 1; i >= 0; i--) {
-    sum += arr[i][i];
-  }
-  if (sum !== diagSum)
-    return false;
-  
-  // sum each row and compare to right to left diag
-  for (let i = 0; i < arr.length; i++) {
-    sum = 0;
+    sumRow = 0;
+    sumCol = 0;
     for (let j = 0; j < arr[i].length; j++) {
-      sum += arr[i][j];
+      sumRow += arr[i][j];
+      sumCol += arr[j][i];
     }
-    if (sum != diagSum)
-      return false;
-  }
-
-  // sum each col and compare to right to left diag
-  for (let j = 0; j < arr.length; j++) {
-    sum = 0;
-    for (let i = 0; i < arr[j].length; i++) {
-      sum += arr[i][j];
+    if (i === 0) {
+      base = sumRow;
+      if (sumCol !== base) {
+        return false;
+      }
     }
-    if (sum != diagSum)
-      return false;
+    else {
+      if (sumRow !== base ||
+          sumCol !== base) {
+        return false;
+      }
+    }
   }
-  
-  // all cols, rows, and daigonals same
+  // diagonals
+  for (let i = 0; i < arr.length; i++) {
+    sumDia += arr[i][i];
+    sumDiaRev += arr[arr.length - (i+1)][arr.length - (i+1)];
+  }
+  if (sumDia !== base || 
+      sumDiaRev !== base) {
+    return false;
+  }
   return true;
 }
+
 const arr = [
   [1, 14, 14, 4],
   [11, 7, 6, 9],
