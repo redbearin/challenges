@@ -1,14 +1,16 @@
-getTotalPrice = groceries => {
+getTotalPrice = arr => {
   let total = 0;
-  for (let i = 0; i < groceries.length; i++) {
-    total += groceries[i].quantity * groceries[i].price;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i].quantity * arr[i].price;
   }
-  return total.toFixed(2);
+  return Math.round(total * 100)/100;
 }
 
-const groceries = [
-  { product: "Chocolate", quantity: 1, price: 0.10 },
-  { product: "Lollipop", quantity: 1, price: 0.20 }
+const arr = [
+  { product: "Milk", quantity: 1, price: 1.50 },
+  { product: "Eggs", quantity: 12, price: 0.10 },
+  { product: "Bread", quantity: 2, price: 1.60 },
+  { product: "Cheese", quantity: 1, price: 4.50 }
 ];
 
-document.getElementById('ans').textContent = getTotalPrice(groceries);
+document.getElementById('ans').textContent =  getTotalPrice(arr);
