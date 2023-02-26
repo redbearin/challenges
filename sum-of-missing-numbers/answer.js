@@ -1,13 +1,14 @@
-sumMissingNumbers = arr => {
-  arr.sort((a,b) => a-b);
+sumMissingNumbers = nums => {
   let sum = 0;
-  for (let i = arr[0] + 1; i <= arr[arr.length - 1] - 1; i++) {
-    if (arr.includes(i) === false) {
+  for (let i = Math.min(...nums) + 1; i <= Math.max(...nums); i++) {
+    if (nums.includes(i) === false) {
       sum += i;
     }
   }
   return sum;
 }
-const arr = [10, 20, 30, 40, 50, 60];
 
-document.getElementById('ans').textContent = sumMissingNumbers(arr);
+const nums = [4, 3, 8, 1, 2];
+
+document.getElementById('ans').textContent = sumMissingNumbers(nums);
+
