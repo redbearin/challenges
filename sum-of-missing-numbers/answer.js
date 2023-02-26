@@ -11,3 +11,4 @@ sumMissingNumbers = nums => {
 const nums = [4, 3, 8, 1, 2];
 
 document.getElementById('ans').textContent = sumMissingNumbers(nums);
+

@@ -3,7 +3,6 @@ getTotalPrice = arr => {
   for (let i = 0; i < arr.length; i++) {
     total += arr[i].quantity * arr[i].price;
   }
-  console.log(Math.round(total * 100))
   return Math.round(total * 100)/100;
 }
 
