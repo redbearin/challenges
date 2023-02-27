@@ -24,3 +24,4 @@ const arr1 = ['B', '_', 'B'];
 const arr2 = ['B', 'D', 'C'];
 
 document.getElementById('ans').textContent = possiblyPerfect(arr1, arr2);
+

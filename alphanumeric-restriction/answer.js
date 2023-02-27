@@ -16,10 +16,8 @@ alphanumericRestriction = str => {
     if (ltrCt && numCt) {
       return false;
     }
-  }
-  return true;
-}
 
 const str = "H3LL0"
 
 document.getElementById('ans').textContent = alphanumericRestriction(str);
+
