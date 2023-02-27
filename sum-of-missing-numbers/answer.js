@@ -1,7 +1,7 @@
 sumMissingNumbers = nums => {
   let sum = 0;
   for (let i = Math.min(...nums) + 1; i <= Math.max(...nums); i++) {
-    if (nums.includes(i) === false) {
+    if (!nums.includes(i)) {
       sum += i;
     }
   }
