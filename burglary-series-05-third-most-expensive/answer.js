@@ -1,15 +1,12 @@
-const thirdMostExpensive = stolenItems => {
-  //break object into an array of subarrays
-  // and sort by the price, highest to lowest
-  const sortedArray = Object.entries(stolenItems).
-                      sort((a,b) => b[1] - a[1])
-  // at least three entries
-  if (sortedArray.length < 3)
-    return false;
-  //  >= three entries
-  return sortedArray[2][0];
-};
+thirdMostExpensive = items => {
+  const itemsArr = Object.entries(items);
+  if (itemsArr.length > 2) {
+    return itemsArr.sort((a,b) => b[1] - a[1])[2][0];
+  }
+  return false;
+}
 
-const stolenItems = { piano: 1000, tv: 500, ball: 10 , mirror: 200, };
+const items = {piano: 100, stereo: 200, tv: 10, timmy: 500};
 
-document.getElementById('ans').textContent = thirdMostExpensive(stolenItems);
+document.getElementById('ans').textContent = thirdMostExpensive(items);
+
