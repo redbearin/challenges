@@ -10,4 +10,5 @@ convert("33") ➞ "Error"
 Notes
 Round to the nearest integer.
 If the input is incorrect, return "Error".
-For the formulae to convert back and forth, check the Resources tab.
+
+
