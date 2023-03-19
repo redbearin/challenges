@@ -10,3 +10,4 @@ pop = arr => {
 const arr = [0];
 
 document.getElementById('ans').textContent = pop(arr);
+
