@@ -6,12 +6,12 @@ whereIsWaldo = arr => {
     base = arr[0][0];
   }
   else {
-    return [1,1];
+    return JSON.stringify([1,1]);
   }
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       if (arr[i][j] !== base) {
-        return [i + 1,j + 1];
+        return JSON.stringify([i + 1,j + 1]);
       }
     }
   }
