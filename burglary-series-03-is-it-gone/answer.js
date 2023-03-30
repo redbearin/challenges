@@ -8,6 +8,7 @@ const obj = {
   tv: 30,
   timmy: 20,
   stereo: 50,
-}
+};
+const name =  'timmy';
 
 document.getElementById('ans').textContent = findIt(obj, name);
