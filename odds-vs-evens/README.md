@@ -12,5 +12,6 @@ oddsVsEvens(81961) ➞ "even"
 oddsVsEvens(54870) ➞ "equal"
 // odd = 12 (5+7)
 // even = 12 (4+8+0)
+
 Notes
 N/A
