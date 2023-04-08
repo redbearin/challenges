@@ -19,3 +19,4 @@ oddSort = arr => {
 const arr = [7, 5, 2, 3, 1];
 
 document.getElementById('ans').textContent = oddSort(arr);
+
