@@ -7,11 +7,12 @@ findMissing = arr => {
     return false;
   }
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i].length - 1 !== arr[i-1].length)
+    if (arr[i].length !== arr[i-1].length + 1) {
       return arr[i-1].length + 1;
+    }
   }
 }
 
-const arr = [[5, 6, 7, 8, 9], [1, 2], [4, 5, 1, 1], [1]];
+const arr = null;
 
 document.getElementById('ans').textContent = findMissing(arr);
