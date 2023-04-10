@@ -1,12 +1,14 @@
 countNumber = arr => {
-  const newArr = arr.flat(Infinity);
-  let numCount = 0;
-  for (let i = 0; i < newArr.length; i++) {
-    if (typeof newArr[i] === "number")
-      numCount++;
+  const flatArr = arr.flat(Infinity);
+  let count = 0;
+  for (let i = 0; i < flatArr.length; i++) {
+    if (typeof(flatArr[i]) === 'number') {
+      count++;
+    }
   }
-  return numCount;
+  return count;
 }
-const arr = [["balkot"]];
+
+const arr = [["", 17.2, 5, "edabit"]];
 
 document.getElementById('ans').textContent = countNumber(arr);
