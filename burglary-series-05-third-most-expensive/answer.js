@@ -9,3 +9,4 @@ thirdMostExpensive = items => {
 const items = {piano: 100, stereo: 200, tv: 10, timmy: 500};
 
 document.getElementById('ans').textContent = thirdMostExpensive(items);
+
