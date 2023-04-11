@@ -7,6 +7,7 @@ To illustrate:
 battleOutcome(578921445) ➞ 7925
 // [57]: 7 wins; [89] 9 wins; [21] 2 wins;
 // [44] neither wins; 5 (automatically) wins
+
 Examples
 battleOutcome(32531) ➞ 351
 // 3 deffeats 2, 5 defeats 3, 1 is a single.
