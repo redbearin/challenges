@@ -1,26 +1,22 @@
-uniqueAbbrev = (abbrev, words) => {
-  let count, regex;
-  // go abbreviation by abbreviation
-  for (let i = 0; i < abbrev.length; i++) {
+uniqueAbbrev = (abbrevs, words) => {
+  let len;
+  let count;
+  for (let i = 0; i < abbrevs.length; i++) {
+    len = abbrevs[i].length;
     count = 0;
-    // build regular expression to match 
-    // abbrev with chars at beginning of word
-    regex = new RegExp ('\\b' + abbrev[i]);
-    // test to see if the chars at the
-    // beginning of word match
     for (let j = 0; j < words.length; j++) {
-      if (regex.test(words[j])) 
+      if (words[j].slice(0, len) === abbrevs[i]) {
         count++;
-      // more than one match, not unique
-      if (count > 1) 
-        return false;
+        if (count > 1) {
+          return false;
+        }
+      }
     }
   }
-  // only match for each abbrev.
   return true;
 }
 
-const abbrev = ["mo", "ma", "me"]; 
-const words = ["moment", "many", "mean"];
+const abbrevs = ["ho", "h", "ha"];
+const words = ["house", "hope", "happy"];
 
-document.getElementById('ans').textContent = uniqueAbbrev(abbrev, words);
+document.getElementById('ans').textContent = uniqueAbbrev(abbrevs, words);
