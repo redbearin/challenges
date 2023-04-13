@@ -5,3 +5,4 @@ oddishOrEvenish = num=> {
 const num = 694;
 
 document.getElementById('ans').textContent = oddishOrEvenish(num);
+

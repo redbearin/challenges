@@ -30,6 +30,6 @@ const maxOccur = str => {
   return JSON.stringify(maxLtrs);
 }
 
-const str = "system admin";
+const str = "the quick brown fox jumps over the lazy dog";
 
 document.getElementById('ans').textContent = maxOccur(str);

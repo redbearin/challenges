@@ -7,6 +7,5 @@ const jewelry = {
   "Diamond Earrings": 980,
   "Gold Watch": 250,
   "Pearl Necklace": 4650
-};
 
 document.getElementById('ans').textContent = mostExpensive(jewelry);
