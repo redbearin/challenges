@@ -73,6 +73,6 @@ catchZeroDivision = str => {
   return false;
 }
 
-const str = "23 - 23 / 23";
+const str = "0 + 0 + (3 / (3 - 3))";
 
 document.getElementById('ans').textContent = catchZeroDivision(str);
