@@ -1,8 +1,5 @@
 isPandigital = num => {
-  return [...new Set(num.toString().split('').sort())].join('') ===
-         '0123456789' ?
-    true :
-    false;
+  return new Set((num + '')).size === 10;
 }
 
 const num = 98140723568910;
