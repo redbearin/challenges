@@ -1,15 +1,9 @@
-const deepCount = arr => {
-  const str = JSON.stringify(arr);
-  let count = 0;
-  console.log(str)
-  for (let i = 0; i < str.length; i++) {
-    if ( str[i] === "]" || str[i] === "[" || str[i] === "," || str[i] === '"' )
-      continue;
-    count++;
-  }
-  return count;
+deepCount = (arr = []) => {
+   return arr.reduce((acc, val) => {
+      return acc + (Array.isArray(val) ? deepCount(val) : 0);
+   }, arr.length);
 };
 
-const arr = ["x", "y", ["z"]];
+const arr = ["a", "b", ["c", "d", ["e"]]];
 
 document.getElementById('ans').textContent = deepCount(arr);
