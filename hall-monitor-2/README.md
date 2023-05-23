@@ -8,7 +8,6 @@ Floor Plan
 Create a function that validates whether the route taken between rooms is possible. The hallway will be given as the letter "H".
 
 Examples
-
 possiblePath([1, 2, "H", 4, 3]) ➞ true
 
 possiblePath(["H", 1, 2]) ➞ false
