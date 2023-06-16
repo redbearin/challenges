@@ -2,7 +2,7 @@ faceInterval = arr => {
   if (!Array.isArray(arr)) {
     return ":/";
   }
-  arr.sort((a,b) => a-b);
+  arr.sort((a, b) => a-b);
   if (arr.includes(arr[arr.length - 1] - arr[0])) {
     return ":)"
   }

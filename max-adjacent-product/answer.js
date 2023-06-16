@@ -1,5 +1,5 @@
 adjacentProduct = arr => {
-  let maxPro = 0;
+  let maxPro = -Infinity;
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] * arr[i - 1] > maxPro) {
       maxPro = arr[i] * arr[i - 1];
