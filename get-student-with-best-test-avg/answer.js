@@ -14,6 +14,6 @@ getBestStudent = students => {
 const students = {
   John: [100, 90, 80],
   Bob: [100, 70, 80]
-}
+};
 
 document.getElementById('ans').textContent = getBestStudent(students);

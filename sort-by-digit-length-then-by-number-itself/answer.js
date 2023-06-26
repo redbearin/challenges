@@ -1,28 +1,30 @@
-digitSort = nums => {
-  // create arr of string nums
-  const strNums = nums.map(String);
-  // sort strNums by length
-  strNums.sort((a,b) => b.length - a.length);
-  let lenGrped = [];
-  let sub = [strNums[0]];
-  // array of subarrays that have elements the same length
-  for (let i = 1; i < strNums.length; i++) {
-    if (strNums[i].length < strNums[i-1].length) {
-      lenGrped.push(sub);
-      sub = [strNums[i]];
+digitSort = arr => {
+  const strArr = arr.map((num) => num.toString());
+
+  const groupedByLen = {};
+
+  for (let i = 0; i < strArr.length; i++) {
+    if (groupedByLen[strArr[i].length]) {
+      groupedByLen[strArr[i].length].push(+strArr[i]);
     }
-    if (strNums[i].length === strNums[i-1].length)
-      sub.push(strNums[i]);
-    if (i === strNums.length - 1)
-      lenGrped.push(sub);
+    else {
+      groupedByLen[strArr[i].length] = [+strArr[i]];
+    }
   }
-  // sort the elements of the same length
-  for (let i = 0; i < lenGrped.length; i++) {
-    lenGrped[i].sort((a,b) => a - b);
+
+  const sortedEntries = Object.entries(groupedByLen).sort((a,b) => b[0] - a[0]);
+
+  for (let i = 0; i < sortedEntries.length ; i++) {
+    sortedEntries[i][1] = sortedEntries[i][1].sort((a,b) => a-b);
   }
-  return JSON.stringify(lenGrped.flat().map(Number));
+  const sortedNumSubs = [];
+  for (let i = 0; i < sortedEntries.length; i++) {
+    sortedNumSubs.push(sortedEntries[i][1]);
+  }
+  return JSON.stringify(sortedNumSubs.flat());
 }
 
-const nums = [53219, 3772, 564, 32, 1];
+const arr = [77, 23, 5, 7, 101];
 
-document.getElementById('ans').textContent = digitSort(nums);
+document.getElementById('ans').textContent = digitSort(arr);
+
