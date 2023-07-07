@@ -1,23 +1,24 @@
 isFullHouse = cards => {
-  const cardCounts = {};
-  // build card count object
+  const counts = {};
+
   for (let i = 0; i < cards.length; i++) {
-    if (cardCounts[cards[i]])
-      cardCounts[cards[i]] = cardCounts[cards[i]] + 1;
-    else
-      cardCounts[cards[i]] = 1;
+    counts[cards[i]] ?
+    counts[cards[i]] += 1 :
+    counts[cards[i]] = 1;
   }
-  cardCountsArr = Object.entries(cardCounts);
-  // more or less than two card types
-  if (cardCountsArr.length !== 2)
+
+  const countsArr = Object.entries(counts);
+
+  if (countsArr.length !== 2) {
     return false;
-  // two of one card, three of another
-  if (cardCountsArr[0][1] === 2 && cardCountsArr[1][1] === 3 ||
-    cardCountsArr[0][1] === 3 && cardCountsArr[1][1] === 2)
-    return true;
-  return false;
+  }
+
+  return countsArr[0][1] === 2 && countsArr[1][1] === 3 ||
+         countsArr[0][1] === 3 && countsArr[1][1] === 2 ?
+    true :
+    false;
 }
 
-const cards = ["7", "J", "3", "4", "2"];
+const cards = ["A", "A", "A", "K", "K"];
 
 document.getElementById('ans').textContent = isFullHouse(cards);
