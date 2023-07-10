@@ -27,3 +27,4 @@ digitSort = arr => {
 const arr = [77, 23, 5, 7, 101];
 
 document.getElementById('ans').textContent = digitSort(arr);
+
