@@ -1,18 +1,20 @@
-weekAfter = begDate =>  {
-  // split beginning date into day, month, year
-  const begDateArr = begDate.split('/');
-  // create a date object for beginning date
-  let date = new Date(+begDateArr[2], +begDateArr[1] - 1, +begDateArr[0]);
-  // add 7 days to date
-  date.setDate(date.getDate() + 7);
-  // create a string formatted date
-  strDate = (new Date(date)).toISOString().split('T')[0];
-  // break the day, month, year into an array
-  strDateArr = strDate.split('-');
-  // rearrage based on order and format as requested
-  return strDateArr[2] + '/' + strDateArr[1] + '/' + strDateArr[0]
+weekAfter = dateStr => {
+  const dateArr = dateStr.split('/');
+  const newFormat = new Date(dateArr[1]+'/'+
+                    dateArr[0]+'/'+
+                    dateArr[2]);
+  const result = new Date(newFormat);
+  result.setDate(result.getDate() + 7);
+  const newStr = result.toLocaleDateString("en-GB");
+  const newStrArr = newStr.split('/');
+  if (newStrArr[0].length === 1) {
+    newStrArr[0] = '0' + newStrArr[0];
+  }
+  if (newStrArr[1].length === 1) {
+    newStrArr[1] = '0' + newStrArr[1];
+  }
+  return newStrArr.join('/');
 }
+const dateStr = "29/12/2020";
+document.getElementById('ans').textContent = weekAfter(dateStr);
 
-const begDate =  "30/12/2020";
-
-document.getElementById('ans').textContent =  weekAfter(begDate);
