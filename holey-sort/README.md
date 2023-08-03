@@ -11,5 +11,4 @@ holeySort([8, 121, 41, 66]) ➞ [121, 41, 8, 66]
 
 Notes
 If two numbers have the same number of holes in them, sort them by the order they first appeared in.
-
 Despite the number 0 appearing to have two holes in certain fonts, it will only have one hole for the purposes of this challenge.

@@ -1,27 +1,29 @@
-holeySort = nums => {
-  // how many holes each number has
-  holes = {0: 1, 1: 0, 2: 0, 3: 0, 4: 1, 5: 0, 6: 1, 7: 0, 8: 2, 9: 1};
-  let strNum, holeTtl;
-  const numsWDetails = [];
-  // go number by number and count total numbers holes
-  for (let i = 0; i < nums.length; i++) {
-    strNum = nums[i].toString();
-    holeTtl = 0;
-    for (let j = 0; j < strNum.length; j++) {
-      holeTtl += holes[strNum[j]];
+holeySort = arr => {
+  withCounts = [];
+  const oneHole = ['0', '4', '6', '9'];
+  let numStr, count;
+  for (let i = 0; i < arr.length; i++) {
+    numStr = arr[i].toString();
+    count = 0;
+    for (let j = 0; j < numStr.length; j++) {
+      if (numStr[j] === '8') {
+        count += 2;
+      }
+      if (oneHole.includes(numStr[j])) {
+        count++;
+      }
     }
-    // number number holes and num to an array
-    numsWDetails.push([holeTtl, nums[i]]);
+    withCounts.push([arr[i], count]);
   }
-  // sort the array that has info on num and number of holes
-  numsWDetails.sort((a,b) => a[0]-b[0]);
-  // remove the hole count
-  for (let i = 0; i < numsWDetails.length; i++) {
-    numsWDetails[i] = numsWDetails[i][1];
+  withCounts.sort((a,b) => a[1] - b[1]);
+  const holeySorted = [];
+  for (let i = 0; i < withCounts.length; i++) {
+    holeySorted.push(withCounts[i][0])
   }
-  return JSON.stringify(numsWDetails);
+  return JSON.stringify(holeySorted);
 }
 
-const nums = [8, 121, 41, 66];
+const arr = [100, 888, 1660, 11];
 
-document.getElementById('ans').textContent = holeySort(nums); 
+document.getElementById('ans').textContent = holeySort(arr);
+
