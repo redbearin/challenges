@@ -1,7 +1,6 @@
 sameLine = points => {
   if (points[0][0] === points[1][0] && 
-      points[1][0] === points[2][0] )
-      {
+      points[1][0] === points[2][0] ) {
     return true;
   }
 
