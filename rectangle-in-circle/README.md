@@ -1,4 +1,4 @@
-Create a function that takes three numbers — the width and height of a rectangle, and the radius of a circle and returns true if the rectangle can fit inside the circle, false if it can't.
+Create a function that takes three numbers — the width and height of a rectangle, and the radius of a circle — and returns true if the rectangle can fit inside the circle, false if it can't.
 
 Examples
 rectangleInCircle(8, 6, 5) ➞ true
