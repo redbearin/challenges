@@ -16,3 +16,4 @@ const c1 = "a";
 const c2 = "b";
 
 document.getElementById('ans').textContent = doubleSwap(str, c1, c2);
+
