@@ -9,3 +9,4 @@ const arr = [];
 const last = 6;
 
 document.getElementById('ans').textContent = nextInLine(arr, last);
+
