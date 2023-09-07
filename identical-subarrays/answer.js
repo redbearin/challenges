@@ -9,8 +9,12 @@ countIdentical = arr => {
 }
 
 const arr = [
-  ["@", "@", "@", "@"],
-  [2, 3], [3, 4], [4, 4]
+  [33, 33],
+  [5],
+  ["a", "a"],
+  [2, 2, 2],
+  [1, 2, 2],
+  [3, 1]
 ];
 
-document.getElementById('ans').textContent = countIdentical(arr) 
+document.getElementById('ans').textContent = countIdentical(arr);
