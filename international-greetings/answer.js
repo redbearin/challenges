@@ -14,3 +14,4 @@ greeting = name => {
 }
 
 document.getElementById('ans').textContent = greeting(name);
+
