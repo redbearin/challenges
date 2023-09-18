@@ -4,10 +4,8 @@ possiblePath = arr => {
     if (!paths[arr[i - 1]].includes(arr[i])) {
       return false;
     }
-  }
-  return true;
-}
 
 const arr = ["H", 1, 2];
 
 document.getElementById('ans').textContent = possiblePath(arr);
+
