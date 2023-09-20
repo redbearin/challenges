@@ -1,18 +1,13 @@
-Given an array of random digits of any length, return true if the number n appears times times in a row, and false otherwise.
+Create a function that determines whether elements in an array can be re-arranged to form a consecutive list of numbers where each number appears exactly once.
 
-Worked Example
-isThereConsecutive([1, 3, 5, 5, 3, 3, 1], 3, 2) ➞ true
-// Second parameter is the number to look out for (3).
-// Third parameter means you need to find the number 3 twice in a row.
-// Return true if it can be found.
 Examples
-isThereConsecutive([1, 2, 3, 4, 5], 1, 1) ➞ true
+cons([5, 1, 4, 3, 2]) ➞ true
+// Can be re-arranged to form [1, 2, 3, 4, 5]
 
-isThereConsecutive([3], 1, 0) ➞ true
+cons([5, 1, 4, 3, 2, 8]) ➞ false
 
-isThereConsecutive([2, 2, 3, 2, 2, 2, 2, 3, 4, 1, 5], 3, 2) ➞ false
+cons([5, 6, 7, 8, 9, 9]) ➞ false
+// 9 appears twice
 
-isThereConsecutive([5, 5, 5, 5, 5], 5, 7) ➞ false
 Notes
-Arrays will only contain positive single digit numbers.
-Expect all parameters to be valid.
+N/A
