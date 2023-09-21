@@ -8,6 +8,7 @@ digitDistance = (num1, num2) => {
   }
   return sum;
 }
+
 const num1 = 121;
 const num2 = 599;
 
