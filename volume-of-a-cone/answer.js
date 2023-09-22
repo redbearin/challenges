@@ -1,10 +1,9 @@
-coneVolume = (height, radius) => {
-  if (height === 0 || radius === 0)
-    return 0;
-  return (1 / 3 * Math.PI * Math.pow(radius, 2) * height).toFixed(2);
+coneVolume = (h, r) => {
+  return Math.round(Math.PI * Math.pow(r, 2) * h / 3 * 100) / 100;
 }
 
-const height = 18;
-const radius = 0;
+const h = 3;
+const r = 2;
 
-document.getElementById('ans').textContent = coneVolume(height, radius);
+document.getElementById('ans').textContent = coneVolume(h, r);
+
