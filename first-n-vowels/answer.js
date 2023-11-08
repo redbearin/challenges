@@ -15,6 +15,7 @@ firstNVowels = (str, n) => {
 }
 
 const str = "major league";
+
 const n = 5;
 
 document.getElementById('ans').textContent = firstNVowels(str, n);
