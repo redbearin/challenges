@@ -18,3 +18,4 @@ const max = 55;
 const digit = 5;
 
 document.getElementById('ans').textContent = digitOccurrences(min, max, digit);
+
