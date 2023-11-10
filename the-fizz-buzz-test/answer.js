@@ -22,3 +22,4 @@ fizzBuzz = max => {
 const max = 15;
 
 document.getElementById('ans').textContent = fizzBuzz(max);
+
