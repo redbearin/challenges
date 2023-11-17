@@ -1,7 +1,7 @@
 doubleFactorial = num => {
   return num <= 1 ?
-         1:
-         num * doubleFactorial(num - 2);
+  1:
+  num * doubleFactorial(num - 2);
 }
 
 const num = 9;
