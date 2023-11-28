@@ -17,3 +17,4 @@ const str = "He's a very naughty boy!";
 const guesses = ["e", "a", "y"];
 
 document.getElementById('ans').textContent = hangman(str, guesses);
+

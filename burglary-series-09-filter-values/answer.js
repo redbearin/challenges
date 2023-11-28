@@ -1,13 +1,12 @@
-filterValues = obj => {
-  const newObj = {};
-  for (item in obj) {
-    if (obj[item] >= 5000) {
-      newObj[item] = obj[item];
-    }
+filterValues = items => {
+  const coveredItems = {};
+  for (key in items) {
+    if (items[key] >= 5000)
+      coveredItems[key] = items[key];
   }
-  return JSON.stringify(newObj);
+  return JSON.stringify(coveredItems);
 }
 
-const obj = { tv: 4999, guitar:5000, fork: 5001 };
+const items = {};
 
-document.getElementById('ans').textContent = filterValues(obj);
+document.getElementById('ans').textContent = filterValues(items);
