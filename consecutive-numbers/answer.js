@@ -11,3 +11,4 @@ cons = arr => {
 const arr = [5, 1, 4, 3, 2, 8];
 
 document.getElementById('ans').textContent = cons(arr);
+
