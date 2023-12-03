@@ -1,7 +1,6 @@
 Create a function that takes an array of numbers and returns the number that's unique.
 
 Examples
-
 unique([3, 3, 3, 7, 3, 3]) ➞ 7
 
 unique([0, 0, 0.77, 0, 0]) ➞ 0.77
