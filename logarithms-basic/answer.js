@@ -1,12 +1,13 @@
-logarithm = (base, total) => {
-  for (let i = 0; i < Infinity; i++) {
-    if (Math.pow(base, i) === total)
-      return i;
+logarithm = (num, ans) => {
+  const notAccept = [-Infinity, Infinity, -0, 0, NaN];
+  if (notAccept.includes(Math.log(ans) / Math.log(num))) {
+    return "Invalid";
   }
+  return Math.log(ans) / Math.log(num);
 }
 
-const base = 2;
+const ans = "Hi,".length;
+const num = 1;
 
-const total = 4;
+document.getElementById('ans').textContent = logarithm(num, ans);
 
-document.getElementById('ans').textContent = logarithm(base, total); 
