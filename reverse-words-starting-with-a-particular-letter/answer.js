@@ -1,17 +1,14 @@
 specialReverse = (str, ltr) => {
-  // break the string into an array of words
-  let strArr = str.split(' ');
-  // go word by word thru array
+  const strArr = str.split(' ');
   for (let i = 0; i < strArr.length; i++) {
-    // first letter of the word is a match
-    if (strArr[i][0] === ltr) 
-      // reverse word
+    if (strArr[i][0] === ltr) {
       strArr[i] = strArr[i].split('').reverse().join('');
+    }
   }
   return strArr.join(' ');
 }
 
-const str = "peter piper picked pickled peppers";
-const ltr = "p";
+const str = "word searches are super fun";
+const ltr = "s";
 
 document.getElementById('ans').textContent = specialReverse(str, ltr);
