@@ -4,6 +4,7 @@ No sides equal: "scalene"
 Two sides equal: "isosceles"
 All sides equal: "equilateral"
 Less or more than 3 sides given: "not a triangle"
+
 Examples
 getTriangleType([2, 6, 5]) ➞ "scalene"
 
