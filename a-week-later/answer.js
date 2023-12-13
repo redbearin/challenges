@@ -17,3 +17,4 @@ weekAfter = dateStr => {
 }
 const dateStr = "29/12/2020";
 document.getElementById('ans').textContent = weekAfter(dateStr);
+
