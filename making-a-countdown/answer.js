@@ -9,3 +9,4 @@ const topNum = 5;
 const phrase = "FIRE";
 
 document.getElementById('ans').textContent = countdown(topNum, phrase);
+
