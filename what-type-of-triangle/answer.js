@@ -12,3 +12,4 @@ getTriangleType = sideLengths => {
 const sideLengths = [3, 5, 5, 2];
 
 document.getElementById('ans').textContent = getTriangleType(sideLengths);
+
