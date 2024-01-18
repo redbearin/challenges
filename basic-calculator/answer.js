@@ -20,3 +20,4 @@ const op = "/";
 const num2 = 2;
 
 document.getElementById('ans').textContent = calculator(num1, op, num2);
+
