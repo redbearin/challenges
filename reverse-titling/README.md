@@ -1,4 +1,4 @@
-Your stereotypical titleCase() function in JavaScript might capitalises the first letter of every word in a given sentence, leaving all the other letters as lowercase.
+Your stereotypical titleCase() function in JavaScript might capitalize the first letter of every word in a given sentence, leaving all the other letters as lowercase.
 
 The goal of this challenge, however, is to create a reverseTitle() function, which achieves the complete opposite! Make the first letter of every word lowercase, and the rest uppercase!
 

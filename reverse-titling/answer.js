@@ -1,22 +1,12 @@
-const reverseTitle = title => {
-  const titleArr = title.split(' ');
-  const revTitleArr = [];
-  let sub;
-  for (let i =0; i < titleArr.length; i++) {
-    sub = '';
-    // first char of word to lowercase
-    sub += titleArr[i][0].toLowerCase();
-    // all other chars in word to capital
-    for (let j = 1; j < titleArr[i].length; j++) {
-      sub += titleArr[i][j].toUpperCase();
-    }
-    // add revised to word to arr
-    revTitleArr.push(sub);
+reverseTitle = str => {
+  const strArr = str.split(' ');
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].slice(0,1).toLowerCase() + strArr[i].slice(1).toUpperCase();
   }
-  // combine new words into a string
-  return revTitleArr.join(' ');
-};
+  return strArr.join(' ');
+}
 
-const title = "Elephants dance about bravely in Thailand";
+const str = "this is a title";
 
-document.getElementById('ans').textContent = reverseTitle(title);
+document.getElementById('ans').textContent = reverseTitle(str);
+
