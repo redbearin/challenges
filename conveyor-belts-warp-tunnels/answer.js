@@ -1,11 +1,8 @@
 warpTunnel = (arr, n) => {
   const lenSub = arr[0].length;
   const str = arr.flat().join('');
-  console.log(str)
   const nRem = n % str.length;
-  console.log(nRem)
   const combArr = (str.slice(-nRem) + str.slice(0, -nRem)).split('');
-  console.log(combArr)
   const numbers = combArr.map(ele => { 
     if (!isNaN(ele)) {
       return parseInt(ele, 10); 
