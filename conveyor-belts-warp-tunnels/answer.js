@@ -1,19 +1,11 @@
 warpTunnel = (arr, n) => {
   const lenSub = arr[0].length;
-  const str = arr.flat().join('');
-  const nRem = n % str.length;
-  const combArr = (str.slice(-nRem) + str.slice(0, -nRem)).split('');
-  const numbers = combArr.map(ele => { 
-    if (!isNaN(ele)) {
-      return parseInt(ele, 10); 
-    }
-    else {
-      return ele;
-    }
-  });
+  const arrFl = arr.flat();
+  const nRem = n % arrFl.length;
+  const combArr = (arrFl.slice(-nRem).concat(arrFl.slice(0, -nRem)));
   let chunksArr = [];
-  for (let i = 0; i < numbers.length; i += lenSub) {
-    chunksArr.push(numbers.slice(i, i + lenSub));
+  for (let i = 0; i < combArr.length; i += lenSub) {
+    chunksArr.push(combArr.slice(i, i + lenSub));
   }
   return JSON.stringify(chunksArr);
 }
