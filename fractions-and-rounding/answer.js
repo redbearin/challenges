@@ -21,3 +21,4 @@ const frac = "2/8";
 const places = 4;
 
 document.getElementById('ans').textContent = fracRound(frac, places);
+

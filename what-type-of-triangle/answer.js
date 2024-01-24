@@ -1,20 +1,15 @@
-getTriangleType = arr => {
-  if (arr.length !== 3) {
+getTriangleType = sideLengths => {
+  if(sideLengths.length !== 3)
     return "not a triangle";
-  }
-  arr.sort((a,b) => a - b);
-  if (arr[0] === arr[1]) {
-    if (arr[1] === arr[2]) {
-      return "equilateral";
-    }
-    return 'isosceles';
-  }
-  if (arr[1] === arr[2]) {
-    return 'isosceles';
-  }
-  return 'scalene';
+  const noRepeats = [...new Set(sideLengths)];
+  if (noRepeats.length === 3)
+    return "scalene";
+  if (noRepeats.length === 2)
+    return "isosceles";
+  return "equilateral";
 }
 
-const arr = [2, 6, 5];
+const sideLengths = [3, 5, 5, 2];
 
-document.getElementById('ans').textContent = getTriangleType(arr);
+document.getElementById('ans').textContent = getTriangleType(sideLengths);
+
