@@ -21,6 +21,6 @@ nameScore = name => {
   return "NOT TOO GOOD";
 }
 
-const name = "BILL GATES";
+const name = "MUBASHIR";
 
 document.getElementById('ans').textContent = nameScore(name);

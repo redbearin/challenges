@@ -7,7 +7,7 @@ bestFriend = (str, ltr1, ltr2) => {
   return true;
 }
 
-const str = "he headed to the store", 
+const str = "he headed to the store"; 
 const ltr1 = "h";
 const ltr2 = "e";
 
