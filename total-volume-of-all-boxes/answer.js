@@ -6,4 +6,4 @@ totalVolume = (...boxes) => {
   return sum;
 }
 
-document.getElementById('ans').textContent = totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1])
+document.getElementById('ans').textContent = totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]);
