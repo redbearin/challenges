@@ -1,15 +1,16 @@
-getStudentTopNotes = arr => {
-  const topNotes = [];
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].notes.sort((a,b) => b-a);
-  }
-  for (let i = 0; i < arr.length; i++) {
-    topNotes.push(arr[i].notes[0]);
-  }
-  return JSON.stringify(topNotes);
+getStudentTopNotes = students => {
+  return JSON.stringify(students.map(ele => {
+      if (ele.notes.length) {
+        return Math.max(...ele.notes)
+      }
+      else {
+        return 0;
+      }
+    }
+  ));
 }
 
-const arr = [
+const students = [
   {
     id: 1,
     name: "Jacek",
@@ -27,4 +28,5 @@ const arr = [
   }
 ];
 
-  document.getElementById('ans').textContent = getStudentTopNotes(arr);
+document.getElementById('ans').textContent = getStudentTopNotes(students);
+
