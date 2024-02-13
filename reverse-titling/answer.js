@@ -9,3 +9,4 @@ reverseTitle = str => {
 const str = "this is a title";
 
 document.getElementById('ans').textContent = reverseTitle(str);
+

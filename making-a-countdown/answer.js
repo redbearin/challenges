@@ -1,12 +1,12 @@
-countdown = (num, str) => {
-  let ctStr = ''
-  for (let i = num; i > 0; i--) {
-    ctStr += i + '. ';
+countdown = (topNum, phrase) => {
+  let sequence = '';
+  for (let i = topNum; i > 0; i--) {
+    sequence += i + '. ';
   }
-  return ctStr + str.toUpperCase() + '!';
+  return sequence + phrase.toUpperCase() + '!';
 }
+const topNum = 5;
+const phrase = "FIRE";
 
-const num = 10;
-const str = "Blast Off"
+document.getElementById('ans').textContent = countdown(topNum, phrase);
 
-document.getElementById('ans').textContent = countdown(num, str); 

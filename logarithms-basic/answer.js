@@ -10,3 +10,4 @@ const ans = "Hi,".length;
 const num = 1;
 
 document.getElementById('ans').textContent = logarithm(num, ans);
+

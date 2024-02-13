@@ -9,5 +9,6 @@ superheroes(["Catwoman", "Deadpool", "Dr.Strange", "Captain-America", "Aquaman",
 
 superheroes(["Wonder-Woman", "Catwoman", "Invisible-Woman"])
 ➞ []
+
 Notes
 Wonder-Woman, Catwoman and Invisible-Woman are superheroines.
