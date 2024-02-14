@@ -13,3 +13,4 @@ superheroes = arr => {
 const arr = ["Batman", "Superman", "Spider-man", "Hulk", "Wolverine", "Wonder-Woman"];
 
 document.getElementById('ans').textContent = superheroes(arr);
+
