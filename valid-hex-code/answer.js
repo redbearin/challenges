@@ -12,3 +12,4 @@ isValidHexCode = code => {
 const code = "CD5C5C";
 
 document.getElementById('ans').textContent = isValidHexCode(code);
+
