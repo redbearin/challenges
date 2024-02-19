@@ -1,5 +1,4 @@
 getDiagonals = arr => {
-  console.log(arr.length)
   const forw = [];
   const back = [];
   for (let i = 0; i < arr.length; i++) {
