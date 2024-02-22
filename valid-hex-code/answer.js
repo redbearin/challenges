@@ -1,18 +1,15 @@
-isValidHexCode = str => {
-  if (str[0] !== '#' || str.length !== 7) {
+isValidHexCode = code => {
+  if (code.length !== 7 || 
+      code[0] !== '#')
     return false;
-  }
-  for (let i = 1; i < str.length; i++) {
-    if (str.charCodeAt(i) < 48 || 
-        str.charCodeAt(i) > 57 && str.charCodeAt(i) < 65 || 
-        str.charCodeAt(i) > 70 && str.charCodeAt(i) < 97 || 
-        str.charCodeAt(i) > 102) {
-      return false;
-    }
-  }
-  return true;
+  const alphaNumCode = code.slice(1);
+  const regex = new RegExp('[a-fA-F]+$[0-9]+$');
+  if (regex.test(alphaNumCode))
+    return true;
+  return false;
 }
 
-const str = "#CD5C5C";
+const code = "CD5C5C";
 
-document.getElementById('ans').textContent = isValidHexCode(str);
+document.getElementById('ans').textContent = isValidHexCode(code);
+

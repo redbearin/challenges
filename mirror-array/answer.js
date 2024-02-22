@@ -8,4 +8,5 @@ mirror = arr => {
 
 const arr = [0, 2, 4, 6];
 
+
 document.getElementById('ans').textContent = mirror(arr);
