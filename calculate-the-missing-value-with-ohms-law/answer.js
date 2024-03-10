@@ -1,32 +1,24 @@
 ohmsLaw = (v, r, i) => {
-  const arr = [v, r, i];
-  // determine if the problem follows
-  // criteria of one blank
-  let blankCount = 0;
-  for (let i = 0; i < 3; i++) {
-    if (arr[i] === '')
-      blankCount++;
-  }
-  if (blankCount > 1 || blankCount < 1)
+  if (v === "" && i === "" || 
+			v === "" && r === "" || 
+			r === "" && i === "" || 
+			v !== "" && r !== "" && i !== "") {
     return "Invalid";
-
-  // follows criteria for blanks
-  let answer;
-  // solve depending on placement of blank
-  if (arr[0] === '') 
-    answer = arr[1] * arr[2];
-  else if (arr[1] === '')
-    answer = arr[0] / arr[2];
-  else
-    answer = arr[0] / arr[1]; 
-  if (Number.isInteger(answer))   
-    return answer;
-  else
-    return answer.toFixed(2);
+  }
+  if (v === "") {
+    return Math.round(r * i * 100)/100;
+  }
+  if (r === "") {
+    return Math.round(v / i * 100)/100;
+  }
+  if (i === "") {
+    return Math.round(v / r * 100)/100;
+  }
 }
 
-const v = "";
-const r = "";
-const i = 10;
+const v = 12;
+const r = 200;
+const i = "";
 
-document.getElementById('ans').textContent = ohmsLaw(v, r, i);
+document.getElementById('ans').textContent =  ohmsLaw(v, r, i);
+
