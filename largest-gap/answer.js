@@ -2,8 +2,8 @@ largestGap = arr => {
   arr.sort((a,b) => a-b);
   let max = 0;
   for (let i = 1; i < arr.length; i++) {
-    if(Math.abs(arr[i] - arr[i-1]) > max) {
-      max = Math.abs(arr[i] - arr[i-1]);
+    if(arr[i] - arr[i-1] > max) {
+      max = arr[i] - arr[i-1];
     }
   }
   return max;
