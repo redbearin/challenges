@@ -13,3 +13,4 @@ duplicateCount("Aa") ➞ 0
 Notes
 Duplicate characters are case sensitive.
 The input string will contain only alphanumeric characters.
+

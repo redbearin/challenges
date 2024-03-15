@@ -11,3 +11,4 @@ removeRepeats = str => {
 const str = "aaabbbccc";
 
 document.getElementById('ans').textContent = removeRepeats(str); 
+
