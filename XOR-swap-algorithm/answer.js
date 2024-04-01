@@ -8,4 +8,4 @@ xor = (a, b) => {
 const a = 10;
 const b = 41;
 
-document.getElementById('ans').textContent = xor(10, 41);
+document.getElementById('ans').textContent = xor(a, b);
