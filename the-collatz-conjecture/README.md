@@ -12,6 +12,7 @@ See the following example, using 10 as the input, with 6 steps:
 8 is even - 8 / 2 = 4
 4 is even - 4 / 2 = 2
 2 is even - 2 / 2 = 1 -> Reached 1, so return 6
+
 Examples
 collatz(2) ➞ 1
 
