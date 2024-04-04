@@ -12,3 +12,4 @@ collatz = num => {
 const num = 3;
 
 document.getElementById('ans').textContent = collatz(num);
+

@@ -20,3 +20,4 @@ duplicateCount = str => {
 const str = "Indivisibilities";
 
 document.getElementById('ans').textContent = duplicateCount(str);
+

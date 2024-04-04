@@ -21,3 +21,4 @@ const r = 200;
 const i = "";
 
 document.getElementById('ans').textContent =  ohmsLaw(v, r, i);
+

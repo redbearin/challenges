@@ -1,13 +1,11 @@
-progressDays = arr => {
-  let proDays = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > arr[i - 1]) {
-      proDays++;
-    }
+progressDays = miles => {
+  let count = 0;
+  for (let i = 1; i < miles.length; i++) {
+    if (miles[i] > miles[i-1])
+      count++;
   }
-  return proDays;
+  return count; 
 }
+const miles = [10, 11, 12, 9, 10];
 
-const arr = [3, 4, 1, 2];
-
-document.getElementById('ans').textContent = progressDays(arr);
+document.getElementById('ans').textContent = progressDays(miles);
