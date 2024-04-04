@@ -7,8 +7,6 @@ testJackpot(["abc", "abc", "abc", "abc"]) ➞ true
 
 testJackpot(["SS", "SS", "SS", "SS"]) ➞ true
 
-testJackpot(c) ➞ false
-
 testJackpot(["SS", "SS", "SS", "Ss"]) ➞ false
 
 Notes

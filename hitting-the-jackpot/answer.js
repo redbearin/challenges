@@ -1,14 +1,9 @@
 testJackpot = arr => {
-  if (!Array.isArray(arr) || 
-       arr === undefined)
-    return false;
-  if (arr[0] !== arr[1] || 
-      arr[1] !== arr[2] || 
-      arr[2] !== arr[3])
-    return false;
-  return true;
+  return [... new Set(arr)].length === 1 ?
+    true :
+    false;
 }
 
-const arr = 0;
+const arr = ["SS", "SS", "SS", "Ss"];
 
 document.getElementById('ans').textContent = testJackpot(arr);
