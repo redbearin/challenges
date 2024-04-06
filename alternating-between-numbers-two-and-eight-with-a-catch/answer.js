@@ -3,6 +3,6 @@ f = n => {
     2:
     8;
 }
-const n = 2;
+const n = 3;
 
 document.getElementById('ans').textContent = f(n);
