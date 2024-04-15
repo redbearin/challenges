@@ -1,17 +1,15 @@
-collatz = n => {
-  let steps = 0;
-  while (n !== 1) {
-    // odd
-    if (n % 2) 
-      n = n * 3 + 1;
-    // even
-    else
-      n = n / 2;
-    // increment step count
-    steps++;
+collatz = num => {
+  let count = 0;
+  while (num !==1) {
+    count++;
+    num % 2 ?
+      num = num * 3 + 1:
+      num = num / 2;
   }
-  return steps;
+  return count;
 }
-const n = 2;
 
-document.getElementById('ans').textContent = collatz(n);
+const num = 3;
+
+document.getElementById('ans').textContent = collatz(num);
+

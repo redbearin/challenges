@@ -1,13 +1,13 @@
 verbify = str => {
-  const strArr = str.split(' ');
-  if (strArr[0][strArr[0].length - 1] === 'd' &&
-      strArr[0][strArr[0].length - 2] === 'e')
+  const arrStr = str.split(' ');
+  if (arrStr[0].slice(-2) === 'ed') {
     return str;
-  if (strArr[0][strArr[0].length - 1] === 'e')
-    return strArr[0] + 'd ' + strArr[1];
-  else
-  return strArr[0] + 'ed ' + strArr[1];
+  }
+  return arrStr[0].slice(-1) === 'e' ?
+  arrStr[0] + 'd ' + arrStr[1] :
+  arrStr[0] + 'ed ' + arrStr[1];
 }
-const str = "shredded cheese";
+
+const str = "cheese burger";
 
 document.getElementById('ans').textContent = verbify(str);

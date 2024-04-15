@@ -1,9 +1,12 @@
 mirror = arr => {
+  const arrNew = [...arr];
   for (let i = arr.length - 2; i >= 0; i--) {
-    arr.push(arr[i]);
+    arrNew.push(arr[i]);
   }
-  return JSON.stringify(arr);
+  return JSON.stringify(arrNew);
 }
-const arr = [3, 5, 6, 7, 8];
+
+const arr = [0, 2, 4, 6];
+
 
 document.getElementById('ans').textContent = mirror(arr);

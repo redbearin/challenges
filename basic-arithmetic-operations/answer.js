@@ -1,6 +1,5 @@
 operation = (strNum1, strNum2, op) => {
   if (op === 'divide' && strNum2 === '0') {
-
     return 'undefined';
   }
   switch (op) {
