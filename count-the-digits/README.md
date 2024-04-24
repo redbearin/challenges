@@ -1,3 +1,4 @@
+
 Create a function that will count the number of digits of a number. Conversion of the number to a string is not allowed.
 
 Examples
