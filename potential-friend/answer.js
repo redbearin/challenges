@@ -1,5 +1,7 @@
 isPotentialFriend = (arr1, arr2) => {
-  if (arr1.length === 1 && arr2.length === 1 && arr1[0] === arr2[0]) {
+  if (arr1.length === 1 && 
+      arr2.length === 1 
+      && arr1[0] === arr2[0]) {
     return true;
   }
   let count = 0;
