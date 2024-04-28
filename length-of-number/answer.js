@@ -6,3 +6,4 @@ numberLength = num => {
 let val = 777777777777777777777777777777;
 
 document.getElementById('ans').textContent = numberLength(val.toString()));
+
