@@ -1,22 +1,17 @@
 getStudentsWithNamesAndTopNotes = students => {
-  const studentTopNote = [];
-  let topVal;
   for (let i = 0; i < students.length; i++) {
-    if (students[i].notes.length) {
-      topVal = Math.max(...students[i].notes)
+    if (!students[i].notes.length) {
+      students[i].notes = [0];
     }
-    else {
-      topVal = null;
-    }
-    studentTopNote.push({name: students[i].name, topNote: topVal})
+    students[i] = {'name': students[i].name, 'topNote': students[i].notes.sort((a,b) => b-a)[0]};
   }
-  return JSON.stringify(studentTopNote);
+  return JSON.stringify(students);
 }
 
 const students = [
-  { "name": "John", "notes": [] },
-  { "name": "Max", "notes": [] },
+  { "name": "John", "notes": [3, 5, 4] },
+  { "name": "Max", "notes": [1, 4, 6] },
   { "name": "Zygmund", "notes": [1, 2, 3] }
-]
+];
 
 document.getElementById('ans').textContent = getStudentsWithNamesAndTopNotes(students);
