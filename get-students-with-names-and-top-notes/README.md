@@ -13,5 +13,6 @@ getStudentsWithNamesAndTopNotes([
   { "name": "Max", "topNote": 6 },
   { "name": "Zygmund", "topNote": 3 }
 ]
+
 Notes
 Try solving this challenge with an arrow function.
