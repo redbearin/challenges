@@ -3,7 +3,7 @@ Create a function which converts an ordered number array into a array of ranges 
 Examples
 numbersToRanges([1, 2, 3, 4, 5]) ➞ ["1-5"]
 
-numbersToRanges([3, 4, 5, 10, 11, 12]) ➞ ["3-5", "10-12"]
+1 ➞ ["3-5", "10-12"]
 
 numbersToRanges([1, 2, 3, 4, 99, 100]) ➞ ["1-4", "99-100"]
 
