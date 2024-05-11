@@ -3,7 +3,6 @@ goldDistribution = arr => {
   let matt = 0;
   let i = 0;
   while (arr.length){
-    console.log(arr)
     if (arr[0] >= arr[arr.length - 1]) {
       if (i % 2 === 0) {
         mash += arr[0];
