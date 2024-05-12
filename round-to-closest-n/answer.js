@@ -1,14 +1,12 @@
-const roundNumber = (num, n) => {
-  const bottom = Math.floor(num/n);
-  const actual = num/n;
-  const top = Math.ceil(num/n);
-  if (top - actual <= actual - bottom)
-    return n * top;
-  else
-    return n * bottom;
+roundNumber = (num, n) => {
+  const times = Math.floor(num / n);
+  if (num - n * times < n * (times + 1) - num) {
+    return n * times;
+  }
+  return n * (times + 1);
 }
 
-const num = 133;
-const n = 14;
+const num = 33;
+const n = 25;
 
-document.getElementById('ans').textContent = roundNumber(num, n) 
+document.getElementById('ans').textContent = roundNumber(num, n);

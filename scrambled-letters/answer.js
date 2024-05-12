@@ -1,19 +1,28 @@
-scrambled = (arr, mask) => {
-  const candidates = arr.filter(word => word.length === mask.length);
-  const meetCriteria = [];
-  for (let i = 0; i < candidates.length; i++) {
-    for (let j = 0; j < candidates[i].length; j++) {
-      if (mask[j] !== candidates[i][j] && 
-          mask[j] !== '*') {
-        break;
+scrambled = (words, mask) => {
+  let flag;
+  const matches = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length === mask.length) {
+      for (let j = 0; j < words[i].length; j++) {
+        flag = false;
+        if (mask[j] !== '*') {
+          if (words[i][j] !== mask[j]) {
+            flag = true;
+            break;
+          }
+        }
       }
-      if (j === candidates[i].length - 1) 
-        meetCriteria.push(candidates[i]);
+      if (!flag) {
+        matches.push(words[i]);
+      }
     }
   }
-  return JSON.stringify(meetCriteria);
+  return JSON.stringify(matches);
 }
-const arr = ["red", "dee", "cede", "reed", "creed", "decree"];
-const mask = "***";
 
-document.getElementById('ans').textContent = scrambled(arr, mask);
+const words = ["cee","dee","eer","erd","ere","red","ree","cede","cere","cree","deer","dere","dree","rede","reed","ceder","cedre","cered","creed","decree","recede"];
+
+const mask = "*re**";
+
+document.getElementById('ans').textContent = scrambled(words, mask);
+

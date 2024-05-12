@@ -1,22 +1,20 @@
-const pyramidVolume = (length, width, height, units) => {
-  let baseVol = length * width * height / 3;
-  console.log(units)
-  switch(units) {
+pyramidVolume = (length, width, height, units) => {
+  const volMtrs = length * width * height / 3;
+  switch (units) {
     case 'millimeters':
-      return (baseVol * Math.pow(1000, 3).toFixed(3)) + ' cubic millimeters';
-    case 'centimeters': 
-      return (baseVol * Math.pow(100, 3)).toFixed(3) + ' cubic centimeters';
-    case 'meters':
-      return baseVol.toFixed(3)+ ' cubic meters';
+      return (volMtrs * 1000000000).toFixed(3) + ' cubic ' + units;
+    case 'centimeters':
+      return (volMtrs * 1000000).toFixed(3) + ' cubic '  + units;
     case 'kilometers':
-      return (baseVol/Math.pow(1000, 3)).toFixed(3) + ' cubic kilometers';
+      return (volMtrs / 1000000000).toFixed(3) + ' cubic ' + units;
+    default:
+      return volMtrs.toFixed(3) + ' cubic ' + units;
   }
-};
+}
 
-const length = 18;
-const width = 412;
-const height = 93;
-
-const units = "millimeters";
+const length = 4;
+const width = 6;
+const height = 20;
+const units = 'centimeters';
 
 document.getElementById('ans').textContent = pyramidVolume(length, width, height, units);

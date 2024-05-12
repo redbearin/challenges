@@ -1,26 +1,21 @@
-longestCommonEnding = (word1, word2) => {
-  // reverse letters
-  word1ArrRev = word1.split('').reverse();
-  word2ArrRev = word2.split('').reverse();
-  
-  // endings that match
+longestCommonEnding = (str1, str2) => {
   let ending = '';
+  let len;
 
-  for (let i = 0; i < word1.length; i++) {
-    // out of letters in one word
-    if (word1ArrRev[i] === undefined || 
-        word2ArrRev[i] === undefined) 
-      break;
-    // letters don't match
-    if (word1ArrRev[i] !== word2ArrRev[i]) 
-      break;
-    // letters do match
-    ending = word1ArrRev[i] + ending;
+  str1.length > str2.length ? 
+    len = str1.length : 
+    len = str2.length;
+
+  for (let i = 1; i < len; i++) {
+    if (str1[str1.length - i] !== str2[str2.length - i]) {
+      return ending;
+    }
+    ending = str1[str1.length - i] + ending;
   }
   return ending;
 }
 
-const word1 = "skyscraper";
-const word2 = "carnivore";
+const str1 = "multiplication";
+const str2 = "ration";
 
-document.getElementById('ans').textContent = longestCommonEnding(word1, word2);
+document.getElementById('ans').textContent = longestCommonEnding(str1, str2);

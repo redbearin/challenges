@@ -1,21 +1,19 @@
 doubleSwap = (str, c1, c2) => {
-  // final string
-  let changed = '';
-  // go element by element thru str
-  // and make changes
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === c1)
-      changed += c2;
-    else if (str[i] === c2)
-      changed += c1;
-    else
-      changed += str[i];
+  const strArr = str.split('');
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === c1) {
+      strArr[i] = c2;
+    }
+    else if (strArr[i] === c2) {
+      strArr[i] = c1;
+    }
   }
-  return changed;
+  return strArr.join('');
 }
 
-const str = "128 895 556 788 999";
-const c1 = '8';
-const c2 = '9'
+const str = "aabbccc";
+const c1 = "a";
+const c2 = "b";
 
-document.getElementById('ans').textContent = doubleSwap( str, c1, c2);
+document.getElementById('ans').textContent = doubleSwap(str, c1, c2);
+

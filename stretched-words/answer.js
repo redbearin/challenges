@@ -1,14 +1,13 @@
 unstretch = str => {
-  let newStr = '';
-  // only add ltrs that are not repeated 
-  // to new string
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] !== str[i-1])
+  let newStr = str[0];
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] !== str[i-1]) {
       newStr += str[i];
+    }
   }
   return newStr;
 }
 
-const str = "cccccaaarrrbbonnnnn";
+const str = "ttiiitllleeee";
 
 document.getElementById('ans').textContent = unstretch(str);

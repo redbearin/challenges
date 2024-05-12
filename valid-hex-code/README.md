@@ -19,7 +19,7 @@ isValidHexCode("#CD5C&C") ➞ false
 // Contains unacceptable character
 
 isValidHexCode("CD5C5C") ➞ false
-
 // Missing #
+
 Notes
 N/A

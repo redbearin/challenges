@@ -1,19 +1,17 @@
-printGrid = (rows, cols) => {
+printgrid = (rows, cols) => {
   let sub;
-  let grid = [];
+  const final = [];
   for (let i = 0; i < rows; i++) {
-    // build subarray
-    // based on row increments
     sub = [i + 1];
     for (let j = 1; j < cols; j++) {
-      sub.push(i + 1 + (j*rows));
-    }
-    grid.push(sub);
+        sub.push(sub[sub.length - 1] + rows);
+    } 
+    final.push(sub);
   }
-  return JSON.stringify(grid);
+  return JSON.stringify(final);
 }
 
-const rows = 4;
-const cols = 1;
+const rows = 5;
+const cols = 3;
 
-document.getElementById('ans').textContent = printGrid(rows, cols);
+document.getElementById('ans').textContent = printgrid(rows, cols);

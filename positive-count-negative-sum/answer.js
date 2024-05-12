@@ -1,20 +1,17 @@
-countPosSumNeg = nums => {
-  // empty nums array
-  if (!nums.length)
-    return '[]';
-  let posCount = 0;
+countPosSumNeg = arr => {
+	if (!arr.length) {
+		return [];
+	}
+  let posCt = 0;
   let negSum = 0;
-  //count positive nums
-  //sum negative numbers (include zero because no impact)
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] <= 0)
-      negSum += nums[i];
-    else
-      posCount++;
+  for (let i =0; i < arr.length; i++) {
+    arr[i] <= 0 ?
+    negSum += arr[i] :
+    posCt++;
   }
-  return '[' + posCount + ', ' + negSum + ']';
-};
+  return [posCt, negSum];
+}
 
-const nums = [91, -4, 80, -73, -28];
+const arr = [92, 6, 73, -77, 81, -90, 99, 8, -85, 34];
 
-document.getElementById('ans').textContent = countPosSumNeg(nums);
+document.getElementById('ans').textContent = countPosSumNeg(arr);

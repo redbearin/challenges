@@ -1,23 +1,20 @@
-hangman = (str, arr) => {
-  // break the string into array
+hangman = (str, guesses) => {
   const strArr = str.split('');
-  const edited = [];
-  // element by element thru strArr
+  const strArrLC = str.toLowerCase().split('');
+  const punctuation = ["'", '"', ',', ':', '.', '!', '-', '_', ' '];
+  const numbers = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9'];
   for (let i = 0; i < strArr.length; i++) {
-    // match
-    if (arr.includes(strArr[i].toLowerCase()))
-      edited.push(strArr[i]);
-    // no match and not a letter
-    else if (!(/[a-zA-Z]/).test(strArr[i]))
-      edited.push(strArr[i])
-    // no match and a letter
-    else
-      edited.push('-');
+    if (!guesses.includes(strArrLC[i]) && 
+        strArrLC[i].charCodeAt(0) > 96 && 
+        strArrLC[i].charCodeAt(0) < 123) {
+          strArr[i] = '-';
+    }
   }
-  return edited.join('');
+  return strArr.join('');
 }
 
-const str = 'He"s a very naughty boy!';
-const arr = ["e", "a", "y"];
+const str = "He's a very naughty boy!";
+const guesses = ["e", "a", "y"];
 
-document.getElementById('ans').textContent = hangman(str, arr);
+document.getElementById('ans').textContent = hangman(str, guesses);
+

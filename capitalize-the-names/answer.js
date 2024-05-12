@@ -8,3 +8,4 @@ capMe = names => {
 const names = ["Slyvia", "Kristal", "Sharilyn", "Calista"];
 
 document.getElementById('ans').textContent = capMe(names);
+

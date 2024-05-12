@@ -1,11 +1,12 @@
-doubleLetters = word => {
-  for (let i = 1; i < word.length; i++) {
-    if (word[i] === word[i -1])
-      return true;
+doubleLetters = str => {
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] === str[i - 1]) {
+      return true
+    }
   }
   return false;
 }
 
-let word = "munchkin";
+const str = "loop";
 
-document.getElementById('ans').textContent = doubleLetters(word);
+document.getElementById('ans').textContent = doubleLetters(str);

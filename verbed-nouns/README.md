@@ -3,7 +3,7 @@ Create a function that ends the first word of a phrase with "ed", essentially ve
 Examples
 verbify("cheese burger") ➞ "cheesed burger"
 
-verbify(c) ➞ "salted water"
+verbify("salt water") ➞ "salted water"
 
 verbify("orange juice") ➞ "oranged juice"
 

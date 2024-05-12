@@ -1,28 +1,18 @@
-const missing = (arr1, arr2) => {
-  let longest, shortest, index;
-  // determine longest and shortest arrays
-  if (arr1.length > arr2.length) {
-    longest = arr1;
-    shortest = arr2;
+missing = (arr1, arr2) => {
+  let idx;
+  for (let i = 0; i < arr1.length; i++) {
+    idx = arr2.indexOf(arr1[i]);
+    if (idx === -1) {
+      return arr1[i];
+    }
+    else {
+      arr2[idx] = '*';
+    }
   }
-  else {
-    longest = arr2;
-    shortest = arr1;
-  }
-  // go element by element through longest array
-  for (let i = 0; i < longest.length; i++) {
-    // find the index of the matching element
-    // in shorter array
-    index = shortest.indexOf(longest[i])
-    // no match (missing element)
-    if (index === -1)
-      return longest[i];
-    // match, mark the element as matched
-    shortest[index] = '*';
-  }
-};
+}
 
-const arr1 = ["Jane", "is", "pretty", "ugly"]; 
-const arr2 = ["Jane", "is", "pretty"];
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+const arr2 = [1, 3, 4, 5, 6, 7, 8];
 
-document.getElementById('ans').textContent = missing(arr1, arr2);
+document.getElementById('ans').textContent = 
+missing(arr1, arr2);

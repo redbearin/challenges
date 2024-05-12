@@ -1,24 +1,14 @@
-getBirthdayCake = (name, age) => {
-  let sym;
-  if (age % 2 !== 0)
-    sym = '*';
-  else
-    sym = '#';
+getBirthdayCake = (person, age) => {
+  let char;
+  age % 2 ? char = '*' : char = '#';
+  
+  const message = char + ' ' + age + " Happy Birthday " + person + '! ' + age + ' ' + char;
 
-  const wording  = sym + ' ' + age + ' Happy Birthday ' +
-                   name + '! ' + age + ' ' + sym;
-  const topBottom = sym.repeat(wording.length);
-
-  const topText = document.createTextNode(topBottom);
-  const innerText = document.createTextNode(wording);
-  const bottomText = document.createTextNode(topBottom);
-
-  document.getElementById("top").appendChild(topText);
-  document.getElementById("middle").appendChild(innerText);
-  document.getElementById('bottom').appendChild(bottomText);
+  return JSON.stringify([char.repeat(message.length), message, char.repeat(message.length)]);
 }
-const name = "Isabelle";
-const age = 2;
 
-getBirthdayCake(name, age);
+const person = "Russell";
+const age = 19;
+
+document.getElementById('ans').textContent = getBirthdayCake(person, age);
 

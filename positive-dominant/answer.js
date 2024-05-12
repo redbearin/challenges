@@ -1,26 +1,22 @@
-isPositiveDominant = arr => {
-  // remove duplicates and sort highest to lowest
-  sortedArr = [...new Set(arr)].sort((a,b) => b-a);
-  let len = arr.length;
-  posNumCount = 0;
-  for (let i = 0; i < sortedArr.length; i++)  {
-    // break out of loop if you reach a neg num
-    if (sortedArr[i] < 0)
-      break;
-    // eliminate 0s from comparison
-    if (sortedArr[i] === 0)
-      len--;
-    // positive number count
-    if (sortedArr[i] > 1)  
-      posNumCount++;
+isPositiveDominant = a => {
+  a = [...new Set(a)];
+  let count = 0;
+	let zeroes = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] > 0) {
+      count++;
+    }
+		if (a[i] === 0) {
+			zeroes++;
+		}
   }
-  // more positives than negatives
-  if (posNumCount > len / 2)
+  if (count > (a.length - zeroes) / 2) {
     return true;
-  // more negatives than positives
+  }
   return false;
 }
 
-const arr = [0, -4, -1];
+const a = [1, 1, 1, 1, -3, -4];
 
-document.getElementById('ans').textContent = isPositiveDominant(arr);
+document.getElementById('ans').textContent = isPositiveDominant(a);
+

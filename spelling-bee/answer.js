@@ -1,13 +1,13 @@
 validateSpelling = str => {
-  const elements = str.split(' ');
-  for (let i = 0; i < elements.length - 1; i++) {
-    if (elements[i][0].toLowerCase() !== 
-        elements[elements.length - 1][i].toLowerCase())
-      return false;
+  const strArr = str.toLowerCase().split('. ');
+  const last = strArr.pop().slice(0, -1);
+  if (strArr.join('') === last) {
+    return true;
   }
-  return true;
+  return false;
 }
 
-const str = "H. A. N. K. E. R. C. H. E. I. F. Handkerchief.";
+const str = "C. Y. T. O. P. L. A. S. M. Cytoplasm?";
 
-document.getElementById('ans').textContent = validateSpelling(str);
+document.getElementById('ans').textContent = 
+validateSpelling(str);

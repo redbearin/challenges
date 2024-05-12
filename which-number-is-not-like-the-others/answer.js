@@ -1,10 +1,11 @@
 unique = arr => {
   arr.sort();
-  if (arr[0] !== arr [1])
-    return arr[0];
-  return arr[arr.length - 1];
+  if (arr[0] === arr[1]) {
+    return arr[arr.length - 1];
+  }
+  return arr[0];
 }
 
-const arr = [0, 1, 1, 1, 1, 1, 1, 1];
+const arr = [3, 3, 3, 7, 3, 3];
 
 document.getElementById('ans').textContent = unique(arr);

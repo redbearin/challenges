@@ -1,26 +1,10 @@
-littleBig = position => {
-  if (position === 1) 
-    return 5;
-  if (position === 2)
-    return 100;
-
-  let little = 5;
-  let big = 100;
-  for (let i = 3; i <= position; i++) {
-    if (i % 2) {
-      little += 1;
-      if (i === position) {
-        return little;
-      }
-    }
-    else {
-      big *= 2;
-      if (i === position)
-        return big;
-    }
-  }
+littleBig = num => {
+  return num % 2 ? 
+    5 + Math.floor(num/2) :
+    Math.pow(2, num/2 - 1) * 100;
 }
 
-const position = 28;
+const num = 28;
 
-document.getElementById('ans').textContent = littleBig(position);
+document.getElementById('ans').textContent = littleBig(num); 
+

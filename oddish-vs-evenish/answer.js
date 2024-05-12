@@ -1,15 +1,8 @@
-oddishOrEvenish = num => {
-  const strNum = num.toString();
-  let sum = 0;
-  for (let i = 0; i < strNum.length; i++) {
-    sum += +strNum[i];
-  }
-  if (sum % 2 === 0)
-    return 'Evenish';
-  else
-    return 'Oddish';
+oddishOrEvenish = num=> {
+  const sum = num.toString().split('').reduce((acc, val) => acc + +val, 0);
+  return sum % 2 ? "Oddish" : "Evenish";
 }
-
-const num = 43;
+const num = 694;
 
 document.getElementById('ans').textContent = oddishOrEvenish(num);
+

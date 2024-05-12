@@ -1,14 +1,14 @@
 mapLetters = str => {
-  const ltrLocs = {};
+  const obj = {};
   for (let i = 0; i < str.length; i++) {
-    if (ltrLocs[str[i]])
-      ltrLocs[str[i]].push(i);
-    else
-      ltrLocs[str[i]] = [i];
+    obj[str[i]] ?
+      obj[str[i]].push(i):
+      obj[str[i]] = [i];
   }
-  return JSON.stringify(ltrLocs);
+  return JSON.stringify(obj);
 }
 
-const str = "grapes";
+const str = "dodo";
 
-document.getElementById('ans').textContent = mapLetters(str);
+document.getElementById('ans').textContent = mapLetters(str) 
+

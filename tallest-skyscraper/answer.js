@@ -1,28 +1,16 @@
-const tallestSkyscraper = arr => {
-  let maxFloors = 0;
-  let floors;
-  // go col by col thru arr
-  for (let col = 0; col < arr.length; col++) {
-    floors = 0;
-    // go row by row thru that col
-    for (let row = arr.length - 1; row >= 0; row--) {
-      if (arr[row][col] === 1) 
-        floors++;
-      else
-        break;
+tallestSkyscraper = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(1)) {
+      return arr.length - i;
     }
-    // skyscraper is taller
-    if (floors > maxFloors)
-      // change maxHeight to reflect new
-      maxFloors = floors;
   }
-  return maxFloors;
-};
+  return 0;
+}
 
 const arr = [
   [0, 0, 0, 0],
-  [0, 0, 0, 0],
-  [1, 1, 1, 0],
+  [0, 1, 0, 0],
+  [0, 1, 1, 0],
   [1, 1, 1, 1]
 ];
 

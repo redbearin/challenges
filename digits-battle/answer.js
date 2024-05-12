@@ -1,19 +1,20 @@
 battleOutcome = num => {
-  // convert numberic num to str num
-  const numStr = num.toString();
-  let outcome = '';
-  // go every two digits thru num
-  for (let i = 0; i < numStr.length; i += 2) {
-    // last digit or first digit bigger than second
-    if (numStr[i + 1] === undefined || 
-        +numStr[i] > +numStr[i + 1])
-      outcome += numStr[i];
-    // second digit bigger
-    else if (+numStr[i] < +numStr[i + 1])
-      outcome += numStr[i + 1];
-  } 
-  return +outcome;
+  let strNum = num.toString();
+  let newNumStr = '';
+  for (let i = 1; i < strNum.length; i += 2) {
+    if (+strNum[i] > +strNum[i - 1]) {
+      newNumStr += strNum[i];
+    }
+    if (+strNum[i] < +strNum[i - 1]) {
+      newNumStr += strNum[i - 1];
+    }
+    if (i === strNum.length - 2) {
+      newNumStr += strNum[i + 1];
+    }
+  }
+  return +newNumStr;
 }
-const num = 78925;
+
+const num = 578921445;
 
 document.getElementById('ans').textContent = battleOutcome(num);

@@ -20,6 +20,7 @@ Suppose a student can earn 100% on an exam by getting the answers all correct or
 ➞ true
 
 // Possible for student to get all questions incorrect.
+
 Examples
 possiblyPerfect(["B", "A", "_", "_"], ["B", "A", "C", "C"]) ➞ true
 
@@ -32,5 +33,6 @@ possiblyPerfect(["B", "_"], ["C", "A"]) ➞ true
 possiblyPerfect(["B", "A"], ["C", "A"]) ➞ false
 
 possiblyPerfect(["B"], ["B"]) ➞ true
+
 Notes
 Test has at least one question.

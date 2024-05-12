@@ -1,21 +1,21 @@
-const canSeeStage = seatMap => {
-  console.log('inside')
-  // column
-  for (let i = 0; i < seatMap[0].length; i++) {
-    // between rows in that column
-    for (let j = 1; j < seatMap.length; j++) {
-      // the element in the row in front is >= element
-      if (seatMap[j][i] <= seatMap[j - 1][i])
-        return false;
+canSeeStage = seats => {
+  //column
+  for (let i = 0; i < seats[0].length; i++) {
+    // row
+    for (let j = 1; j < seats.length; j++) {
+      if (seats[j][i] <= seats[j - 1][i]) {
+	        return false;			
+			}
     }
   }
   return true;
-};
+}
 
-const seatMap = [
-  [1, 0, 0],
-  [1, 1, 1],
-  [2, 2, 2]
+const seats = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ];
 
-document.getElementById('ans').textContent = canSeeStage(seatMap);
+document.getElementById('ans').textContent = canSeeStage(seats);
+

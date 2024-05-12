@@ -1,28 +1,26 @@
-const allAboutStrings = str => {
+allAboutStrings = str => {
   const details = [];
-  // length
-  details[0] = str.length;
-  // first char
-  details[1] = str[0];
-  // last char
-  details[2] = str[str.length - 1];
-  // middle char or chars
-  if (details[0] % 2)
-    details[3] = str[Math.ceil(details[0] / 2) - 1];
-  else {
-    details[3] = str[(details[0] / 2) - 1] + str[details[0] / 2];
+  details.push(str.length);
+  details.push(str[0]);
+  details.push(str[str.length -1]);
+
+  str.length % 2 ?
+    details.push(str[Math.floor(str.length/2)]) :
+    details.push(str[str.length/2 - 1] + str[str.length/2]);
+
+  for (let i = 2; i < str.length; i++) {
+    if (str[1] === str[i]) {
+      details.push('@ index ' + i);
+      break;
+    }
+    if (i === str.length - 1) {
+      details.push("not found");
+    }
   }
-  // index that holds same char as in index 1
-  const backPart = str.slice(2);
-  const backIdx = str.slice(2).indexOf(str[1]);
-  if (backIdx === -1)
-    details[4] = "not found";
-  else
-    details[4] = "@ index " + (backIdx + 2);
-
   return JSON.stringify(details);
-};
+}
 
-const str = "Science";
+const str = "Computer";
 
 document.getElementById('ans').textContent = allAboutStrings(str);
+

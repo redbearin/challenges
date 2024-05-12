@@ -1,16 +1,14 @@
 removeRepeats = str => {
-  let noRepeats = '';
-  for (let i = 0; i < str.length; i++) {
-    // letter at first index
-    // letter different than prior letter
-    // add to no repeats string
-    if (i === 0 || 
-        str[i] !== str[i - 1])
-      noRepeats += str[i];
+  let newStr = str[0];
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] != str[i - 1]) {
+      newStr += str[i];
+    }
   }
-  return noRepeats;
+  return newStr;
 }
 
-const str = "bookkeeper";
+const str = "aaabbbccc";
 
-document.getElementById('ans').textContent = removeRepeats(str);
+document.getElementById('ans').textContent = removeRepeats(str); 
+
