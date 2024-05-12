@@ -12,3 +12,4 @@ countBoomerangs = arr => {
 const arr = [9, 5, 9, 5, 1, 1, 1];
 
 document.getElementById('ans').textContent = countBoomerangs(arr);
+
