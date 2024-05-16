@@ -1,14 +1,11 @@
-isAutomorphic = num => {
-  const numLen = num.toString().length;
-  // square the number and take the last num of digits that
-  // math length of number
-  const lastDig = Math.pow(num, 2).toString().slice(-numLen);
-  // last digits are the same as num
-  if (lastDig === num.toString())
-    return true;
-  return false;
+isAutomorphic = n => {
+  const strNum = Math.pow(n,2).toString();
+  return strNum.slice(-(n.toString().length)) === n.toString() ?
+    true:
+    false;
 }
 
-const num = 5;
+const n = 25;
 
-document.getElementById('ans').textContent = isAutomorphic(num);
+document.getElementById('ans').textContent = isAutomorphic(n);
+
