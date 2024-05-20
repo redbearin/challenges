@@ -4,7 +4,6 @@ alliterationCorrect = str => {
   let base = '*';
   for (let i = 0; i < strArr.length; i++) {
     if (strArr[i].length > 3) {
-
       if (base === '*') {
         base = strArr[i][0];
       }

@@ -29,12 +29,12 @@ chemicalReactions = (C, H, O) => {
   else {
     molecules[2] = C;
   }
-  
+
   return JSON.stringify(molecules);
 }
 
-const C = 113;
-const H = 0;
-const O = 52;
+const C = 45;
+const H = 11;
+const O = 100;
 
 document.getElementById('ans').textContent = chemicalReactions(C, H, O);
