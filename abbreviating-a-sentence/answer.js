@@ -10,3 +10,4 @@ abbreviate = (str, n = 4) => {
 }
 
 document.getElementById('ans').textContent = abbreviate("do it yourself", 2);
+
