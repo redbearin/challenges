@@ -3,7 +3,7 @@ findVertex = (a, b, c) => {
   if (k === -0) {
     k = 0;
   }
-  return [-b/(a*2), k];
+  return JSON.stringify([-b/(a*2), k]);
 }
 
 const a = 1;
