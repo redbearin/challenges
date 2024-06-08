@@ -1,7 +1,8 @@
 clearFog = str => {
   const newStr = str.replace(/[fogFOG]/g, "");
-  newStr === str ?
-  
+  return newStr === str ?
+  "It's a clear day!":
+  newStr;
 }
 
 const str = "fogfogFFfoooofftogffreogffesGgfOogfog";
