@@ -1,27 +1,17 @@
 replace = (str, range) => {
-  let flag = false;
+  const beg = range.charCodeAt(0);
+  const end = range.charCodeAt(2);
   let newStr = '';
   for (let i = 0; i < str.length; i++) {
-    if (flag) {
-      if(str[i] === range[2]) {
-        flag = false;
-      }
-      newStr += "#"
-    }
-    else if (!flag) {
-      if(str[i] === range[0]) {
-        newStr += "#";
-        flag = true;
-      }
-      else {
-        newStr += str[i];
-      }
-    }
+    str.charCodeAt(i) >= beg && 
+    str.charCodeAt(i) <= end ?
+    newStr += '#':
+    newStr += str[i];
   }
   return newStr;
 }
 
 const str = "abcdef";
-const range = "c-e";
+const rep = "c-e";
 
-document.getElementById('ans').textContent = replace(str, range); 
+document.getElementById('ans').textContent = replace(str, rep); 
