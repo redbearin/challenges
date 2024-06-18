@@ -1,28 +1,20 @@
-minLength = (arr, ttl) => {
-  let i = 0
-  let j = 0;
-  let count = 2;
-  let sum;
-  console.log('inside')
-  // subarray less than length of array
-  while (count < arr.length) {
-    // going through the array
-    while (i < arr.length) {
-      console.log(i)
-      let sum = 0;
-      let j = 0;
-      while (j < count) {
-        sum += arr[j + i];
-      }
-      if (sum > ttl) {
+minLength = (arr, n) => {
+  let count = 1;
+  let sub;
+  while (count <= arr.length) {
+    for (let i = 0; i < arr.length - count + 1; i++) {
+      sub = arr.slice(i, i + count)
+      if (sub.reduce((acc, ele) => acc + ele) > n) {
         return count;
       }
-      i += count;
     }
     count++;
   }
+  return -1;
 }
 
 const arr = [5, 8, 2, -1, 3, 4];
-const ttl = 9;
-document.getElementById('ans').textContent = minLength(arr, ttl);
+const n = 9;
+
+document.getElementById('ans').textContent = minLength(arr, n);
+
