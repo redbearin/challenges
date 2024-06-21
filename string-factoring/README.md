@@ -8,6 +8,7 @@ stringFactor([2, 2, 2, 3, 3]) ➞ "2^3 x 3^2"
 stringFactor([2, 7]) ➞ "2 x 7"
 
 stringFactor([2, 3, 3]) ➞ "2 x 3^2"
+
 Notes
 Factors should be joined with x (multiplication sign).
 Multiple instances of the same factor should be exponentiated.
