@@ -6,7 +6,7 @@ countTrue = arr => {
     }
   }
   return count;
-} 
+}
 
 const arr = [true, false, false, true, false];
 

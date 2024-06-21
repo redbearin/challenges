@@ -7,6 +7,7 @@ Other important rules:
 The message should be in the format: {age} Happy Birthday {name}! {age}
 Leave a space between the edge of the cake and the age numbers.
 Examples
+
 getBirthdayCake("Jack", 10) ➞ [
   "##############################",
   "# 10 Happy Birthday Jack! 10 #",
