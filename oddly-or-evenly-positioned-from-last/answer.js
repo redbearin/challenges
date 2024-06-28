@@ -1,26 +1,20 @@
-const charAtPos = (input, type) => {
-  let start, final;
-  if(type === 'even')
-    start = 2;
-  else
-    start = 1;
+charAtPos = (input, pos) => {
+  let beg;
+  pos === 'odd'?
+    beg = input.length - 1:
+    beg = input.length - 2;
 
-  if (Array.isArray(input)) {
-    final = [];
-    for (let i = input.length - start; i >= 0; i -= 2) {
-      final.unshift(input[i]);
-    }
+  posArr = [];
+  for (let i = beg; i >= 0; i -= 2) {
+    posArr.unshift(input[i]);
   }
-  else {
-    final = '';
-    for (let i = input.length - start; i >= 0; i -= 2) {
-      final = input[i] + final;
-    }
+  if (typeof input === 'string') {
+    return posArr.join('');
   }
-  return JSON.stringify(final);
-};
+  return posArr;
+}
 
-const input = [")", "(", "*", "&", "^", "%", "$", "#", "@", "!"];
-const type = "odd";
+const input = [2, 4, 6, 8, 10];
+const pos = "even";
 
-document.getElementById('ans').textContent = charAtPos(input, type);
+document.getElementById('ans').textContent = charAtPos(input, pos);
