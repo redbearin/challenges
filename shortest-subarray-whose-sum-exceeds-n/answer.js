@@ -17,3 +17,4 @@ const arr = [5, 8, 2, -1, 3, 4];
 const n = 9;
 
 document.getElementById('ans').textContent = minLength(arr, n);
+

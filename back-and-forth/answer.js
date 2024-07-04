@@ -18,3 +18,4 @@ calculateArrowhead = arr => {
 const arr = [">>>>", "<", "<", "<"];
 
 document.getElementById('ans').textContent = calculateArrowhead(arr);
+
