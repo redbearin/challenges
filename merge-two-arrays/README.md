@@ -3,6 +3,7 @@ Create a function that takes two arrays and combines them by alternatingly takin
 The arrays may be of different lengths, with at least one character / digit.
 The first array will contain string characters (lowercase, a-z).
 The second array will contain integers (all positive).
+
 Examples
 mergeArrays(["f", "d", "w", "t"], [5, 3, 7, 8])
 ➞ ["f", 5, "d", 3, "w", 7, "t", 8]
