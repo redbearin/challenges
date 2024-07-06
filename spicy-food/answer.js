@@ -1,19 +1,19 @@
-billSplit = (foodType, cost) => {
-  let you = 0;
-  let friend = 0;
-  for (let i = 0; i < cost.length; i++) {
-    if (foodType[i] === "S") {
-      you += cost[i]; 
+billSplit = (spicy, prices) => {
+  let youTtl = 0;
+  let friendTtl = 0;
+  for (let i = 0; i < spicy.length; i++) {
+    if (spicy[i] === "N") {
+      youTtl += prices[i]/2;
+      friendTtl += prices[i]/2;
     }
     else {
-      you += cost[i]/2;
-      friend += cost[i]/2;
+      youTtl += prices[i];
     }
   }
-  return JSON.stringify([you, friend]);
+  return JSON.stringify([youTtl, friendTtl]);
 }
 
-const foodType = ["S", "N"];
-const cost = [41, 10];
+const spicy = ["N", "S", "N"];
+const prices = [10, 10, 20];
 
-document.getElementById('ans').textContent = billSplit(foodType, cost);
+document.getElementById('ans').textContent = billSplit(spicy, prices);
