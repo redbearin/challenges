@@ -1,15 +1,13 @@
-wordBuilder = (ltrs, indices) => {
-  const rearranged = []
-  for (let i = 0; i < ltrs.length; i++) {
-    rearranged.push('*');
+wordBuilder = (ltrs, idx) => {
+  const newArr = Array(ltrs.length).fill('*');
+  for (let i = 0; i < idx.length; i++) {
+    newArr[idx[i]] = ltrs[i];
   }
-  for (let i = 0; i < ltrs.length; i++) {
-    rearranged[indices[i]] = ltrs[i];
-  }
-  return rearranged.join('');
+  return newArr.join('');
 }
 
-const ltrs= ["g", "e", "o"];
-const indices = [1, 0, 2];
+const ltrs = ["e", "t", "s", "t"];
+const idx = [1, 3, 2, 0];
 
-document.getElementById('ans').textContent = wordBuilder(ltrs, indices);
+document.getElementById('ans').textContent = wordBuilder(ltrs, idx);
+
