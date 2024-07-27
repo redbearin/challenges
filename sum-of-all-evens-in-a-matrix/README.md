@@ -24,6 +24,7 @@ sumOfEvens([
   [],
   []
 ]) ➞ 0
+
 Notes
 Submatrices will be of equal length.
 Return 0 if the 2D matrix only consists of empty submatrices.

@@ -1,19 +1,17 @@
-const removeLetters = (arr, str) => {
-  // index of the str letter in arr
-  let ltrIndex; 
+removeLetters = (arr, str) => {
+  let i = 0;
+  let idx;
   for (let i = 0; i < str.length; i++) {
-    ltrIndex = arr.ltrIndexOf(str[i]);
-    // str letter not in array
-    // go to next str letter
-    if (ltrIndex === -1)
-      continue;
-    // remove letter from array
-    arr.splice(ltrIndex, 1);
+    idx = arr.indexOf(str[i]);
+    if (idx !== -1) {
+      arr.splice(idx, 1);
+    }
   }
   return JSON.stringify(arr);
 }
 
-const arr = ["t", "t", "e", "s", "t", "u"];
-const str = "testing";
+const arr = ["b", "b", "l", "l", "g", "n", "o", "a", "w"];
+const str = "balloon";
+
 
 document.getElementById('ans').textContent = removeLetters(arr, str);
