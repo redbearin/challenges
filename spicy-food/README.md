@@ -19,6 +19,7 @@ billSplit(["N", "S", "N"], [10, 10, 20]) ➞ [25, 15]
 billSplit(["N", "N"], [10, 10]) ➞ [10, 10]
 
 billSplit(["S", "N"], [41, 10]) ➞ [46, 5]
+
 Notes
 The dishes are in the same order for both input arrays.
 Remember to output an array in this order: [your payment, friend's payment]
