@@ -26,3 +26,4 @@ holeySort = arr => {
 const arr = [100, 888, 1660, 11];
 
 document.getElementById('ans').textContent = holeySort(arr);
+
