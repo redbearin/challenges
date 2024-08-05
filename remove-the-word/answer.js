@@ -13,4 +13,5 @@ removeLetters = (arr, str) => {
 const arr = ["b", "b", "l", "l", "g", "n", "o", "a", "w"];
 const str = "balloon";
 
+
 document.getElementById('ans').textContent = removeLetters(arr, str);
