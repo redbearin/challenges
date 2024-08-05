@@ -6,3 +6,7 @@ numbersSum([1, 2, "13", "4", "645"]) ➞ 3
 numbersSum([true, false, "123", "75"]) ➞ 0
 
 numbersSum([1, 2, 3, 4, 5, true]) ➞ 15
+
+Notes
+Check the Resources tab for help.
+
