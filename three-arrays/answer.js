@@ -18,4 +18,5 @@ sumCommon = (...args) => {
   return sum;
 }
 
-document.getElementById('ans').textContent = sumCommon([1, 2, 2, 3], [5, 3, 2, 2], [7, 3, 2, 2])
+document.getElementById('ans').textContent = sumCommon([1, 2, 2, 3], [5, 3, 2, 2], [7, 3, 2, 2]);
+
