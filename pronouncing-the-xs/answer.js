@@ -1,29 +1,19 @@
 xPronounce = str => {
-  let pronStr = '';
-  // go element by element thru string
-  for (let i = 0; i < str.length; i++) {
-    // letter is an x
-    if (str[i] === 'x' || str[i] === 'X') {
-      // x at beginning of word
-      if (str[i-1] === ' ' || undefined) {
-        // x a single letter wordd
-        if (str[i+1] === ' ')
-          pronStr += 'ecks';
-        // x at beginning of multi letter word
-        else 
-          pronStr += 'z';
+  const strArr = str.split(' ');
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i][0] === 'x') {
+      if (strArr[i].length === 1) {
+        strArr[i] = "ecks";
       }
-      // x in middle of word or at end of word
-      else
-        pronStr += 'cks'
+      else {
+        strArr[i] = "z" + strArr[i].slice(1);
+      }
     }
-    // not an x
-    else 
-      pronStr += str[i];
+    strArr[i] = strArr[i].replace(/x/g, 'cks');
   }
-  return pronStr;
+  return strArr.join(' ');
 }
 
-const str = "OMG x box unboxing video x D";
+const str = "Inside the box was a xylophone";
 
 document.getElementById('ans').textContent = xPronounce(str);
