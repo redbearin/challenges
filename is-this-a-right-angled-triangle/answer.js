@@ -15,3 +15,4 @@ const s2 = 130;
 const s3 = 110;
 
 document.getElementById('ans').textContent = rightTriangle(s1, s2, s3);
+
