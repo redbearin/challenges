@@ -7,6 +7,6 @@ getVodkaBottle = (obj, num) => {
 }
 
 const obj = { whiskey: 100, "Rammstein A": 100, "Rammstein D": 70, beer: 70 };
-const num = 
+const num = 100;
 
 document.getElementById('ans').textContent = getVodkaBottle(obj, num);
