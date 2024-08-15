@@ -1,23 +1,13 @@
-uniqueStyles = bandStyles => {
-  const styles = {};
-  for (let i = 0; i < bandStyles.length; i++) {
-    // break the str into arr of styles
-    let arr = bandStyles[i].split(',');
-    // add each style to the styles object
-    for (let j = 0; j < arr.length; j++) {
-      if (!styles[arr[j]]) 
-        styles[arr[j]] = 1;
-    }
-  }
-  return Object.keys(styles).length;
+uniqueStyles = arr => {
+  return [... new Set(arr.join(',').split(','))].length;
 }
 
-const bandStyles = [
-  "Soul",
-  "House,Folk",
-  "Trance,Downtempo,Big Beat,House",
-  "Deep House",
-  "Soul"
-];
+const arr = ["Dub,Dancehall",
+  "Industrial,Heavy Metal",
+  "Techno,Dubstep",
+  "Synth-pop,Euro-Disco",
+  "Industrial,Techno,Minimal"];
 
-document.getElementById('ans').textContent = uniqueStyles(bandStyles);
+document.getElementById('ans').textContent = 
+uniqueStyles(arr);
+
