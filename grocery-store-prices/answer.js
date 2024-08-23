@@ -1,7 +1,7 @@
 getPrices = arr => {
   const prices = [];
   for (let i = 0; i < arr.length; i++) {
-    prices.push(/\(([^)]+)\)/.exec(arr[i])[1]);
+    prices.push(+/\(\$([^)]+)\)/.exec(arr[i])[1]);
   }
   return JSON.stringify(prices);
 }
