@@ -2,7 +2,7 @@ weeklySalary = arr => {
   let sum = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (i === 6 || i === 7) {
+    if (i === 5 || i === 6) {
       if (arr[i] > 8) {
         sum += (arr[i] - 8) * 30 + 160;
       }
@@ -21,6 +21,7 @@ weeklySalary = arr => {
   }
   return sum;
 }
+
 const arr = [10, 10, 10, 0, 8, 0, 0];
 
 document.getElementById('ans').textContent = weeklySalary(arr);
