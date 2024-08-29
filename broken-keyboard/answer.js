@@ -1,14 +1,15 @@
-findBrokenKeys = (str1, str2) => {
-  const brokenKeys = [];
-  for (let i = 0; i < str1.length; i++) {
-    if(str1[i] !== str2[i]) {
-      brokenKeys.push(str1[i])
+findBrokenKeys = (correct, actual) => {
+  const ltrs = [];
+  for (let i = 0; i < correct.length; i++) {
+    if (correct[i] !== actual[i]) {
+      ltrs.push(correct[i])
     }
   }
-  return JSON.stringify([...new Set(brokenKeys)]);
+  return JSON.stringify([...new Set(ltrs)]);
 }
 
-const str1 = "beethoven";
-const str2 = "affthoif5";
+const correct = "happy birthday";
+const actual = "hawwy birthday";
 
-document.getElementById('ans').textContent = findBrokenKeys(str1, str2);
+document.getElementById('ans').textContent = findBrokenKeys(correct, actual);
+
