@@ -12,3 +12,4 @@ const correct = "happy birthday";
 const actual = "hawwy birthday";
 
 document.getElementById('ans').textContent = findBrokenKeys(correct, actual);
+

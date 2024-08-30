@@ -8,3 +8,4 @@ isAutomorphic = n => {
 const n = 25;
 
 document.getElementById('ans').textContent = isAutomorphic(n);
+
