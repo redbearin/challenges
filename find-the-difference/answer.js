@@ -12,3 +12,4 @@ const str = "ae";
 const mod = "aea";
 
 document.getElementById('ans').textContent = findTheDifference("ae", "aea");
+
