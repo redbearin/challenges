@@ -12,6 +12,7 @@ orderedMatrix(5, 5) ➞ [
 orderedMatrix(1, 1) ➞ [[1]]
 
 orderedMatrix(1, 5) ➞ [[1, 2, 3, 4, 5]]
+
 Notes
 a is the height of the matrix (y coordinate), and b is the width (x coordinate).
 a and b will always be positive, and the matrix will always be square shaped (in each row are the same amount of columns).

@@ -1,19 +1,20 @@
-orderedMatrix = (numRows, numCols) => {
-  const matrix = [];
-  count = 0;
-  let sub;
-  for (let i = 0; i < numRows; i++) {
-    sub = [];
-    for (let j = 0; j < numCols; j++) {
+orderedMatrix = (rows, cols) => {
+  let row;
+  const arr = [];
+  let count = 1;
+  for (let i = 0; i < rows; i++) {
+    row = [];
+    for (let j = 0; j < cols; j++) {
+      row.push(count);
       count++;
-      sub.push(count);
     }
-    matrix.push(sub);
+    arr.push(row);
   }
-  return JSON.stringify(matrix);
+  return JSON.stringify(arr);
 }
 
-const numRows = 1;
-const numCols = 5;
+const rows = 5;
+const cols = 5;
 
-document.getElementById('ans').textContent = orderedMatrix(numRows, numCols);
+document.getElementById('ans').textContent = orderedMatrix(rows, cols);
+
