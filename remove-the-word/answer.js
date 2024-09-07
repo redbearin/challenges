@@ -1,5 +1,4 @@
 removeLetters = (arr, str) => {
-  let i = 0;
   let idx;
   for (let i = 0; i < str.length; i++) {
     idx = arr.indexOf(str[i]);

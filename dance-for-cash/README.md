@@ -3,6 +3,7 @@ Your local bank has decided to upgrade its ATM machines by incorporating motion 
 Create a program that converts a customer's PIN number to its dance equivalent. There is one dance move per digit in the PIN number. A list of dance moves is given in the code.
 
 Examples
+
 danceConvert("0000") ➞ ["Shimmy", "Shake", "Pirouette", "Slide"]
 
 danceConvert("3856") ➞ [ "Slide", "Arabesque", "Pop", "Arabesque" ]

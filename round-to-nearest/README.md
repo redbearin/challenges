@@ -9,3 +9,4 @@ roundNearest(123, 5) ➞ 125
 
 Notes
 If no nearest number is given, round the number as you normally would (see example #2).
+
