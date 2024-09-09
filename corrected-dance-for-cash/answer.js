@@ -1,4 +1,5 @@
 const MOVES = ["Shimmy", "Shake", "Pirouette", "Slide", "Box Step", "Headspin", "Dosado", "Pop", "Lock", "Arabesque"];
+
 danceConvert = pin => {
   if(/([^0-9])/g.test(pin) || 
 		 pin.length !== 4){
