@@ -11,7 +11,7 @@ findTheDifference("abcd", "abcde") ➞ "e"
 
 findTheDifference("rt", "rst") ➞ "s"
 
-findTheDifference("gjklmn", "ghjklmn"") ➞ "h"
+findTheDifference("gjklmn", "ghjklmn") ➞ "h"
 
 findTheDifference("ae", "aea") ➞ "a"
 

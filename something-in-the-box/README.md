@@ -28,5 +28,6 @@ inBox([
   "#   #",
   "#####"
 ]) ➞ false
+
 Notes
 The asterisk may be in the array, however, it must be inside the box, if it exists.
