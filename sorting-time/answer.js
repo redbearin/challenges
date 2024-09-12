@@ -14,7 +14,7 @@ sortArray = arr => {
       }
     }
   }
-  return arr;
+  return JSON.stringify(arr);
 }
 
 const arr = [2, -5, 1, 4, 7, 8];
