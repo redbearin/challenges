@@ -7,14 +7,15 @@ editWords = arr => {
       }
       arr[i][j] = arr[i][j].split('').reverse();
       if (arr[i][j].length > 3 && (arr[i][j][0] !== 'Y' && arr[i][j][1] !== 'T' && arr[i][j][2] !== 'I' && arr[i][j][3] !== 'C')) {
-        arr[i][j].splice(Math.floor(arr[i][j].length/2), 0, '-');
+        arr[i][j].splice(Math.ceil(arr[i][j].length/2), 0, '-');
       }
       arr[i][j] = arr[i][j].join('');
     }
+    arr[i] = arr[i].join(' ');
   }
-  return arr;
+  return JSON.stringify(arr);
 }
 
-const arr = ["New York City"];
+const arr = ['New York City'];
 
 document.getElementById('ans').textContent = editWords(arr);
