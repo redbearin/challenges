@@ -1,16 +1,18 @@
 editWords = arr => {
-  let strArr = arr[0].toUpperCase().split(' ').reverse();
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i] === "") {
-      strArr[i] = "-";
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].toUpperCase().split(' ').reverse();
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] === "") {
+        arr[i][j] = "-";
+      }
+      arr[i][j] = arr[i][j].split('').reverse();
+      if (arr[i][j].length > 3 && (arr[i][j][0] !== 'Y' && arr[i][j][1] !== 'T' && arr[i][j][2] !== 'I' && arr[i][j][3] !== 'C')) {
+        arr[i][j].splice(Math.floor(arr[i][j].length/2), 0, '-');
+      }
+      arr[i][j] = arr[i][j].join('');
     }
-    strArr[i] = strArr[i].split('').reverse();
-    if (strArr[i].length > 3 && strArr[i] !== "YTIC") {
-      strArr[i].splice(Math.floor(strArr[i].length/2), 0, '-');
-    }
-    strArr[i] = strArr[i].join('');
   }
-  return [strArr];
+  return arr;
 }
 
 const arr = ["New York City"];
