@@ -9,3 +9,4 @@ numbersSum([1, 2, 3, 4, 5, true]) ➞ 15
 
 Notes
 Check the Resources tab for help.
+

@@ -19,3 +19,4 @@ elasticize = str => {
 const str = "KAYAK";
 
 document.getElementById('ans').textContent = elasticize(str);
+

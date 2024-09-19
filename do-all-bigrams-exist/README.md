@@ -11,6 +11,7 @@ canFind(["ay", "be", "ta", "cu"], ["maybe", "beta", "abet", "course"]) ➞ false
 canFind(["th", "fo", "ma", "or"], ["the", "many", "for", "forest"]) ➞ true
 
 canFind(["oo", "mi", "ki", "la"], ["milk", "chocolate", "cooks"]) ➞ false
+
 Notes
 A bigram is string of two consecutive characters in the same word.
 If the array of words is empty, return false.
