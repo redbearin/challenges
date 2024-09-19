@@ -1,31 +1,22 @@
-const elasticize = word => {
-  const leftLength = Math.ceil(word.length / 2);
-  let newWordBeginning = '';
-  // left side of word
-  for (let i = 0; i < leftLength; i++) {
-    // add number of letters that 
-    // corresponds to position in word
-    for (let j = 0; j < i + 1; j++) {
-      newWordBeginning += word[i];
-    }
+elasticize = str => {
+  let center = '';
+  if (str.length % 2) {
+    center = str[Math.floor(str.length/2)].repeat(Math.ceil(str.length/2));
   }
-  let newWordEnd = '';
-  let ltrGrouping;
-  // right side of word
-  for (let i = word.length - 1; i > leftLength - 1; i--) {
-    ltrGrouping = '';
-    // add number of letters that 
-    // corresponds to position in word
-    for (let j = 0; j < word.length - i; j++) {
-      ltrGrouping += word[i];
-    }
-    // add that grouping to the ending of the word
-    newWordEnd = ltrGrouping + newWordEnd;
+  let front = '';
+  for (let i = 0; i < Math.floor(str.length/2); i++) {
+    front += str[i].repeat(i + 1);
   }
-  // combine the new beginning and new ending
-  return newWordBeginning + newWordEnd;
+  let end = '';
+  let count = 1;
+  for (let i = str.length -1; i >= str.length/2; i--) {
+    end = str[i].repeat(count) + end;
+    count++;
+  }
+  return front + center + end;
 }
 
-const word = "ANNA";
+const str = "KAYAK";
 
-document.getElementById('ans').textContent = elasticize(word);
+document.getElementById('ans').textContent = elasticize(str);
+
