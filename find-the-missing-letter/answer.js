@@ -1,13 +1,12 @@
-missingLetter = letters => {
-  // create a string of letters
-  const lettersStr = letters.join('');
-  // compare character code and identify gap
-  for (let i = 1; i < lettersStr.length; i++) {
-    if (lettersStr.charCodeAt(i) !== lettersStr.charCodeAt(i - 1) + 1)
-      return String.fromCharCode(lettersStr.charCodeAt(i - 1) + 1);
+missingLetter = arr => {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].charCodeAt(0) !== 
+        arr[i-1].charCodeAt(0) + 1) {
+      return (String.fromCharCode(arr[i-1].charCodeAt(0) + 1));
+    }
   }
-} 
+}
 
-const letters = ["m", "o"];
+const arr = ["a", "b", "c", "e", "f", "g"];
 
-document.getElementById('ans').textContent = missingLetter(letters);
+document.getElementById('ans').textContent = missingLetter(arr);
