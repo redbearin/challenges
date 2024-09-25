@@ -10,3 +10,4 @@ const arr = ["Dub,Dancehall",
 
 document.getElementById('ans').textContent = 
 uniqueStyles(arr);
+

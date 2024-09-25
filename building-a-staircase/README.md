@@ -30,6 +30,7 @@ buildStaircase(4, "$") ➞ [
 ]
 
 // height = 4 and building block = "$"
+
 Notes
 If the height is 0, return an empty array [].
 See Comments or Resources for help.
