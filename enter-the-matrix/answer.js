@@ -1,19 +1,17 @@
 transposeMatrix = arr => {
   let str = '';
-  // column by column thru arr
-  for (let j = 0; j < arr[0].length; j++) {
-    // go row by row thru arr
-    for (let i = 0; i < arr.length; i++) {
-      str += arr[i][j] + ' ';
+  //column
+  for (let i = 0; i < arr[0].length; i++) {
+    //row
+    for (let j = 0; j < arr.length; j++) {
+      str += arr[j][i] + ' ';
     }
   }
-  return str;
+  return str.trim();
 }
 
 const arr = [
-  ["You", "the"],
-  ["must", "table"],
-  ["transpose", "order."]
-];
+  ["The", "are"],
+  ["columns", "rows."];
 
 document.getElementById('ans').textContent = transposeMatrix(arr);
