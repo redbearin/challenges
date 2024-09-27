@@ -26,3 +26,4 @@ const obj = {
 };
 
 document.getElementById('ans').textContent = whoPassed(obj);
+

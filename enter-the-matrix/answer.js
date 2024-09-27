@@ -12,7 +12,6 @@ transposeMatrix = arr => {
 
 const arr = [
   ["The", "are"],
-  ["columns", "rows."]
-];
+  ["columns", "rows."];
 
 document.getElementById('ans').textContent = transposeMatrix(arr);

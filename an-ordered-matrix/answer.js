@@ -17,3 +17,4 @@ const rows = 5;
 const cols = 5;
 
 document.getElementById('ans').textContent = orderedMatrix(rows, cols);
+
