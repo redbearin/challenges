@@ -1,33 +1,29 @@
-const whoPassed = students => {
-  const passed = [];
-  let scoreArr;
-  // initialize lowGrade flag
-  let lowGrade = false;
-  // go student by student through students object
-  for (key in students) {
-    // go grade by grade
-    for (let i = 0; i < students[key].length; i++) {
-      // put the score into an array
-      scoreArr = students[key][i].split('/');
-      // determine if the student received 100%
-      if (+scoreArr[0]/+scoreArr[1] !== 1) {
-        lowGrade = true;
+whoPassed = obj => {
+  let strNumArr;
+  let flag = false;
+  const arr = [];
+  for (let key in obj) {
+    for (let i = 0; i < obj[key].length; i++) {
+      strNumArr = obj[key][i].split('/');
+      if (+strNumArr[0]/+strNumArr[1] !== 1) {
+        flag = true;
         break;
       }
     }
-    // all grades 100%
-    if (!lowGrade) 
-      passed.push(key);
-    // reset unacceptable grade flag
-    else
-      lowGrade = false;
+    if (!flag) {
+      arr.push(key);
+    }
+    flag = false;
   }
-  return JSON.stringify(passed.sort());
+  return JSON.stringify(arr.sort());
+}
+
+const obj = {
+  "John" : ["5/5", "50/50", "10/10", "10/10"],
+  "Sarah" : ["4/8", "50/57", "7/10", "10/18"],
+  "Adam" : ["8/10", "22/25", "3/5", "5/5"],
+  "Barry" : ["3/3", "20/20"]
 };
 
-const students = {
-  "Zach" : ["10/10", "2/4"],
-  "Fred" : ["7/9", "2/3"]
-};
+document.getElementById('ans').textContent = whoPassed(obj);
 
-document.getElementById('ans').textContent = whoPassed(students);
