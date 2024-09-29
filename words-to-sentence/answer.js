@@ -1,30 +1,49 @@
-const wordsToSentence = arr => {
-  // clean the array
-  for (let i = arr.length - 1; i >= 0; i--) {
-    if (!arr[i])
-      arr.splice(i, 1);
-  }
-  // nothing in array
-  if (!arr.length)
-    return '';
-  // build the string
-  // intialize the string
+wordsToSentence = arr => {
+	if (arr === null) {
+		return "";
+	}
   let str = '';
-  // go element by element thru array
-  for (let i = 0; i < arr.length; i++) {
-    // first element of array
-    if (i === 0)
-      str += arr[i];
-    // last element of array
-    else if (i === arr.length - 1)
-      str += ' and ' + arr[i];
-    // middle element
-    else
-      str += ', ' + arr[i];
+  let flag = false;
+  let n = 1;
+  for (let i = arr.length - n; i >= 0; i--) {
+    if (!arr[i].length) {
+      if (!flag) {
+        flag = true;
+        n++;
+      }
+      else {
+        n++;
+      }
+    }
+    else {
+      break;
+    }
   }
+  for (let i = 0; i < arr.length - n; i++) {
+    if (arr[i].length) {
+      if (i === 0) {
+        str += arr[i];
+      }
+      else {
+        str += ', ' + arr[i];
+      }
+    }
+  }
+  if (str === "") {
+    if (arr[arr.length -n] === "") {
+      return "";
+    }
+		if (!arr[arr.length -n]) {
+			return "";
+		}
+    else {
+      return arr[arr.length -n];
+    }
+  }
+  str += ' and ' + arr[arr.length -n];
   return str;
-};
+}
 
-const arr = [["Hello", "", "Bye"]];
+const arr = ["Hello", "", "Bye"];
 
 document.getElementById('ans').textContent = wordsToSentence(arr);
