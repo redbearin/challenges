@@ -18,4 +18,4 @@ numberPairs = str => {
 
 const str = "9 10 20 20 10 10 30 50 10 20";
 
-document.getElementById('ans').textContent = number_pairs(str);
+document.getElementById('ans').textContent = numberPairs(str);
