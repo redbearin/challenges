@@ -1,21 +1,17 @@
-const sockPairs = socks => {
-  const typeCounts = {};
-  let pairs = 0;
-  // build counts of each sockType
-  for (let i = 0; i < socks.length; i++) {
-    if(typeCounts[socks[i]])
-      typeCounts[socks[i]] += 1;
-    else 
-    typeCounts[socks[i]] = 1;
+sockPairs = str => {
+  const counts = {};
+  for (let i = 0; i < str.length; i++) {
+    counts[str[i]]?
+    counts[str[i]]++ :
+    counts[str[i]] = 1;
   }
-  // go thru all sock types in 
-  // typeCount object and build pairs
-  for (let sockType in typeCounts) {
-    pairs += Math.floor(typeCounts[sockType] / 2);
+  let pairs = 0;
+  for (let key in counts) {
+    pairs += Math.floor(counts[key]/2);
   }
   return pairs;
 }
 
-const socks = "AA";
+const str = "CABBACCC";
 
-document.getElementById('ans').textContent = sockPairs(socks);
+document.getElementById('ans').textContent = sockPairs(str);
