@@ -5,3 +5,5 @@ numberLength = num => {
 const num = 10;
 
 document.getElementById('ans').textContent = numberLength(num);
+
+
