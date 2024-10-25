@@ -1,9 +1,9 @@
-numberLength = num => { 
-  console.log(num)
-  return num.length;
+numberLength = num => {
+  return num.toString().length;
 }
 
-let val = 777777777777777777777777777777;
+const num = 10;
 
-document.getElementById('ans').textContent = numberLength(val.toString()));
+document.getElementById('ans').textContent = numberLength(num);
+
 
