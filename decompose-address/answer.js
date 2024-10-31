@@ -1,43 +1,15 @@
-const decomposeAddress = (address) => {
-  const addArr = address.split(' ');
-  let stExt = ['Rd', 'Ct', 'St', 'Pl', 'Dr'];
-
-  // find the index of the street extension
-  let index;
-  for (let i = 0; i < addArr.length; i++) {
-    if (addArr[i].length === 2 && stExt.includes(addArr[i])) {
-      index = i;
-      break;
-    }
+decomposeAddress = str => {
+  const strArr = str.split(', ');
+  const first = strArr[0].split(' ');
+  const second = strArr[1].split(' ');
+  const city = [];
+  for (let i = 3; i < first.length; i++) {
+    city.push(first[i]);
   }
-  // build street address - works with 
-  // streets names with two letter words
-  const substrs = [addArr[0]];
-  let street = '';
-  for (let i = 1; i <= index; i++) {
-    if (i === index)
-      street += addArr[i];
-    else
-      street += addArr[i] + ' ';
-  }
+  return JSON.stringify([first[0], first[1] + ' ' + first[2], city.join(' ').trim(), second[0], second[1]]);
+}
 
-  // build city
-  let city = '';
-  for (i = index + 1; i < addArr.length - 2; i++) {
-    if (i === addArr.length - 3)
-      city += addArr[i].slice(0, -1)
-    else
-      city += addArr[i] + ' ';
-  }
+const str = "557 Farmer Rd Corner, MT 59105";
 
-  // add street address, city, state, zip to substring array
-  substrs.push(street, 
-               city, 
-               addArr[addArr.length - 2], 
-               addArr[addArr.length - 1]);
-  return JSON.stringify(substrs);
-};
+document.getElementById('ans').textContent = decomposeAddress(str);
 
-const address = "8919 Scarecrow Ct Idaho Falls, ID 80193";
-
-document.getElementById('ans').textContent = decomposeAddress(address);
