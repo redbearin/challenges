@@ -6,7 +6,6 @@ pigLatinSentence = str => {
       strArr[i] = strArr[i] + 'way';
     }
     else {
-      console.log('not first letter')
       for (let j = 0; j < strArr[i].length; j++) {
         if (/([aeiouAEIOU])/.test(strArr[i][j])) {
           idx = j;
