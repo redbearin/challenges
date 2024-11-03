@@ -1,28 +1,28 @@
-bandNamesSort = bands => {
-  let bandsAndComponents = [];
-  // create array of subarrays
-  // each subarray includes 1) array of words, 2) band name
-  for (let i =0; i < bands.length; i++) {
-    bandsAndComponents.push([bands[i].split(' '), bands[i]]);
+bandNamesSort = arr => {
+  const newArr = [];
+  let sub;
+  let newSub;
+  for (let i = 0; i < arr.length; i++) {
+    sub = arr[i].split(' ');
+    for (let j = 0; j < sub.length; j++) {
+      if (sub[j] !== "An" && 
+          sub[j] !== "A" && 
+          sub[j] !== "The") {
+        newSub = sub.slice(j);
+        break;
+      }
+    }
+    newArr.push([newSub[0].toLowerCase(), arr[i]]);
   }
-  // modify array of words to remove the, a, an
-  for (let i = 0; i < bandsAndComponents.length; i++) {
-    if (bandsAndComponents[i][0][0] === 'A' || 
-        bandsAndComponents[i][0][0] === 'An' || 
-        bandsAndComponents[i][0][0] === 'The')
-      bandsAndComponents[i][0] = bandsAndComponents[i][0].slice(1);
-  }
-  // sort based on the first word after the, a, an removed
-  bandsAndComponents.sort();
-  // build an array that includes the complete
-  // band names in the right order;
-  const bandsSorted = [];
+  newArr.sort();
+  let finalArr = [];
   for (let i = 0; i < newArr.length; i++) {
-    bandsSorted.push(newArr[i][1]);
+    finalArr.push(newArr[i][1]);
   }
-  return JSON.stringify(bandsSorted);
-};
+  return JSON.stringify(finalArr);
+}
 
-const bands = ["But Myth", "An Old Dog", "Def Leppard", "The Any Glitters", "The Dawn"];
+const arr = ["The New Yardbirds", "The Beatles", "The Square Roots", "On A Friday", "An Irony"];
 
-document.getElementById('ans').textContent = bandNamesSort(bands);
+document.getElementById('ans').textContent = bandNamesSort(arr);
+
