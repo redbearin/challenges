@@ -1,5 +1,5 @@
 set = arr => {
-  return [... new Set(arr)];
+  return JSON.stringify([... new Set(arr)]);
 }
 
 const arr = [1, 3, 3, 5, 5, 5];
