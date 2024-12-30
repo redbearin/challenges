@@ -12,3 +12,4 @@ decomposeAddress = str => {
 const str = "557 Farmer Rd Corner, MT 59105";
 
 document.getElementById('ans').textContent = decomposeAddress(str);
+
