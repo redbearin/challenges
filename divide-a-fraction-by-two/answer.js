@@ -1,28 +1,26 @@
-fractionHalf = str => {
-  const primes = [2,3,5,7,11,13,17,19,23,29];
-  const strArr= str.split('/');
-  strArr[0] = +strArr[0];
-  strArr[1] = +strArr[1] * 2;
-  // numerator a 1
-  // denominator - numerator = 1
-  if (strArr[0] === 1 || strArr[1] - strArr[0] === 1)
-    return "" + strArr[0] + "/"  + strArr[1];
-  // numerator can be divided into denominator evenly
-  if (Number.isInteger(strArr[1]/strArr[0])) 
-    return "" + 1 + "/" + strArr[1]/strArr[0];
-  // check to see if both num and denom and be divided
-  // by a prime
-  else {
-    for (let i = 0; i < primes.length; i++) {
-      if (primes[i] > strArr[0]) 
-        return "" + strArr[0] + "/"  + strArr[1];
-      if (Number.isInteger(strArr[0]/primes[i]) && 
-          Number.isInteger(strArr[1]/primes[i])) {
-        strArr[0] = strArr[0]/primes[i];
-        strArr[1] = strArr[1]/primes[i];
-      }
-    }
+fractionHalf = frac => {
+  const fracArr = frac.split('/');
+  fracArr[0] = +fracArr[0];
+  fracArr[1] = +fracArr[1] * 2;
+  if (fracArr[0] % 2 === 0 && fracArr[1] % 2 === 0) {
+    fracArr[0] = fracArr[0]/2;
+    fracArr[1] = fracArr[1]/2;
   }
+  if (fracArr[0] % 3 === 0 && fracArr[1] % 3 === 0) {
+    fracArr[0] = fracArr[0]/3;
+    fracArr[1] = fracArr[1]/3;
+  }
+  if (fracArr[0] % 5 === 0 && fracArr[1] % 5 === 0) {
+    fracArr[0] = fracArr[0]/5;
+    fracArr[1] = fracArr[1]/5;
+  }
+  if (fracArr[0] % 7 === 0 && fracArr[1] % 7 === 0) {
+    fracArr[0] = fracArr[0]/7;
+    fracArr[1] = fracArr[1]/7;
+  }
+  return fracArr[0] + '/' + fracArr[1];
 }
-const str = "3/8";
-document.getElementById('ans').textContent = fractionHalf(str);
+
+const frac = "52/97";
+
+document.getElementById('ans').textContent = fractionHalf(frac);
