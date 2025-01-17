@@ -6,4 +6,4 @@ error = n => {
   return arr[n - 1];
 }
 
-document.getElementById('ans').textContent = error(n);
+document.getElementById('ans').textContent = error(3);

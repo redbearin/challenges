@@ -9,3 +9,5 @@ numberLength(0) ➞ 1
 
 Notes
 N/A
+
+Correction for BigInt made in answer1 and index1
