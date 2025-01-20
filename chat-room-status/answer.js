@@ -1,7 +1,7 @@
 chatroomStatus = arr => {
   let front;
   if(!arr.length) {
-    front = "no one ";
+    front = "no one";
     console.log(front)
   }
   else if (arr.length === 1)  {
@@ -12,7 +12,7 @@ chatroomStatus = arr => {
     front = arr[0] + " and " + arr[1];
   }
   else {
-    front = arr[0] + ",  " + arr[1] + " and " + (arr.length - 2) + " more";
+    front = arr[0] + ", " + arr[1] + " and " + (arr.length - 2) + " more";
   }
   return front + " online";
 }
