@@ -1,10 +1,10 @@
-function reverse(str) {
-  if (str === "")
+reverse = str => {
+  if (!str) {
     return "";
-  else
-    return reverse(str.substr(1)) + str[0];
-};
+  }
+  return str.slice(-1) + reverse(str.slice(0, -1));
+}
 
-const str = "";
+const str = "hello";
 
 document.getElementById('ans').textContent = reverse(str);
