@@ -2,7 +2,7 @@ fib = num => {
   if  (num < 2) {
       return num;
   }
-  return fibonacci(num - 1) + fibonacci(num - 2);
+  return fib(num - 1) + fib(num - 2);
 }
 
 const num = 8;
