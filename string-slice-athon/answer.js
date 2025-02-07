@@ -26,3 +26,4 @@ document.getElementById('ans2').textContent = challenge2(s);
 document.getElementById('ans3').textContent = challenge3(s);
 document.getElementById('ans4').textContent = challenge4(s);
 document.getElementById('ans5').textContent = challenge5(s);
+
