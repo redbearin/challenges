@@ -10,3 +10,4 @@ const arr = [
 ];
 
 document.getElementById('ans').textContent = countTowers(arr); 
+
