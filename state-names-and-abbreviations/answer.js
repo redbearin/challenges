@@ -1,5 +1,4 @@
 filterStateNames = (arr, typ) => {
-  const newArr = [];
   return typ === 'abb'?
   JSON.stringify(arr.filter(ele => ele.charCodeAt(1) < 91)) :
   JSON.stringify(arr.filter(ele => ele.charCodeAt(1) > 96)) ;
