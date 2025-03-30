@@ -1,6 +1,4 @@
-lessThanOrEqualToZero = num => {
-  return num <= 0;
-}
+lessThanOrEqualToZero = num => num <= 0;
 
 const num = 5;
 
