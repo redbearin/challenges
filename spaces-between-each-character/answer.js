@@ -6,6 +6,6 @@ spaceMeOut = str => {
   return newStr + str[str.length - 1];
 }
 
-const str = "far out";
+const str = "far";
 
 document.getElementById('ans').textContent = spaceMeOut(str);
