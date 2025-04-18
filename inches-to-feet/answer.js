@@ -1,4 +1,4 @@
-inchesToFeet = numIn => +(numIn/12).toFixed(0);
+inchesToFeet = numIn => Math.floor(numIn/12);
 
 const numIn = 324;
 
