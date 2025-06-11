@@ -1,16 +1,20 @@
-posNegSort = nums => {
-  let positives = [];
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > 0)
-      positives.push(nums[i]);
+posNegSort = arr => {
+  let posNum = [];
+  for (let i = 0; i< arr.length; i++) {
+    if (arr[i] > 0) {
+      posNum.push(arr[i]);
+    }
   }
-  positives.sort((a,b) => a - b);
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > 0)
-      nums[i] = positives.shift();
+  posNum.sort();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      arr[i] = posNum.shift();
+    }
   }
-  return JSON.stringify(nums);
+  return JSON.stringify(arr);
 }
-const nums = [];
 
-document.getElementById('ans').textContent = posNegSort(nums);
+const arr = [6, 3, -2, 5, -8, 2, -2];
+
+document.getElementById('ans').textContent = posNegSort(arr);
+
