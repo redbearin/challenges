@@ -1,14 +1,12 @@
 factFact = num => {
-  let outProd = 1;
-  let prod
-  for (let i = num; i > 1; i--) {
-    prod = 1;
-    for (let j = i; j > 1; j--) {
-      prod *= j;
+  let total = 1;
+  while (num > 1) {
+    for (let i = num; i >= 1; i--) {
+      total *= i;
     }
-    outProd *= prod;
+    num--;
   }
-  return outProd;
+  return total;
 }
 
 const num = 4;
