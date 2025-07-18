@@ -1,17 +1,5 @@
-lettersOnly = str => {
-  if (!str)
-    return false;
-  for (let i = 0; i < str.length; i++) {
-    if (str.charCodeAt(i) < 32 || 
-        str.charCodeAt(i) > 32 && 
-        str.charCodeAt(i) < 97 || 
-        str.charCodeAt(i) > 122) {
-      return false;   
-    }
-  }
-  return true;
-}
+lettersOnly = str => str.replace(/[^A-Za-z]/g, "");
 
-const str = "";
+const str = "^U)6$22>8p).";
 
 document.getElementById('ans').textContent = lettersOnly(str);
