@@ -1,4 +1,4 @@
-const chineseZodiac = year => {
+chineseZodiac = year => {
   switch (year % 12) {
     case 0:
       return 'Monkey';
@@ -30,3 +30,4 @@ const chineseZodiac = year => {
 const year = 1933;
 
 document.getElementById('ans').textContent = chineseZodiac(year);
+
