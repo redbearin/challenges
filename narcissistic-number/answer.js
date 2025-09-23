@@ -1,15 +1,9 @@
 isNarcissistic = num => {
-  const strNum = num.toString();
-  let sum = 0;
-  for (let i = 0; i < strNum.length; i++) {
-    sum += Math.pow(+strNum[i], strNum.length);
-  }
-  if (sum === num) {
-    return true;
-  }
-  return false;
+  const len = num.toString().length;
+  return num.toString().split('').map(Number).reduce((acc, ele) => Math.pow(ele, len) + acc, 0) === num;
 }
 
-const num = 8202;
+const num = 153;
 
 document.getElementById('ans').textContent = isNarcissistic(num);
+

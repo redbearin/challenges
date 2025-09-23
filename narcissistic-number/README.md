@@ -1,19 +1,19 @@
-A number is narcissistic when the sum of its digits, with each digit raised to the power of digits quantity, is equal to the number itself.
+A Narcissistic Number is a number that is the sum of its own digits each raised to the power of the number of digits.
 
-153 ➞ 3 digits ➞ 1³ + 5³ + 3³ = 1 + 125 + 27 = 153 ➞ Narcissistic
-84 ➞ 2 digits ➞ 8² + 4² = 64 + 16 = 80 ➞ Not narcissistic
-Given a positive integer n, implement a function that returns true if the number is narcissistic, and false if it's not.
+For example, take 153 (3 digits), which is narcisstic:
+
+1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+1652 (4 digits), is non-narcisstic:
+
+1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
+Create a function that returns true or false depending upon whether the given number n is a Narcissistic number or not.
 
 Examples
-isNarcissistic(8208) ➞ true
-// 8⁴ + 2⁴ + 0⁴ + 8⁴ = 8208
+isNarcissistic(153) ➞ true
 
-isNarcissistic(22) ➞ false
-// 2² + 2² = 8
+isNarcissistic(370) ➞ true
 
-isNarcissistic(9) ➞ true
-// 9¹ = 9
+isNarcissistic(1652) ➞ false
 
 Notes
-Trivially, any number in the 1-9 range is narcissistic and any two-digit number is not.
-Curious fact: Only 88 numbers are narcissistic.
+N/A
