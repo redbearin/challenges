@@ -43,6 +43,7 @@ function routeTracer([
   ],
   items: "##&"
 }
+
 Notes
 The starting position must not be changed in the new matrix.
 The x will overwite the symbol already present in the spot visited.

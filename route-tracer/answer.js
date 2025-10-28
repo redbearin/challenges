@@ -1,48 +1,31 @@
-routeTracer = (grid, route) => {
-  let currentPos = [];
-  let index;
-  let items = '';
-  // the starting position
-  // based on the location of @
+routeTracer = (grid, path) => {
+  const grid1 = [...grid];
+  let str = '';
+  let current;
   for (let i = 0; i < grid.length; i++) {
-    index = grid[i].findIndex(element => element === '@'
-    );
-    if (index !== -1)
-      currentPos.push(i, index);
-  }
-  // go through each element in route
-  // and find the new location
-  for (let i = 0; i < route.length; i++) {
-    if (route[i] === 'l') {
-      loc = grid[currentPos[0]][currentPos[1] - 1];
-      if (loc === '&' || loc === '#' || loc === '$')
-        items += grid[currentPos[0]][currentPos[1] - 1];
-      grid[currentPos[0]][currentPos[1] - 1] = 'x';
-      currentPos[1] = currentPos[1] - 1;
-    }
-    if (route[i] === 'r') {
-      loc = grid[currentPos[0]][currentPos[1] + 1];
-      if (loc === '&' || loc === '#' || loc === '$')
-        items += grid[currentPos[0]][currentPos[1] + 1];
-      grid[currentPos[0]][currentPos[1] + 1] = 'x';
-      currentPos[1] = currentPos[1] + 1;
-    }
-    if (route[i] === 'u') {
-      loc = grid[currentPos[0] - 1][currentPos[1]];
-      if (loc === '&' || loc === '#' || loc === '$')
-        items += grid[currentPos[0] - 1][currentPos[1]];
-      grid[currentPos[0] - 1][currentPos[1]]= 'x';
-      currentPos[0] = currentPos[0] - 1;
-    }
-    if (route[i] === 'd')  {
-      loc = grid[currentPos[0] + 1][currentPos[1]];
-      if (loc === '&' || loc === '#' || loc === '$')
-        items += grid[currentPos[0] + 1][currentPos[1]];
-      grid[currentPos[0] + 1][currentPos[1]]= 'x';
-      currentPos[0] = currentPos[0] + 1;
+    if (grid[i].includes('@')) {
+      current = [i, grid[i].indexOf('@')];
     }
   }
-  return JSON.stringify({grid, items});
+  for (let i = 0; i < path.length; i++) {
+    if (path[i] === 'l') {
+      current = [current[0], current[1] - 1];
+    }
+    if (path[i] === 'r') {
+      current = [current[0], current[1] + 1];
+    }
+    if (path[i] === 'u') {
+      current = [current[0] - 1, current[1]];
+    }
+    if (path[i] === 'd') {
+      current = [current[0] + 1, current[1]];
+    }
+    if (grid[current[0]][current[1]] !== "-") {
+      str += grid[current[0]][current[1]];
+    }
+    grid1[current[0]][current[1]] = 'x';
+  }
+  return JSON.stringify({route: grid1, items: str});
 }
 
 const grid = [
@@ -51,6 +34,8 @@ const grid = [
   ["-", "#", "$", "&"],
   ["$", "-", "&", "-"]
 ];
-const route = "lddr";
 
-document.getElementById('ans').textContent = routeTracer (grid, route);
+const path = "lddr";
+
+document.getElementById('ans').textContent = routeTracer(grid, path);
+
