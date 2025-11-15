@@ -1,11 +1,12 @@
-Create a function that returns true when num1 is equal to num2; otherwise return false.
+Create a function that takes two integers and checks if they are equal.
 
 Examples
-isSameNum(4, 8) ➞ false
+isEqual(5, 6) ➞ false
 
-isSameNum(2, 2) ➞  true
+isEqual(1, 1) ➞ true
 
-isSameNum(2, "2") ➞ false
+isEqual("1", 1) ➞ false
 
 Notes
-Don't forget to return the result.
+If there is a string then it should return false.
+
