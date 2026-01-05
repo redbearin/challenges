@@ -1,6 +1,5 @@
-repeat = (str, rep) => {
-  str.repeat(rep);
-}
+repeat = (str, rep) => str.repeat(rep);
+
 const str = "edabit";
 const rep = 3;
 
