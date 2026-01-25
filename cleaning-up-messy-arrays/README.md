@@ -14,4 +14,4 @@ cleanUpArray(["7", "4", "8"]) ➞ [[4, 8], [7]]
 cleanUpArray(["9", "4", "5", "8"]) ➞ [[4, 8], [9, 5]]
 
 Notes
-All numbers will be positive integers.
+All numbers will be positive integers. Note strings for input.
