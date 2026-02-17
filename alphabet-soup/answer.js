@@ -1,4 +1,4 @@
-AlphabetSoup = str => str.split('').sort().join();
+AlphabetSoup = str => str.split('').sort().join('');
 
 const str = "hello";
 
