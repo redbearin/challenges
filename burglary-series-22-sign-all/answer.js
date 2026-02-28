@@ -1,3 +1,4 @@
+
 signAll = (obj, name) => {
   for (let key in obj)  {
     obj[key].signature = name;
