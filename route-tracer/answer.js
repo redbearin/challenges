@@ -34,6 +34,8 @@ const grid = [
   ["-", "#", "$", "&"],
   ["$", "-", "&", "-"]
 ];
+
 const path = "lddr";
 
 document.getElementById('ans').textContent = routeTracer(grid, path);
+
