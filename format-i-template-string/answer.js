@@ -1,9 +1,8 @@
-buildTemplateStr = (nameA, nameB, nameC) => {
-  return `Their names are:  ${nameA},  ${nameB} and ${nameC}.`
-}
+format = (a, b, c) => `Their names were: ${a}, ${b} and ${c}.`;
 
-const nameA = "John";
-const nameB = "Joe";
-const nameC = "Jack";
+const a = "John";
+const b = "Joe";
+const c = "Jack";
 
-document.getElementById('ans').textContent = buildTemplateStr(nameA, nameB, nameC);
+document.getElementById('ans').textContent = format(a, b, c);
+
