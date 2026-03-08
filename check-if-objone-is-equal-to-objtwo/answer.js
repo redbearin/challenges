@@ -1,9 +1,9 @@
 isEqual = (objOne, objTwo) => Object.entries(objOne).flat().join('') === Object.entries(objTwo).flat().join('');
 
 const objOne = {
-  name: "Benny",
-  phone: "3325558745",
-  email: "benny@edabit.com"
+  name: "Jason",
+  phone: "9853759720",
+  email: "jason@edabit.com"
 };
 
 const objTwo = {
