@@ -11,6 +11,6 @@ hasValidUnitOfMeasure = obj => {
   return false;
 }
 
-const obj = { "product": "Milk", unitOfMeasure: "L" };
+const obj = { "product": "Beer", unitOfMeasure: false };
 
 document.getElementById('ans').textContent = hasValidUnitOfMeasure(obj);
