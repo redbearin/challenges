@@ -5,6 +5,7 @@ const a = "John";
 const b = "Joe";
 const c = "Jack";
 const template = "your template string" ➞ "Their names were:  John,  Joe  and  Jack."
+
 Tips
 A template string is a string that uses a Dollar sign and curly braces inside backticks ${} as a placeholder that can then be formatted:
 

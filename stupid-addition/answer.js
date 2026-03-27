@@ -1,13 +1,16 @@
 stupidAddition = (n1, n2) => {
   if (Number.isInteger(n1)) {
     if (Number.isInteger(n2)) {
-      return n1.toString() + n2;
+      return n1.toString() + n2.toString();
     }
     return "null";
-  } 
+  }
   if (Number.isInteger(n2)) {
+    if (Number.isInteger(n1)) {
+      return n1.toString() + n2.toString();      
+    }
     return "null";
-  } 
+  }
   return +n1 + +n2;
 }
 
