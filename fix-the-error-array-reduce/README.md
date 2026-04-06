@@ -12,5 +12,6 @@ calculateSum("a") ➞ 97
 // a = 97
 
 reverseString("hello") ➞ "olleh"
+
 Notes
 N/A

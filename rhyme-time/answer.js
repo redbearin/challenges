@@ -1,8 +1,6 @@
 doesRhyme = (str1, str2) => {
   str1ModArr = str1.toLowerCase().replace(/[^(aeiou )]/g, "").split(' ');
-
   str2ModArr = str2.toLowerCase().replace(/[^(aeiou )]/g, "").split(' ');
-
   return str1ModArr[str1ModArr.length - 1] === str2ModArr[str2ModArr.length - 1];
 }
 
