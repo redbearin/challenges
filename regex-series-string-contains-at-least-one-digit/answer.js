@@ -1,7 +1,6 @@
-containsDigit = str => {
-  return /[0-9]/.test(str);
-}
+const ckNum = str => /[0-9]/g.test(str);
 
-const str =   "abwekz";
+const str = "23cc4";
 
-document.getElementById('ans').textContent = containsDigit(str);
+document.getElementById('ans').textContent = ckNum(str);
+

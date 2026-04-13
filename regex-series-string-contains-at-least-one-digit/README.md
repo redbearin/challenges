@@ -8,5 +8,6 @@ Examples
 "abwekz" ➞ false
 
 "sdfkxi" ➞ false
+
 Notes
 This challenge is designed to use RegEx only.
