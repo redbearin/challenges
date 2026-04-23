@@ -8,6 +8,7 @@ The return value is an object with 2 properties:
 
 product: the product name that the user selected.
 change: an array of coins (can be empty, must be sorted in descending order).
+
 Examples
 vendingMachine(products, 200, 7) ➞ { product: "Crackers", change: [ 50, 20, 10 ] }
 
