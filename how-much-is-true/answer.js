@@ -1,13 +1,5 @@
-countTrue = arr => {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === true) {
-      count++;
-    }
-  }
-  return count;
-}
+const countTrue = arr => arr.filter(n => n === true).length;
 
-const arr = [true, false, false, true, false];
+const arr = [false, false, false, false];
 
 document.getElementById('ans').textContent = countTrue(arr);
