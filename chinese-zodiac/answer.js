@@ -1,9 +1,33 @@
-chineseZodiac = yr => {
-  const rems = {0: "Monkey", 1: "Rooster", 2: "Dog", 	3: "Pig", 4: "Rat",	5: "Ox", 6: "Tiger", 	7: "Rabbit", 8: "Dragon", 9: "Snake", 	10: "Horse", 	11: "Sheep"};
-  
-  return rems[yr % 12];
-}
+chineseZodiac = year => {
+  switch (year % 12) {
+    case 0:
+      return 'Monkey';
+    case 1:
+      return 'Rooster';
+    case 2:
+      return 'Dog';
+    case 3:
+      return 'Pig';
+    case 4:
+      return 'Rat';
+    case 5:
+      return 'Ox';
+    case 6:
+      return 'Tiger';
+    case 7:
+      return 'Rabbit';
+    case 8:
+      return 'Dragon';
+    case 9:
+      return 'Snake';
+    case 10:
+      return 'Horse';
+    case 11:
+      return 'Sheep';
+  }
+};
 
-const yr = 1968;
+const year = 1933;
 
-document.getElementById('ans').textContent = chineseZodiac(yr);
+document.getElementById('ans').textContent = chineseZodiac(year);
+
