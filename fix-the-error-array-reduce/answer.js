@@ -1,7 +1,12 @@
-reverseString = str => str.split('').reduce((acc, char) => {
-    return char + acc;
-  }, "");
+calculateSum = txt => {
+  return txt.split('').reduce((acc, char) => char.charCodeAt(0) + acc, 0);
+}
 
-const str = "hello";
+reverseString = txt => {
+  return text.split('').reduce((newStr, char) => char + newStr, "");
+}
 
-document.getElementById('ans').textContent = reverseString(str);
+const txt = "lime";
+
+document.getElementById('ans').textContent = reverseString(txt);
+document.getElementById('ans1').textContent = calculateSum(txt);

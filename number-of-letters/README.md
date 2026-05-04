@@ -5,11 +5,8 @@ letter:count space letter:count (see examples).
 
 Special cases:
 space is NOT a letter!
-
 special symbols like ($ & * @ ! ' @') is NOT a letter!
-
 lower and upper letters IS EQUAL (A == a, B == b ... Z == z)!
-
 Examples
 charCount("Hello world!") ➞ "d:1 e:1 h:1 l:3 o:2 r:1 w:1"
 

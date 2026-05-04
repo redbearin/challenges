@@ -5,3 +5,4 @@ const b = "Joe";
 const c = "Jack";
 
 document.getElementById('ans').textContent = format(a, b, c);
+
