@@ -10,4 +10,5 @@ findLongest("\"Strengths\" is the longest and most commonly used word that conta
 Notes
 Special characters and symbols don't count as part of the word.
 Return the longest word found in lowercase letters.
-A recursive version of this challenge can be found in here.
+A recursive version of this challenge can be found in here. 
+There should be no need to use a recursive solution, if you use regex.
