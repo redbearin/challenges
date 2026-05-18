@@ -8,7 +8,7 @@ const twoSum = (nums, target) => {
   }
 }
 
-const nums = [2,7,11,15];
+const nums = [2,11,15,7];
 const target = 9;
 
 document.getElementById('ans').textContent = twoSum(nums, target);
