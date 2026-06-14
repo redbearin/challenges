@@ -1,11 +1,7 @@
 takeDownAverage = scores => {
-  let sum = 0;
-  let len = scores.length;
-  for (let i = 0; i < scores.length; i++) {
-    sum += +scores[i].slice(0, -1);
-  }
-  let avg = sum/len;
-  return Math.round(((avg - 5) * (len + 1)) - sum) + '%';
+  const sumScores = scores.reduce((acc, val) => acc + +(val.slice(0,-1)), 0);
+  const numScores = scores.length;
+  return Math.round((sumScores/numScores - 5) *(numScores + 1) - sumScores) + "%";
 }
 
 const scores = ["95%", "83%", "90%", "87%", "88%", "93%"];
