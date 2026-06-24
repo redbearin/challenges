@@ -1,26 +1,23 @@
-closestToPage = (chapters, page) => {
-  let diff = Infinity;
-  let closestTitle = '';
-  // go title by title through chapters obj
-  for (let title in chapters) {
-    // closer to this title
-    if (Math.abs(chapters[title] - page) <= diff) {
-      diff = Math.abs(chapters[title] - page);
-      closestTitle = title;
+closestToPage = (chaps, pg) => {
+  const chapsArr = Object.entries(chaps);
+  for (let i = 1; i < chapsArr.length; i++) {
+    if (chapsArr[i][1] > pg && chapsArr[i-1][1] < pg) {
+      if (pg - chapsArr[i-1][1] >=  chapsArr[i][1] - pg) {
+        return chapsArr[i][0]
+      }
+      return chapsArr[i -1][0];
     }
-    // past the closest title
-    else
-      break;
   }
-  return closestTitle;
 }
 
-const chapters = {
-  "Chapter 1" : 1,
-  "Chapter 2" : 15,
-  "Chapter 3" : 37
-};
+const chaps =  {
+  "New Beginnings" : 1,
+  "Strange Developments" : 62,
+  "The End?" : 194,
+  "The True Ending" : 460
+}
 
-const page = 10;
+const pg = 200;
 
-document.getElementById('ans').textContent = closestToPage(chapters, page)
+document.getElementById('ans').textContent = closestToPage(chaps, pg);
+
