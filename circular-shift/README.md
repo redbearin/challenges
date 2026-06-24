@@ -1,0 +1,12 @@
+Write a function that takes two arrays (arr1 and arr2) and an int n, and returns true if the second array is equal to the first array shifted by n positions. Otherwise, return false.
+
+Examples
+circularShift([1, 2, 3, 4], [3, 4, 1, 2], 2) ➞ true
+
+circularShift([1, 1], [1, 1], 6) ➞ true
+
+circularShift([0, 1, 2, 3, 4, 5], [3, 4, 5, 2, 1, 0], 3) ➞ false
+
+Notes
+The two arrays will be of the same length.
+n can be a negative value.
