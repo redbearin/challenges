@@ -10,6 +10,7 @@ countUnique("sore", "zebra") ➞ 7
 // "a", "b", "e", "o", "r", "s", "z"
 
 countUnique("a", "soup") ➞ 5
+
 Notes
 Each word will contain at least one letter.
 All words will be lower cased.

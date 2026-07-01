@@ -3,6 +3,7 @@ takeDownAverage = scores => {
   const numScores = scores.length;
   return Math.round((sumScores/numScores - 5) *(numScores + 1) - sumScores) + "%";
 }
+
 const scores = ["95%", "83%", "90%", "87%", "88%", "93%"];
 
 document.getElementById('ans').textContent = takeDownAverage(scores);
