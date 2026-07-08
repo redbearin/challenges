@@ -3,7 +3,7 @@ You are given an array with random words but your program doesn't accept words t
 Examples
 accepted(["Ducks", "Bears",  "Cats"]) ➞ ["Ducks", "Bears"]
 
-accepted(["cars", "trucks", "planes"] ➞ ["cars", trucks", "planes"]
+accepted(["cars", "trucks", "planes"]) ➞ ["cars", trucks", "planes"]
 
 accepted(["Cans", "Worms", "Bugs", "Cold", "Beans"]) ➞ ["Worms", "Bugs", "Beans"]
 

@@ -18,6 +18,6 @@ makeRug(3, 5, '$')  ➞ [
 makeRug(2, 2, 'A')  ➞ [
   "AA",
   "AA"
-]
+
 Notes
 You can set a value for the parameter when creating the function e.g. function (x = 3)
