@@ -1,5 +1,6 @@
-posCom = num => Math.pow(2, num);
+posCom = switches => Math.pow(2, switches);
 
-const num = 10;
+const switches = 10;
 
-document.getElementById('ans').textContent = posCom(num);
+document.getElementById('ans').textContent = posCom(switches);
+
