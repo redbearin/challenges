@@ -1,5 +1,4 @@
 justAnotherSumProblem = (n1, n2) => {
-  console.log(n1)
   let big, small;
   if (n1 > n2) {
     big = n1;
@@ -9,8 +8,6 @@ justAnotherSumProblem = (n1, n2) => {
     big = n2;
     small = n1;
   }
-  console.log(big)
-  console.log(small)
   let sum = 0;
   for (let i = small; i <= big; i++) {
     sum += i;
