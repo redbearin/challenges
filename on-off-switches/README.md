@@ -9,3 +9,4 @@ posCom(10) ➞ 1024
 
 Notes
 All numbers will be whole and positive.
+
