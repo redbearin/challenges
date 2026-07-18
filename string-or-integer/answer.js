@@ -1,5 +1,5 @@
-intOrString = param => Number.isInteger(param) ? "int" : "str";
+intOrString = n => Number.isInteger(n) ? "int" : "str";
 
-const param = 9843532;
+const n = 8;
 
-document.getElementById('ans').textContent = intOrString(param);
+document.getElementById('ans').textContent = intOrString(n);
