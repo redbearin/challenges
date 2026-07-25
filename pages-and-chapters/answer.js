@@ -9,12 +9,15 @@ closestToPage = (chaps, pg) => {
     }
   }
 }
+
 const chaps =  {
   "New Beginnings" : 1,
   "Strange Developments" : 62,
   "The End?" : 194,
   "The True Ending" : 460
 }
+
 const pg = 200;
 
 document.getElementById('ans').textContent = closestToPage(chaps, pg);
+
