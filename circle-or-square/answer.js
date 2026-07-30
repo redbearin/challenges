@@ -1,6 +1,7 @@
-circle_or_square = (r, a) => (2 * 3.14 * r) > (4 * Math.sqrt(a)) ? true : false;
+circle_or_square = (rad, area) => 2 * Math.PI * rad > Math.sqrt(area) * 4;
 
-const r = 5;
-const a = 100;
+const rad = 16;
+const area = 625;
 
-document.getElementById('ans').textContent = circle_or_square(r, a);
+document.getElementById('ans').textContent = circle_or_square(rad, area);
+

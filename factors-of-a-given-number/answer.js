@@ -11,3 +11,4 @@ findFactors = num => {
 const num = 9;
 
 document.getElementById('ans').textContent = findFactors(num);
+
