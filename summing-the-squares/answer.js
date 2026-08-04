@@ -1,11 +1,11 @@
 squaresSum = num => {
-  let sum = 0;
+  let total = 0;
   for (let i = 1; i <= num; i++) {
-    sum += Math.pow(i, 2);
+    total += i**2;
   }
-  return sum;
+  return total;
 }
 
-const num = 3;
+const num = 13;
 
 document.getElementById('ans').textContent = squaresSum(num);

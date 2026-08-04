@@ -1,17 +1,21 @@
-mdFormat = (str, sty) => {
-  switch (sty) {
-    case "b":
-      return "**" + str + "**";
-    case "i":
-      return "_" + str + "_";
-    case "c":
-      return "`" + str + "`";
-    default:
-      return "~~" + str + "~~";
+mdFormat = (str, style) => {
+  if (style === "b") {
+    return "**" + str + "**";
+  }
+  if (style === "i") {
+    return "_" + str + "_";   
+  }
+  if (style === "c") {
+    return "`" + str + "`";       
+  }
+  if (style === "s") {
+    return "~~" + str + "~~";    
   }
 }
 
 const str = "Bold";
-const sty = "b";
 
-document.getElementById('ans').textContent = mdFormat(str, sty);
+const style = "b";
+
+document.getElementById('ans').textContent = mdFormat(str, style);
+
