@@ -17,10 +17,7 @@ isParselTongue = str => {
       return false;
     }
     flag = false;
-  }
-  return true;
-}
-
+    
 const str = "She ssselects to eat that apple. ";
 
 document.getElementById('ans').textContent = isParselTongue(str);

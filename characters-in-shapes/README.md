@@ -19,5 +19,6 @@ countCharacters([
 countCharacters([]) ➞ 0
 
 countCharacters(["", ""]) ➞ 0
+
 Notes
 Return 0 if the given array is empty.

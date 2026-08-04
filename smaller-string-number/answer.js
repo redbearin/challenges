@@ -1,6 +1,8 @@
-smallerNum = (num1, num2) => +num1 <= +num2 ? num1 : num2;
+smallerNum = (strNum1, strNum2) => strNum1.localeCompare(strNum2, undefined, { numeric: true }) < 0 ? strNum1 : strNum2;
 
-const num1 = "21";
-const num2 = "44";
 
-document.getElementById('ans').textContent = smallerNum(num1, num2);
+const strNum1 = "1500";
+const strNum2 = "1";
+
+document.getElementById('ans').textContent = smallerNum(strNum1, strNum2);
+

@@ -8,3 +8,4 @@ oddProduct = arr => arr.reduce((acc, ele) => {
 const arr = [3, 4, 1, 1, 5];
 
 document.getElementById('ans').textContent = oddProduct(arr);
+
