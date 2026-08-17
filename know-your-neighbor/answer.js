@@ -11,7 +11,6 @@ plusSign = str => {
   }
   return true;
 }
-
-const str = "f+d+c+#+f+";
+const str = "+f+d+c+#+f+";
 
 document.getElementById('ans').textContent = plusSign(str);

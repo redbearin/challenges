@@ -1,3 +1,4 @@
+
 vendingMachine = (products, money, item) => {
   change money - products.
 }
@@ -14,7 +15,9 @@ const products = [
   { number: 9, price: 80,  name: 'Small snack' },
 ];
 
+
 const money = 200;
 const item = 7;
 
 document.getElementById('ans').textContent = vendingMachine(products, money, item);
+

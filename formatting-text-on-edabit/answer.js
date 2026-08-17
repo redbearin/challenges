@@ -9,11 +9,13 @@ mdFormat = (str, style) => {
     return "`" + str + "`";       
   }
   if (style === "s") {
-    return "~~" + str + "~~";      
+    return "~~" + str + "~~";    
   }
 }
 
 const str = "Bold";
+
 const style = "b";
 
 document.getElementById('ans').textContent = mdFormat(str, style);
+
