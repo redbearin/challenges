@@ -9,3 +9,4 @@ isEqual("1", 1) ➞ false
 
 Notes
 If there is a string then it should return false.
+

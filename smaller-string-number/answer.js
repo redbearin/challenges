@@ -5,3 +5,4 @@ const strNum1 = "1500";
 const strNum2 = "1";
 
 document.getElementById('ans').textContent = smallerNum(strNum1, strNum2);
+

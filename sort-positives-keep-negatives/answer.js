@@ -17,3 +17,4 @@ posNegSort = arr => {
 const arr = [6, 3, -2, 5, -8, 2, -2];
 
 document.getElementById('ans').textContent = posNegSort(arr);
+
