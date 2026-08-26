@@ -16,6 +16,7 @@ const happy = n => {
 const n = 203;
 
 document.getElementById('ans').textContent = happy(n);
+
 portionHappy = nums => {
   let happyCount = 0;
   for (let i = 0; i < nums.length; i++) {
