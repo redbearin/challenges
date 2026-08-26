@@ -1,30 +1,16 @@
-monkeyTalk = str => {
-  const strArr = str.split(' ');
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-  let monkeyWords = [];
-  // go word by word
-  for (let i = 0; i < strArr.length; i++) {
-    // first letter is a vowel
-    if (vowels.includes(strArr[i][0])) {
-      // in the first word
-      if (i === 0)
-        monkeyWords.push('Eek')
-      // not in first word
-      else
-        monkeyWords.push('eek')
-    }  
-    // first letter is a consonant
-    else {
-      // in the first word
-      if (i === 0)
-      monkeyWords.push('Ook')
-      // not in the first word
-      else
-      monkeyWords.push('ook')
-    }
+monkeyTalk = txt => {
+  const arr = txt.toLowerCase().split(' ');
+  const monkey = [];
+  for (let i = 0; i < arr.length; i++) {
+    /[a,e,i,o,u]/.test(arr[0]) ?
+      monkey.push('eek'):
+      monkey.push('ook');
   }
-  return monkeyWords.join(' ') + '.';
+  const newStr = monkey.join(' ');
+  return newStr[0].toUpperCase() + newStr.slice(1) + ".";
 }
-const str = "Mubashir Hassan";
 
-document.getElementById('ans').textContent = monkeyTalk(str);
+const txt = "Edabit is Amazing";
+
+document.getElementById('ans').textContent = monkeyTalk(txt);
+
