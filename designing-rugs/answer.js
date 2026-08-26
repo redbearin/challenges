@@ -1,18 +1,13 @@
-makeRug = (h, w, sym) => {
-  const rug = [];
-  let str;
-  for (let i = 0; i < 3; i++) {
-    str = '';
-    for (let j = 0; j < 5; j++) {
-      str += sym;
-    }
-    rug.push(str);
+makeRug = (width, height, char = "#") => {
+  const arr = [];
+  let row = char.repeat(width);
+  for (let i = 0; i < height; i++) {
+    arr.push(row);
   }
-  return JSON.stringify(rug);
+  return JSON.stringify(arr);
 }
+const width = 3;
+const height = 5;
 
-const h = 3;
-const w = 5;
-const sym = '$';
+document.getElementById('ans').textContent = makeRug(width, height, '$');
 
-document.getElementById('ans').textContent = makeRug(h, w, sym);

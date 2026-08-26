@@ -1,13 +1,5 @@
-accepted = words => {
-  const culled = [];
-  for (let i = 0; i < words.length; i++) {
-    if (words[i][0] !== 'C') {
-      culled.push(words[i]);
-    }
-  }
-  return JSON.stringify(culled);
-}
+accepted = words => JSON.stringify(words.filter(ele => ele[0] !== "C"));
 
-const words = ["Ducks", "Bears",  "Cats"];
+const words = ["Cans", "Worms", "Bugs", "Cold", "Beans"];
 
 document.getElementById('ans').textContent = accepted(words);
