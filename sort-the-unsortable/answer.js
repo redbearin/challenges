@@ -1,7 +1,5 @@
-sortIt = arr => {
-  return JSON.stringify(arr.sort((a,b) => a-b));
-}
+sortIt = arr => JSON.stringify(arr.sort((a, b) => a - b));
 
-const arr = [[3], 4, [2], [5], 1, 6];
+const arr = [4, [1], 3];
 
 document.getElementById('ans').textContent = sortIt(arr);
