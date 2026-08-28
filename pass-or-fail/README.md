@@ -1,0 +1,1 @@
+Write a function to check if a student has passed or failed based on the student score and the minimum passing score. 

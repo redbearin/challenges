@@ -1,21 +1,23 @@
 isParselTongue = str => {
-  str = str.toLowerCase().trim();
+  str = str.toLowerCase();
   const strArr = str.split(' ');
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i].includes('s')) {
-      for (let j = 0; j < strArr[i].length - 1; j++) {
-        if (strArr[i][j] === 's' && strArr[i][j+1] === 's') {
+  let flag = false;
+  for (let i = 0; i < strArr.length; i++) { 
+    for (let j = 0; j < strArr[i].length; j++) {
+      if (strArr[i][j] === 's' && 
+          strArr[i][j - 1] === 's' || 
+          strArr[i][j + 1] === 's') {
           break;
-        }
-        if (j === strArr[i].length - 2) {
-          return false;
-        }
+      }
+      if (strArr[i][j] === 's') {
+        flag = true;
       }
     }
-  }
-  return true;
-}
-
-const str = "Steve likes to eat pancakes";
+    if (flag) {
+      return false;
+    }
+    flag = false;
+    
+const str = "She ssselects to eat that apple. ";
 
 document.getElementById('ans').textContent = isParselTongue(str);
