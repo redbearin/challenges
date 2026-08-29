@@ -1,13 +1,16 @@
 digitsCount = num => {
-  let count = 1;
-  while (num > 9 || 
-         num < -9) {
+  if (num === 0) {
+    return 1;
+  }
+  num = Math.abs(num);
+  let count = 0;
+  while (num >= 1) {
+    num = Math.trunc(num / 10);
     count++;
-    num = num / 10;
   }
   return count;
 }
 
-const num = 0;
+const num = 4666;
 
 document.getElementById('ans').textContent = digitsCount(num);
