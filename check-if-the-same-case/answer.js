@@ -1,5 +1,5 @@
-sameCase = str => /^[a-z]+$|^[A-Z]+$/.test(str);
+sameCase = str => str.toUpperCase() === str || str.toLowerCase() === str;
 
-const str = "ThE";
+const str = "hello";
 
 document.getElementById('ans').textContent = sameCase(str);

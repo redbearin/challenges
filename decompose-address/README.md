@@ -5,6 +5,7 @@ Street Name
 City Name
 State
 Zip Code
+
 Examples
 decomposeAddress("557 Farmer Rd Corner, MT 59105")
 ➞ ["557", "Farmer Rd", "Corner", "MT", "59105"]
