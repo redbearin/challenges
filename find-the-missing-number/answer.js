@@ -1,16 +1,11 @@
-missingNum = arr => {
-  arr.sort((a,b) => a - b);
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] !== arr[i-1] + 1) {
-      return arr[i - 1] + 1;
-    }
-  }
-  if (arr[0] > 1) {
-    return arr[0] - 1;
-  }
-  return arr[arr.length - 1] + 1;
+findMissingNumber = (arr, n) => {
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((sum, current) => sum + current, 0);
+  return expectedSum - actualSum;
 }
 
-const arr = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+const arr = [1, 2, 4, 5];
+const n = 5;
 
-document.getElementById('ans').textContent = missingNum(arr);
+document.getElementById('ans').textContent = findMissingNumber(arr, n);
+
