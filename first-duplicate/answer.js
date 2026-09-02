@@ -4,10 +4,7 @@ const firstDuplicate = (arr) => {
     if (seen.has(num)) {
       return num;
     }
-    else {
-      seen.add(num);
-    }
-    console.log(seen)
+    seen.add(num);
   }
   return "no repeats";
 };
