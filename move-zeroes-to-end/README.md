@@ -20,5 +20,5 @@ moveZeros([4, 0, 5, 0, 0, 2]);
 
 Rules: Don't use .sort(), and try to solve it in O(n) time.
 
-Bonus: First solve it by creating a new array. Then see if you can solve it in place, modifying the original array without creating another array.
+This includes two different possible solutions. One replacing in place and a second creating another array.
 
