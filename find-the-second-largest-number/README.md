@@ -1,11 +1,17 @@
-Create a function that takes an array of numbers and returns the second largest number.
+Write a function called secondLargest that takes an array of numbers and returns the second largest unique number.
 
-Examples
-secondLargest([10, 40, 30, 20, 50]) ➞ 40
+secondLargest([10, 5, 8, 20, 15]); // 15
+secondLargest([3, 1, 2]);           // 2
+secondLargest([5, 5, 4, 3]);        // 4
+secondLargest([-10, -5, -20]);      // -10
 
-secondLargest([25, 143, 89, 13, 105]) ➞ 105
+If there isn't a second unique number, return null:
 
-secondLargest([54, 23, 11, 17, 10]) ➞ 23
+secondLargest([7, 7, 7]); // null
+secondLargest([5]);       // null
 
-Notes
-There will be at least two numbers in the array.
+The catch: Try to solve it without using .sort().
+
+You'll probably need a loop, some comparisons, and a way to keep track of the largest and second-largest values you've seen.
+
+This one has a few sneaky edge cases. Send me your solution when you're done and I'll test it for you.
