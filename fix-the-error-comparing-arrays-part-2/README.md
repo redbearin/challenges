@@ -20,6 +20,7 @@ function checkEquals(arr1, arr2) {
     return false
    }
 }
+
 It works in most cases, but on some cases it fails. This confuses him, can you spot the error and fix it?
 
 Examples

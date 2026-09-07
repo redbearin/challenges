@@ -1,6 +1,7 @@
-countUnique = (w1, w2) => [...new Set(w1+w2)].length;
+countUnique = (str1, str2) => [...new Set((str1 + str2).split(''))].length;
 
-const w1 = "apple";
-const w2 = "play";
+const str1 = "apple";
+const str2 = "play";
 
-document.getElementById('ans').textContent = countUnique(w1, w2);
+document.getElementById('ans').textContent = countUnique(str1, str2);
+

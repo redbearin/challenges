@@ -25,3 +25,4 @@ bandNamesSort = arr => {
 const arr = ["The New Yardbirds", "The Beatles", "The Square Roots", "On A Friday", "An Irony"];
 
 document.getElementById('ans').textContent = bandNamesSort(arr);
+

@@ -6,3 +6,4 @@ isNarcissistic = num => {
 const num = 153;
 
 document.getElementById('ans').textContent = isNarcissistic(num);
+

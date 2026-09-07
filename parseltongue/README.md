@@ -3,6 +3,7 @@ Hermione has come up with a precise formula for determining whether or not a phr
 Each word in a sssentence must contain either:
 
 Two or more consecutive instances of the letter "s" (i.e. must be together ss..), or...
+
 Zero instances of the letter "s" by itself.
 
 Examples

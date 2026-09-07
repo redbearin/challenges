@@ -1,4 +1,5 @@
-countDs = str => str.toLowerCase().replace(/[^d]/g, '').length;
-const str = "Debris was scattered all over the yard.";
+countDs = str => str.replace(/[^d]/ig, "").length;
+
+const str = "My friend Dylan got distracted in school.";
 
 document.getElementById('ans').textContent = countDs(str);

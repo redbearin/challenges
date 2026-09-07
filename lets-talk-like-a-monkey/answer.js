@@ -13,3 +13,4 @@ monkeyTalk = txt => {
 const txt = "Edabit is Amazing";
 
 document.getElementById('ans').textContent = monkeyTalk(txt);
+

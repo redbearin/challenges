@@ -1,4 +1,4 @@
-removeNumbers = str => str.split('').filter(c => !parseInt(c)).join('');
+removeNumbers = str => str.replace(/[0-9]/g, "");
 
 const str = "12ma23tt";
 
