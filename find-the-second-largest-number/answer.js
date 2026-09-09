@@ -1,7 +1,8 @@
 secondLargest = arr => {
   const noDups = [...new Set(arr)];
   const largest = Math.max(...noDups);
-  noDups.splice(noDups.indexOf(largest), 1);
+  const index = noDups.indexOf(largest);
+  noDups.splice(index, 1);
   let sec = -Infinity;
   for (let i = 0; i < noDups.length; i++) {
     if (noDups[i] > sec) {
@@ -14,6 +15,6 @@ secondLargest = arr => {
   return sec;
 }
 
-const arr = [];
+const arr = [10];
 
 document.getElementById('ans').textContent = secondLargest(arr);
