@@ -14,6 +14,6 @@ mostFrequent = str => {
   return maxChar; 
 }
 
-const str = "11222!!";
+const str = "aabb";
 
 document.getElementById('ans').textContent = mostFrequent(str);
