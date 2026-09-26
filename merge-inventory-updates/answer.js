@@ -1,13 +1,15 @@
 const updateInventory = (inventory, updates) => {
-  const inventoryMap = new Map(inventory.map(item => [item.id, item]));
+  const inventoryMap = new Map(
+    inventory.map(item => [item.id, {... item}])
+  );
   for (const entry of updates) {
     if (!inventoryMap.has(entry.id)) {
-      inventoryMap.set(entry.id, entry);
+      inventoryMap.set(entry.id, {...entry});
     }
     else {
       const currentQty = inventoryMap.get(entry.id).quantity;
-      const currentUser = inventoryMap.get(entry.id);      
-      const updatedUser = {...currentUser, quantity: entry.quantity + currentQty};
+      const originalUser = inventoryMap.get(entry.id);      
+      const updatedUser = {...originalUser, quantity: entry.quantity + currentQty};
       inventoryMap.set(entry.id, updatedUser);
     }
   }
