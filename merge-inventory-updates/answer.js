@@ -1,16 +1,15 @@
 const updateInventory = (inventory, updates) => {
   const inventoryMap = new Map(
-    inventory.map(item => [item.id, {... item}])
-  );
-  for (const entry of updates) {
-    if (!inventoryMap.has(entry.id)) {
-      inventoryMap.set(entry.id, {...entry});
+    inventory.map(item => [item.id, {... item}]));
+  for (const item of updates) {
+    if (!inventoryMap.has(item.id)) {
+      inventoryMap.set(item.id, {...item});
     }
     else {
-      const currentQty = inventoryMap.get(entry.id).quantity;
-      const originalUser = inventoryMap.get(entry.id);      
-      const updatedUser = {...originalUser, quantity: entry.quantity + currentQty};
-      inventoryMap.set(entry.id, updatedUser);
+      const currentQty = inventoryMap.get(item.id).quantity;
+      const originalUser = inventoryMap.get(item.id);      
+      const updatedUser = {...originalUser, quantity: item.quantity + currentQty};
+      inventoryMap.set(item.id, updatedUser);
     }
   }
   return JSON.stringify([...inventoryMap.values()]);
