@@ -31,4 +31,7 @@ it should return:
 }
 
 The requirements are specific: use array destructuring inside the function body, destructure the first object into a variable named currentJob, collect the remaining objects into pendingJobs using rest syntax, return an object containing those two variables, don't use slice() or array indexing, and don't modify the input array or its objects.
-You can assume jobs always contains at least one job object.
+
+You can assume jobs always contains at least one job object. 
+Make sure to follow the formatting conventions.
+
