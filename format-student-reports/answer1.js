@@ -1,4 +1,11 @@
-const formatStudentReports = students => students.map(({student_id: studentId, profile: {first_name: firstName, last_name: lastName}, scores: [firstScore, , lastScore], status = "Active"}) => `Student #${studentId} | ${firstName} ${lastName} | First: ${firstScore} | Last: ${lastScore} | ${status}`);
+const formatStudentReports = students => 
+  students.map(({
+      student_id: studentId, 
+      profile: {first_name: firstName, last_name: lastName}, 
+      scores: [firstScore, , lastScore], 
+      status = "Active"}) => 
+        `Student #${studentId} | ${firstName} ${lastName} | First: ${firstScore} | Last: ${lastScore} | ${status}`
+  );
 
 const students = [
   {
