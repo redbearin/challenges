@@ -53,3 +53,5 @@ Requirements
 7. Preserve the input order and don't mutate the input.
 8. Match the output strings exactly, including the #, spaces, colons, and capitalization.
 You can assume every student has a valid ID, profile, and exactly three numeric scores. Only status may be missing.
+
+Note: that the old require is required with this version of VS Code
