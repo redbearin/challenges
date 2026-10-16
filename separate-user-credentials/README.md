@@ -63,3 +63,5 @@ Requirements
 6. Don't mutate the input array or its objects.
 7. Your function should preserve any additional properties a user might have, even if they aren't shown in the examples.
 You can assume each user is a plain object containing a password property.
+
+There is a very simple one line approach.
