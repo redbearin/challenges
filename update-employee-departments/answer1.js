@@ -1,6 +1,9 @@
 const updateDepartments = employees => employees.map(
-  employee => ({...employee, department: "Engineering"})
-  );
+  employee => ({
+    ...employee, 
+    department: "Engineering"
+  }));
+
 const employees = [
   {
     id: 101,
