@@ -3,6 +3,7 @@ Write a function named updateProductPrice that receives:
 - targetId: the ID of the product to update
 - newPrice: the replacement price
 The function should update only the matching product.
+
 Input
 const products = [
   {
@@ -24,7 +25,6 @@ const products = [
     discount: 10
   }
 ];
-
 
 Calling:
 updateProductPrice(products, 102, 19.99);
@@ -52,7 +52,6 @@ should produce:
   }
 ]
 
-
 Requirements
 1. Use .map() to create a new array.
 2. Use a ternary expression inside the callback.
@@ -62,3 +61,4 @@ Requirements
 6. Don't mutate the input array or any original product objects.
 7. If no product matches, return a new array containing the original object references.
 You can assume product IDs are unique.
+

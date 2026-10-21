@@ -26,8 +26,8 @@ const products = [
   }
 ];
 
-const targetId = 102;
-const newPrice = 19.99;
+const targetId = 104;
+const newPrice = 49.99;
 
 // output without tests
 console.log(updateProductPrice(products, targetId, newPrice));
