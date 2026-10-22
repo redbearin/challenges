@@ -20,4 +20,4 @@ const customer = {
 
 const newCity = "Seattle";
 
-document.getElementById(ans).textContent = updateCustomerCity(customer, newCity);
+document.getElementById('ans').textContent = updateCustomerCity(customer, newCity);
