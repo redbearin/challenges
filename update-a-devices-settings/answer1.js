@@ -4,9 +4,9 @@ const updateDeviceSettings = (devices, targetId, newVolume, newBrightness) =>
     {
       ...device,
       settings: {
-      ...device.settings,
-      volume: newVolume,
-      brightness: newBrightness
+        ...device.settings,
+        volume: newVolume,
+        brightness: newBrightness
       }
     } :
     device
