@@ -1,3 +1,5 @@
+"use strict";
+
 const updateSecuritySettings = (account, newTwoFactor, newLoginAlerts) => ({
   ...account,
   preferences: {
