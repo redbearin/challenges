@@ -83,7 +83,7 @@ assert.deepStrictEqual(result[1], {
   preferences: {
     language: "Spanish",
     dashboard: {
-      theme: "solarized",
+      theme: "dark",
       layout: "list",
       widgets: 3
     }

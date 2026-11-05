@@ -58,6 +58,6 @@ const employees = [
 
 const targetId = 102;
 
-const newTheme = "solarized";
+const newTheme = "dark";
 
 document.getElementById('ans').textContent = JSON.stringify(updateEmployeeTheme(employees, targetId, newTheme));
