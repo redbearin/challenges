@@ -55,9 +55,9 @@ const employees = [
   }
 ];
 
-const targetId = 101;
+const targetId = 103;
 
-const increase = 10;
+const increase = 0;
 
 console.log(increaseRefreshRateIfChanged(employees, targetId, increase));
 
