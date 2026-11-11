@@ -1,4 +1,4 @@
-Write a function named s that accepts:
+Write a function named increaseEmployeeBonus that accepts:
 - employees: an array of employee objects
 - targetId: the employee ID to update
 - increase: the amount to add to the employee's bonus
