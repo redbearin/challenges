@@ -54,8 +54,8 @@ const employees = [
   }
 ];
 
-const targetId = 101;
+const targetId = 103;
 
-const increase = 100;
+const increase = 0;
 
 document.getElementById('ans').textContent= JSON.stringify(increaseEmployeeBonus(employees, targetId, increase));
