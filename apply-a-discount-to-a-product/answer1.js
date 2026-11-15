@@ -53,7 +53,7 @@ const products = [
 
 const targetId = 101;
 
-const discount = 0;
+const discount = 20;
 
 console.log(applyProductDiscount(products, targetId, discount));
 

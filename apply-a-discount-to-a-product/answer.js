@@ -49,6 +49,6 @@ const products = [
 
 const targetId = 101;
 
-const discount = 0;
+const discount = 30;
 
 document.getElementById("ans").textContent = JSON.stringify(applyProductDiscount(products, targetId, discount));
