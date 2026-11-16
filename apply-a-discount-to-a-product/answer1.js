@@ -2,23 +2,20 @@
 
 const assert = require("assert").strict;
 
-const applyProductDiscount = (products, targetId, discount) => {
-  return products.map(product => 
+const applyProductDiscount = (products, targetId, discount) => 
+  products.map(product => {
+    const newPrice = Math.max(product.pricing.current - discount, 0);
+    return  product.id === targetId && newPrice < product.pricing.current ?
     {
-      const newPrice = Math.max(product.pricing.current - discount, 0);
-
-      return  product.id === targetId && newPrice < product.pricing.current ?
-        {
-          ...product,
-          pricing: {
-            ...product.pricing,
-            current: newPrice
-          }
-        } :
-        product;
-    }
-  );
-};
+      ...product,
+      pricing: {
+        ...product.pricing,
+        current: newPrice
+      }
+    } :
+    product;
+  }
+);
 
 const products = [
   {
