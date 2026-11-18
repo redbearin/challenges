@@ -1,0 +1,51 @@
+const applyDiscountIfMatched = (products, targetId, discount) => products.map(
+  product => {
+    const newPrice = Math.max(0, product.pricing.current - discount);
+    return product.id === targetId && newPrice < product.pricing.current ?
+    {
+      ...product,
+      pricing: {
+        ...product.pricing,
+        current: newPrice
+      }
+    } :
+    product
+  } 
+);
+
+const products = [
+  {
+    id: 101,
+    name: "Keyboard",
+    pricing: {
+      current: 80,
+      original: 100,
+      currency: "USD"
+    }
+  },
+  {
+    id: 102,
+    name: "Mouse",
+    pricing: {
+      current: 0,
+      original: 30,
+      currency: "USD"
+    }
+  },
+  {
+    id: 103,
+    name: "Monitor",
+    category: "Electronics",
+    pricing: {
+      current: 250,
+      original: 300,
+      currency: "USD"
+    }
+  }
+];
+
+const targetId = 101;
+
+const discount = 20;
+
+document.getElementById('ans').textContent = JSON.stringify(applyDiscountIfMatched(products, targetId, discount));
