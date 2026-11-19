@@ -4,7 +4,12 @@ const assert = require("assert").strict;
 
 const applyDiscountIfMatched = (products, targetId, discount) => products.map(
   product => {
+    if (product.id !== targetId) {
+      return product;
+    }
+    
     const newPrice = Math.max(0, product.pricing.current - discount);
+    
     return product.id === targetId && newPrice < product.pricing.current ?
     {
       ...product,

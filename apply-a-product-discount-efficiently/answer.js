@@ -44,7 +44,7 @@ const products = [
   }
 ];
 
-const targetId = 101;
+const targetId = 102;
 
 const discount = 20;
 
